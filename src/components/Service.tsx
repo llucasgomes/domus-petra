@@ -13,7 +13,7 @@ export default function Service() {
         serviços
       </h1>
       <div className="w-full h-auto flex justify-center items-center flex-wrap gap-6">
-        <Card className="p-0 max-w-80 ">
+        <Card className="p-0">
           <CardContent className="px-0">
             <Image
               src={"/image/service01.webp"}
@@ -29,6 +29,7 @@ export default function Service() {
             </CardTitle>
           </CardFooter>
         </Card>
+
         <Card className="p-0">
           <CardContent className="px-0">
             <Image
@@ -45,6 +46,7 @@ export default function Service() {
             </CardTitle>
           </CardFooter>
         </Card>
+
         <Card className="p-0">
           <CardContent className="px-0">
             <Image
