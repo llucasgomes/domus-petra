@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export default function About() {
   return (
     <section
-      className={`${montSerrat.className} bg-red-100 h-screen md:h-auto md:py-10 w-full flex flex-col justify-center items-center`}
+      className={`${montSerrat.className} h-screen md:h-auto md:py-10 w-full flex flex-col justify-center items-center`}
     >
       <h1 className="uppercase font-[600] pb-3 text-center text-[#343434]  dark:text-[#ffffff] md:mb-8">
         {"fabiano dell'agnoll"}
