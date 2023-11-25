@@ -3,10 +3,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Album, Contact, HelpCircle, Hotel, Menu } from "lucide-react";
+} from '@/components/ui/dropdown-menu'
+import { Album, Contact, HelpCircle, Hotel, Menu } from 'lucide-react'
 
 export default function MenuMobile() {
   return (
@@ -34,5 +33,5 @@ export default function MenuMobile() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

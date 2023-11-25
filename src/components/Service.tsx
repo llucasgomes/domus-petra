@@ -1,24 +1,24 @@
-import Image from "next/image";
-import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
-import { montSerrat } from "@/app/ui/fonts";
+import { montSerrat } from '@/app/ui/fonts'
+import Image from 'next/image'
+import { Card, CardContent, CardFooter, CardTitle } from './ui/card'
 
 export default function Service() {
   return (
     <section
-      className={`${montSerrat.className} w-full h-auto  bg-[#d9d9d9] py-5 px-9`}
+      className={`${montSerrat.className} h-auto w-full  bg-[#d9d9d9] px-9 py-5`}
     >
       <h1
-        className={`${montSerrat.className} w-full text-[#343434] text-3xl uppercase font-semibold text-center mb-8`}
+        className={`${montSerrat.className} mb-8 w-full text-center text-3xl font-semibold uppercase text-[#343434]`}
       >
         serviços
       </h1>
-      <div className="w-full h-auto flex justify-center items-center flex-wrap gap-6">
-        <Card className="p-0">
+      <div className="flex h-auto w-full flex-wrap items-center justify-center gap-4">
+        <Card className="rounded-none">
           <CardContent className="px-0">
             <Image
-              src={"/image/service01.webp"}
-              width={300}
-              height={300}
+              src={'/image/service01.webp'}
+              width={500}
+              height={500}
               alt="Imagem Ilustrativa"
               className=" w-full"
             />
@@ -30,12 +30,12 @@ export default function Service() {
           </CardFooter>
         </Card>
 
-        <Card className="p-0">
+        <Card className="rounded-none">
           <CardContent className="px-0">
             <Image
-              src={"/image/service02.webp"}
-              width={300}
-              height={300}
+              src={'/image/service02.webp'}
+              width={500}
+              height={500}
               alt="Imagem Ilustrativa"
               className=" w-full"
             />
@@ -47,12 +47,12 @@ export default function Service() {
           </CardFooter>
         </Card>
 
-        <Card className="p-0">
+        <Card className="rounded-none">
           <CardContent className="px-0">
             <Image
-              src={"/image/service03.webp"}
-              width={300}
-              height={300}
+              src={'/image/service03.webp'}
+              width={500}
+              height={500}
               alt="Imagem Ilustrativa"
               className=" w-full"
             />
@@ -65,5 +65,5 @@ export default function Service() {
         </Card>
       </div>
     </section>
-  );
+  )
 }

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   authors: [
     { name: "Lucas Gomes", url: "https://www.linkedin.com/in/llucasgomess/" },
   ],
+  // icons: { icon: "/image/favicon.ico" },
 };
 
 export default function RootLayout({
