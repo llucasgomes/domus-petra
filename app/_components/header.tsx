@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ButtonMenu, ButtonServices } from './header/ButtonMenu'
+import { ButtonServices } from './header/ButtonMenu'
+import { ButtonMenuResponsive } from './header/ButtonMenuMobile'
 
 export const Header = () => {
   return (
@@ -29,7 +30,7 @@ export const Header = () => {
         </ul>
       </nav>
       <div className="md:hidden">
-        <ButtonMenu />
+        <ButtonMenuResponsive />
       </div>
     </header>
   )

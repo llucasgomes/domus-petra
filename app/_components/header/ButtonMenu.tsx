@@ -1,6 +1,5 @@
 'use client'
 
-import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import {
   NavigationMenu,
@@ -9,16 +8,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '../ui/navigation-menu'
-
-export const ButtonMenu = () => {
-  return (
-    <Menu
-      className="border-none focus:outline-none data-[state=open]:bg-transparent"
-      size={36}
-      color="#ffffff"
-    />
-  )
-}
 
 export const ButtonServices = () => {
   return (
