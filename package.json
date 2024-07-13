@@ -10,6 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "git-commit-msg-linter": "^5.0.8",
