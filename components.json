@@ -5,13 +5,13 @@
   "tsx": true,
   "tailwind": {
     "config": "tailwind.config.ts",
-    "css": "app/globals.css",
+    "css": "src/app/globals.css",
     "baseColor": "slate",
     "cssVariables": true,
     "prefix": ""
   },
   "aliases": {
-    "components": "@/app/_components",
-    "utils": "@/app/_lib/utils"
+    "components": "@/components",
+    "utils": "@/lib/utils"
   }
 }

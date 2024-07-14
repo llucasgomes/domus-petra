@@ -24,7 +24,3 @@ Instalação das dependências necessárias para suporte a ESLint, Prettier e pl
 5. **Husky + Lint-staged**
    - Utilização de githooks para execução automática de linting (ESLint) e formatação (Prettier) antes de confirmar mudanças, garantindo consistência no código fonte.
 
-6. **Conventional Commits**
-   - Configuração para padronização das mensagens de commit conforme as convenções estabelecidas, facilitando o rastreamento e gerenciamento de mudanças no código.
-
-
