@@ -17,7 +17,7 @@ export const MenuService = () => {
           </NavigationMenuTrigger>
           <NavigationMenuContent className="grid w-[150px] gap-3 bg-black p-3 md:w-[150px] md:grid-cols-1 lg:w-[150px]">
             <Link
-              href={'/servicos/consultorias'}
+              href={'/services/consultoria'}
               className="block cursor-pointer select-none space-y-1 rounded-md p-3 leading-none text-white no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
               <div className="text-sm font-medium leading-none">
@@ -25,13 +25,13 @@ export const MenuService = () => {
               </div>
             </Link>
             <Link
-              href={'/servicos/palestras'}
+              href={'/services/palestras'}
               className="block cursor-pointer select-none space-y-1 rounded-md p-3 leading-none text-white no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
               <div className="text-sm font-medium leading-none">Palestras</div>
             </Link>
             <Link
-              href={'/servicos/treinamentos'}
+              href={'/services/treinamentos'}
               className="block cursor-pointer select-none space-y-1 rounded-md p-3 leading-none text-white no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
               <div className="text-sm font-medium leading-none">
