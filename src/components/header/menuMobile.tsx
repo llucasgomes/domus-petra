@@ -1,17 +1,14 @@
-'use client'
-
 import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '../ui/sheet'
+import { Perfil } from './perfiMobile'
 
 const routes = [
   {
@@ -56,10 +53,7 @@ export const MenuMobile = () => {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when youre done.
-          </SheetDescription>
+          <Perfil />
         </SheetHeader>
         <SheetFooter>
           <nav>
