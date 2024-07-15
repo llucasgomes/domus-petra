@@ -1,34 +1,36 @@
 'use client'
 
+import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { SheetTitle } from '../ui/sheet'
+import { LogOut } from './auth'
 
 export const Perfil = () => {
-  const user = false
+  const { data } = useSession()
 
-  const email = 'lucas.gomes.manaus@gmail.com'
   return (
     <div
-      className={`mb-3 flex items-center space-x-4 rounded-md border p-4 ${!user && 'bg-black'}`}
+      className={`mb-3 flex items-center space-x-4 rounded-md border p-4 ${!data?.user && 'bg-black'}`}
     >
-      {user ? (
+      {data?.user ? (
         <>
           <Avatar>
-            <AvatarImage src={'data.user.image!'} />
+            <AvatarImage src={data.user.image!} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div className="flex-1 space-y-1">
             <SheetTitle>
               <p className="text-left text-sm font-medium leading-none">
-                Lucas da Silva Gomes
+                {data.user.name!}
               </p>
             </SheetTitle>
 
             <p className="text-left text-sm text-muted-foreground">
-              {email.split('@')[0]}
+              {data.user.email!.split('@')[0]}
             </p>
           </div>
+          <LogOut />
         </>
       ) : (
         <div className="flex h-full w-full items-center justify-center">
