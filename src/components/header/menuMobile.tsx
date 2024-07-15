@@ -8,6 +8,7 @@ import {
   SheetHeader,
   SheetTrigger,
 } from '../ui/sheet'
+import { LogIn } from './auth'
 import { Perfil } from './perfiMobile'
 
 const routes = [
@@ -62,12 +63,7 @@ export const MenuMobile = () => {
                 return <RouteLink key={route} name={name} route={route} />
               })}
               <SheetClose asChild>
-                <Link
-                  href={'/about'}
-                  className="w-full cursor-pointer bg-red-300 px-4 py-3 dark:text-white"
-                >
-                  Login
-                </Link>
+                <LogIn />
               </SheetClose>
             </ul>
           </nav>
