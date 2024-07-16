@@ -37,4 +37,5 @@ yarn-error.log*
 next-env.d.ts
 
 #nao ira subir
+.prettierrc.son
 .vscode
