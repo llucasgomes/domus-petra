@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>Spbre</div>
+  return <div>Sobre</div>
 }
