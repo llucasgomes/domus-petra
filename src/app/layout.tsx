@@ -2,10 +2,8 @@ import { Header } from '@/components/header'
 import AuthProvider from '@/providers/auth'
 import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { montserrat } from './_ui/fonts'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Domus Petra',
@@ -69,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AuthProvider>
-        <body className={inter.className}>
+        <body className={`${montserrat.className} antialiased`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
