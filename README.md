@@ -30,3 +30,9 @@ Instalação das dependências necessárias para suporte a ESLint, Prettier e pl
 7. **NextAuth.js**
    - NextAuth.js é uma biblioteca de autenticação para Next.js, uma estrutura popular de React para desenvolvimento de aplicações web. Ele simplifica a adição de autenticação em seus aplicativos Next.js, oferecendo suporte para vários provedores de autenticação, como Google, Facebook, GitHub, entre outros, além de permitir autenticação própria (self-hosted authentication).
 
+8. **Instalando a biblioteca React-Icons**
+```
+npm install react-icons
+```
+
+
