@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
 import { montserrat } from './_ui/fonts'
 import './globals.css'
+import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
   title: 'Domus Petra',
@@ -76,6 +77,7 @@ export default function RootLayout({
           >
             <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </body>
       </AuthProvider>

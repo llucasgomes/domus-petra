@@ -1,0 +1,66 @@
+/* Estilos para o rodapé */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footerContainer {
+    display: flex;
+    justify-content: space-between; /* Imagem à esquerda e redes sociais à direita */
+    align-items: center;
+    margin-bottom: 10px;  
+  }
+  
+  .logo {
+    max-width: 100px; /* Ajuste conforme necessário */
+  }
+  
+  .socialMedia {
+    display: flex;
+    gap: 15px; /* Espaço entre os links */
+  }
+  
+  .socialLink {
+    text-decoration: none;
+    color: #021067;
+    font-size: 32px; /* Tamanho dos ícones */
+  }
+  
+  .socialLink:hover {
+    color: #007bff; 
+  }
+    
+  .copyright {
+    margin-top: 10px; /* Espaço acima do copyright */
+  }
+
+  .copyright span {
+    color: #007bff; 
+  }
+
+    /* Estilo para mobile */
+    @media (max-width: 768px) {
+        .footerContainer {
+            flex-direction: column; /* Coloca a imagem acima das redes sociais */
+            align-items: center; /* Centraliza os itens */
+          }
+        
+          .logo {
+            margin-bottom: 10px; /* Espaço abaixo da imagem */
+          }
+        
+          .socialMedia {
+            margin-bottom: 10px; /* Espaço abaixo das redes sociais */
+            margin-top: 20px; /* Espaço acima do copyright no mobile */
+          }
+        
+          .socialLink {
+            margin-bottom: 5px; /* Espaço abaixo de cada link social no mobile */
+          }
+          
+          .copyright {
+            margin-top: 10px; /* Espaço acima do copyright no mobile */
+          }   
+      }
+      
