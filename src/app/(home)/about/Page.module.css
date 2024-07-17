@@ -1,0 +1,174 @@
+.section {
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row; /* Flex para desktop */
+    align-items: center;
+  }
+  
+  .image {
+    margin-left: 20px; /* Margem à esquerda para desktop */
+    order: 2; /* A imagem será o segundo elemento */
+    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+    transition: transform 0.2s; /* Efeito de transição */
+  }
+
+  /* Efeito de hover (opcional) */
+  .image:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  .leftImage {
+    margin-right: 20px; /* Margem à esquerda para desktop */
+    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+    transition: transform 0.2s; /* Efeito de transição */
+    order: 1; /* A imagem será o primeiro elemento */
+  }
+
+   /* Efeito de hover (opcional) */
+   .leftImage:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  .rightParagraph {
+    order: 2; /* O parágrafo será o primeiro elemento */
+  }
+  
+  .imageMobile {
+    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+    transition: transform 0.2s; /* Efeito de transição */
+    display: none; /* Esconde a imagem mobile por padrão */
+  }
+
+   /* Efeito de hover (opcional) */
+   .imageMobile:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  .paragraph {
+    flex: 1; /* Permite que o parágrafo ocupe o espaço restante */
+    order: 1; /* O parágrafo será o primeiro elemento */
+  }
+  
+  .backroundSection {
+    background-color: #d9d9d9;
+  }
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footerContainer {
+    display: flex;
+    justify-content: space-between; /* Imagem à esquerda e redes sociais à direita */
+    align-items: center;
+    margin-bottom: 10px;  
+  }
+  
+  .logo {
+    max-width: 100px; /* Ajuste conforme necessário */
+  }
+  
+  .socialMedia {
+    display: flex;
+    gap: 15px; /* Espaço entre os links */
+  }
+  
+  .socialLink {
+    text-decoration: none;
+    color: #021067;
+    font-size: 32px; /* Tamanho dos ícones */
+  }
+  
+  .socialLink:hover {
+    color: #007bff; 
+  }
+    
+  .copyright {
+    margin-top: 10px; /* Espaço acima do copyright */
+  }
+
+  .copyright span {
+    color: #007bff; 
+  }
+
+  /* Estilo para mobile */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column; /* Coloca a imagem acima do parágrafo no mobile */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+  
+    .image {
+      margin-left: 0; /* Remove margem no mobile */
+      margin-bottom: 10px; /* Adiciona espaço entre a imagem e o parágrafo */
+      order: 0; /* A imagem permanece acima no mobile */
+    }
+  
+    .imageMobile {
+      display: block; /* Mostra a imagem mobile no mobile */
+      margin-bottom: 10px; /* Espaço abaixo da imagem mobile */
+    }
+  
+    .paragraph {
+      margin-top: 0; /* Ajusta espaço acima do parágrafo, se necessário */
+      order: 1; /* O parágrafo permanece abaixo no mobile */
+    }
+
+    .footerContainer {
+        flex-direction: column; /* Coloca a imagem acima das redes sociais */
+        align-items: center; /* Centraliza os itens */
+      }
+    
+      .logo {
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
+      }
+    
+      .socialMedia {
+        margin-bottom: 10px; /* Espaço abaixo das redes sociais */
+        margin-top: 20px; /* Espaço acima do copyright no mobile */
+      }
+    
+      .socialLink {
+        margin-bottom: 5px; /* Espaço abaixo de cada link social no mobile */
+      }
+      
+      .copyright {
+        margin-top: 10px; /* Espaço acima do copyright no mobile */
+      }   
+  }
+  
+  /* Estilo para iPad e MacBook */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .image {
+      order: 2; /* A imagem será o segundo elemento */
+    }
+  
+    .paragraph {
+      order: 1; /* O parágrafo será o primeiro elemento */
+    }
+  
+    .imageMobile {
+      display: none; /* Mantém a imagem mobile escondida */
+    }
+  }
+  
