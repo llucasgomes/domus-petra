@@ -50,8 +50,8 @@ export default function Page() {
         <p className={styles.subtitle}>
           Descubra os segredos do sucesso em nossa próxima palestra.
           <br />
-          Venha aprender técnicas inovadoras e insights valiosos para alavancar
-          sua carreira.
+          Venha aprender <span>técnicas inovadoras </span>e{' '}
+          <span>insights valiosos</span> para alavancar sua carreira.
           <br />
           Não perca esta oportunidade única de crescimento e networking. Reserve
           seu lugar agora!

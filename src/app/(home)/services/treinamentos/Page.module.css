@@ -31,7 +31,7 @@
     color: #5981B1;
     text-decoration: underline;
   }
-  
+
   /* Efeito de hover (opcional) */
   .card:hover {
     transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
@@ -206,7 +206,7 @@
         display: none;
     }
 
-    .card3, .card4, .card6 {
+    .card2, .card3, .card4 {
         display: flex;
     }
 }

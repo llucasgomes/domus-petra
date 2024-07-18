@@ -206,7 +206,7 @@
         display: none;
     }
 
-    .card3, .card4, .card6 {
+    .card1, .card2, .card4 {
         display: flex;
     }
 }
