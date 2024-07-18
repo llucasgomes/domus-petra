@@ -26,8 +26,14 @@
     letter-spacing: 3px; /* Ajuste o valor conforme necessário */
     line-height: 1.5;
 }
+
+.subtitle span {
+    color: #5981B1;
+    text-decoration: underline;
+  }
+  
   /* Efeito de hover (opcional) */
-  .image:hover {
+  .card:hover {
     transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
     cursor: pointer;
   }
@@ -51,7 +57,7 @@
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);        
         width: 100%;
         max-width: 380px; /* Ajuste conforme necessário */
         height: 620px;
@@ -59,7 +65,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin: 10px;
+        margin: 30px;
     }
 
     .card img {
@@ -164,17 +170,17 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 300px; /* Ajuste conforme necessário */
-        height: 617px;
+        height: 450px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin: 10px auto; /* Centraliza os cards */
+        margin: 30px auto; /* Centraliza os cards */
     }
 
     .card img {
         width: 100%;
-        height: auto;
+        height: 40%;
     }
 
     .card h2 {
@@ -184,7 +190,7 @@
     }
     .card p {
         background-color: #fff;
-        padding: 10px;
+        padding: 1px;
         width: 100%;
     }
 
