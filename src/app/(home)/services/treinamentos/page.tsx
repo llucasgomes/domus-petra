@@ -5,38 +5,38 @@ import styles from './Page.module.css'
 
 const cardContent = [
   {
-    imgSrc: '/palestra1.png',
+    imgSrc: '/treinamento.png',
     alt: 'treinamento',
     title: 'INVISTA EM TREINAMENTO CONTÍNUO',
-    text: 'O treinamento contínuo é vital para manter sua equipe atualizada com as últimas tendências e tecnologias. Melhorando as habilidades dos funcionários, promove a empresa para enfrentar novos desafios',
+    text: 'O treinamento contínuo é vital para manter sua equipe atualizada com as últimas tendências e tecnologias. Melhorando as habilidades dos funcionários, preparando-os para novos desafios!',
   },
   {
-    imgSrc: '/palestra2.png',
+    imgSrc: '/treinamento2.png',
     alt: 'liderança',
     title: 'DESENVOLVA LÍDERES EFICAZES',
     text: 'Investir em programas de desenvolvimento de liderança cultiva futuros líderes dentro da sua organização, motivando equipes, a melhorar na comunicação e promove um ambiente de trabalho positivo.',
   },
   {
-    imgSrc: '/palestra3.png',
+    imgSrc: '/treinamento3.png',
     alt: 'producao',
     title: 'AUMENTE A PRODUTIVIDADE COM TREINAMENTOS ESPECÍFICOS',
-    text: 'Treinamentos específicos focados nas necessidades da sua empresa podem aumentar significativamente a produtividade.',
+    text: 'Treinamentos específicos, como a Realidade Virtual(VR) focando necessidades a sua empresa, aumentando significativamente a produtividade.',
   },
   {
-    imgSrc: '/palestra4.png',
+    imgSrc: '/treinamento4.png',
     alt: 'satisfacao',
     title: 'MELHORE A SATISFAÇÃO DOS FUNCIONÁRIOS',
     text: 'A liderança deve ser visionária e inovadora, capaz de guiar a equipe rumo ao sucesso, sempre buscando novas soluções e oportunidades.',
   },
   {
-    imgSrc: '/palestra5.png',
+    imgSrc: '/treinamento5.png',
     alt: 'cultura',
     title: 'PROMOVA UMA CULTURA DE APRENDIZADO CONTÍNUO',
     text: 'Estabelecer uma cultura onde o aprendizado contínuo é incentivado e recompensado pode transformar sua organização. Contribuindo para a inovação e crescimento organizacional a longo prazo.',
   },
   {
-    imgSrc: '/palestra6.png',
-    alt: 'conformidade-riscos',
+    imgSrc: '/treinamento6.png',
+    alt: 'conformidade',
     title: 'GARANTA A CONFORMIDADE E REDUZA RISCOS',
     text: 'Treinamentos de conformidade são cruciais para garantir que todos os funcionários entendam as normas e regulamentos da indústria, dentro da conformidade com as leis.',
   },

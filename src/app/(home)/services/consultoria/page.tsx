@@ -5,38 +5,38 @@ import styles from './Page.module.css'
 
 const cardContent = [
   {
-    imgSrc: '/palestra1.png',
+    imgSrc: '/consultoria1.png',
     alt: 'servicos',
     title: 'TRANSFORME SEU NEGÓCIO COM NOSSOS SERVIÇOS',
     text: 'Nossa consultoria oferece soluções personalizadas para cada desafio, garantindo resultados concretos e duradouro. Nossa empresa leva seu negócio a novos patamares',
   },
   {
-    imgSrc: '/palestra2.png',
+    imgSrc: '/consultoria2.png',
     alt: 'estrategia-sucesso',
     title: 'ESTRATÉGIAS INOVADORAS PARA O SUCESSO',
     text: 'Investir em programas de desenvolvimento de liderança cultiva futuros líderes dentro da sua organização, motivando equipes, a melhorar na comunicação e promove um ambiente de trabalho positivo.',
   },
   {
-    imgSrc: '/palestra3.png',
+    imgSrc: '/consultoria3.png',
     alt: 'solucoes',
     title: 'SOLUÇÕES PERSONALIZADAS PARA SEUS DESAFIOS',
     text: 'Cada empresa é única, e nossas soluções também são. Trabalhamos de perto com você para entender suas necessidades e criar soluções sob medida que impulsionam o crescimento e a eficiência.',
   },
   {
-    imgSrc: '/palestra4.png',
+    imgSrc: '/consultoria4.png',
     alt: 'otimizacao',
     title: 'OTIMIZE SEUS RECURSOS COM NOSSOS EXPERTOS',
     text: 'Maximize o potencial dos seus recursos com a orientação dos nossos especialistas que oferece insights valiosos para aprimorar o uso de recursos e sua empresa alcançar melhores resultados.',
   },
   {
-    imgSrc: '/palestra5.png',
-    alt: 'cultura',
+    imgSrc: '/consultoria5.png',
+    alt: 'inovacao',
     title: 'INOVAÇÃO E CRESCIMENTO A LONGO PRAZO',
     text: 'Invista em inovação, pois nossa equipe está comprometida em fornecer soluções que não apenas resolvem problemas imediatos, mas também promovem um crescimento consistente a longo prazo..',
   },
   {
-    imgSrc: '/palestra6.png',
-    alt: 'conformidade-riscos',
+    imgSrc: '/consultoria6.png',
+    alt: 'expertise-resultados',
     title: 'EXPERTISE E RESULTADOS QUE FAZEM A DIFERENÇA',
     text: 'Confie em nossa experiência com consultores de alto nível que oferecem conhecimento aprofundado e soluções eficazes que geram resultados tangíveis.',
   },
