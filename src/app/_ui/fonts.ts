@@ -1,4 +1,4 @@
-import { Inter, Lora, Montserrat } from 'next/font/google'
+import { Bebas_Neue, Inter, Lora, Montserrat } from 'next/font/google'
 
 export const inter = Inter({ subsets: ['latin'] })
 export const montserrat = Montserrat({
@@ -8,5 +8,10 @@ export const montserrat = Montserrat({
 
 export const lora = Lora({
   weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+})
+
+export const bebasNeue = Bebas_Neue({
+  weight: ['400'],
   subsets: ['latin'],
 })

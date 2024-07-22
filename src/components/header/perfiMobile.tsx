@@ -11,7 +11,7 @@ export const Perfil = () => {
 
   return (
     <div
-      className={`mb-3 flex items-center space-x-4 rounded-md border p-4 ${!data?.user && 'bg-black'}`}
+      className={`mb-3 flex items-center space-x-4 rounded-md border p-4 ${!data?.user && 'border-none bg-[--bg-highlight]'}`}
     >
       {data?.user ? (
         <>

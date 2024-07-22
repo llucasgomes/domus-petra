@@ -1,10 +1,28 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { MenuMobile } from './menuMobile'
 import { NavHeader } from './nav'
 
 export const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <header className="flex h-20 w-full items-center justify-between bg-black px-6">
+    <header
+      className={`fixed top-0 z-10 flex h-20 w-full items-center justify-between gap-6 px-8 transition-colors duration-300 ${isScrolled ? 'bg-[--bg-highlight]' : 'bg-transparent'}`}
+    >
       <Image
         src={'/logoHorizontalWhite.png'}
         alt="Logo Domus Petra"

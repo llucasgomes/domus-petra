@@ -1,10 +1,10 @@
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import AuthProvider from '@/providers/auth'
 import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
 import { montserrat } from './_ui/fonts'
 import './globals.css'
-import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
   title: 'Domus Petra',
@@ -68,7 +68,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AuthProvider>
-        <body className={`${montserrat.className} antialiased`}>
+        <body
+          className={`${montserrat.className} bg-[-bg-primary] antialiased`}
+        >
           <ThemeProvider
             attribute="class"
             defaultTheme="light"

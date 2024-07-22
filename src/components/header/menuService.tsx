@@ -15,7 +15,7 @@ export const MenuService = () => {
           <NavigationMenuTrigger className="bg-transparent text-base text-white hover:bg-transparent hover:text-white focus:bg-transparent data-[state=open]:bg-transparent data-[active]:text-white data-[state=open]:text-white">
             Serviços
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="grid w-[150px] gap-3 bg-black p-3 md:w-[150px] md:grid-cols-1 lg:w-[150px]">
+          <NavigationMenuContent className="grid w-[150px] gap-3 bg-[--bg-highlight] p-3 md:w-[150px] md:grid-cols-1 lg:w-[150px]">
             <Link
               href={'/services/consultoria'}
               className="block cursor-pointer select-none space-y-1 rounded-md p-3 leading-none text-white no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
