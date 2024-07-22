@@ -60,10 +60,20 @@ export const FormEmail = () => {
       message: '',
     },
   })
-
+  // Defina seu Handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const { email, name, phone, message } = values
-    console.log(email, name, phone, message)
+    await fetch(`http://localhost:3000/api/resend`, {
+      method: 'POST',
+      body: JSON.stringify(values),
+    })
+      .then((res) => {
+        console.log(res)
+
+        form.reset()
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
