@@ -52,7 +52,7 @@ export const MenuMobile = () => {
           color="#ffffff"
         />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="bg-[--bg-highlight]">
         <SheetHeader>
           <Perfil />
         </SheetHeader>
@@ -82,7 +82,7 @@ const RouteLink = ({ name, route }: RouteLinkProps) => {
     <SheetClose asChild>
       <Link
         href={route}
-        className="w-full cursor-pointer rounded-sm bg-red-300 px-4 py-3 dark:text-white"
+        className="w-full cursor-pointer rounded-sm bg-[--bg-secundary] px-4 py-3"
       >
         {name}
       </Link>

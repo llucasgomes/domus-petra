@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/carousel'
 import { CommentUser } from './comment'
 
+import { depoimentos } from '@/lib/data'
 import Autoplay from 'embla-carousel-autoplay'
 
 export const CarroselComments = () => {
@@ -22,18 +23,14 @@ export const CarroselComments = () => {
       ]}
     >
       <CarouselContent>
-        <CarouselItem className="flex aspect-square items-center justify-center">
-          <CommentUser />
-        </CarouselItem>
-        <CarouselItem className="flex aspect-square items-center justify-center">
-          <CommentUser />
-        </CarouselItem>
-        <CarouselItem className="flex aspect-square items-center justify-center">
-          <CommentUser />
-        </CarouselItem>
-        <CarouselItem className="flex aspect-square items-center justify-center">
-          <CommentUser />
-        </CarouselItem>
+        {depoimentos.map((depo) => (
+          <CarouselItem
+            key={depo.empresa}
+            className="flex aspect-square items-center justify-center"
+          >
+            <CommentUser data={depo} />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious className="hidden sm:block" />
       <CarouselNext className="hidden sm:block" />
