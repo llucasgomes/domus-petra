@@ -18,7 +18,7 @@ export const CarroselComments = () => {
       className="h-auto w-full"
       plugins={[
         Autoplay({
-          delay: 3000,
+          delay: 5000,
         }),
       ]}
     >
@@ -32,8 +32,8 @@ export const CarroselComments = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden sm:block" />
-      <CarouselNext className="hidden sm:block" />
+      <CarouselPrevious className="hidden sm:flex md:hidden lg:hidden" />
+      <CarouselNext className="hidden sm:flex md:hidden lg:hidden" />
     </Carousel>
   )
 }
