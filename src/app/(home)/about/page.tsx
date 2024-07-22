@@ -5,7 +5,7 @@ import styles from './Page.module.css'
 export default function Page() {
   return (
     <>
-      <section className={styles.section}>
+      <section className={`${styles.section} mt-20`}>
         <div className={styles.container}>
           <h2 className={styles.title}>DOMUS PETRA</h2>
           <div className={styles.content}>
