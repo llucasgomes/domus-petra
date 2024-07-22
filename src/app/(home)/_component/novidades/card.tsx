@@ -18,10 +18,10 @@ type CardNovidadeBlogProps = {
   assunto: string
   autor: string
   data_post: string
-  video_youtube?: undefined
+  video_youtube?: string
 }
 
-export const CardNovidadeBlog = ({ data }: { data: CardNovidadeBlogProps }) => {
+export const CardNovidadeBlog = ({ post }: { post: CardNovidadeBlogProps }) => {
   return (
     <Card className="relative h-[450px] min-w-56 max-w-96 p-0">
       <Badge
@@ -34,7 +34,7 @@ export const CardNovidadeBlog = ({ data }: { data: CardNovidadeBlogProps }) => {
       </Badge>
       <CardHeader className="h-52 w-full p-3">
         <Image
-          src={data.capa_image}
+          src={post.capa_image}
           width={150}
           height={150}
           alt="adsad"
@@ -42,8 +42,8 @@ export const CardNovidadeBlog = ({ data }: { data: CardNovidadeBlogProps }) => {
         />
       </CardHeader>
       <CardContent className="flex flex-col gap-4 p-3">
-        <CardTitle>{data.title}</CardTitle>
-        <CardDescription>{data.subtitle.slice(0, 170)}...</CardDescription>
+        <CardTitle>{post.title}</CardTitle>
+        <CardDescription>{post.subtitle.slice(0, 170)}...</CardDescription>
       </CardContent>
       <CardFooter className="justify-end">
         <Link href={'/'} className="text-right font-semibold uppercase">

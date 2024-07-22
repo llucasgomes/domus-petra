@@ -28,7 +28,7 @@ export const CarroselNovidades = () => {
             key={post.id}
             className="flex aspect-square items-center justify-center"
           >
-            <CardNovidadeBlog key={post.id} data={post} />
+            <CardNovidadeBlog key={post.id} post={post} />
           </CarouselItem>
         ))}
       </CarouselContent>
