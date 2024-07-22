@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { bebasNeue } from '../_ui/fonts'
 import { CarroselComments } from './_component/carrosel'
+import { CarroselNovidades } from './_component/novidades/carrosel'
 
 export default function Home() {
   return (
@@ -224,10 +225,9 @@ export default function Home() {
           <p className="text-left text-lg text-white">
             Receba novidades, conheça as melhores práticas e muito mais.
           </p>
-          <p className="text-left text-lg text-white">Acesse nosso Blog...</p>
         </div>
         <div className="flex w-full max-w-6xl items-center justify-center py-5 sm:max-h-[500px] sm:py-3 lg:max-w-[600px]">
-          <CarroselComments />
+          <CarroselNovidades />
         </div>
       </section>
       {/* SECTION DEPOIMENTOS */}

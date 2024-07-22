@@ -6,12 +6,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import { CommentUser } from './comment'
 
-import { depoimentos } from '@/lib/data'
+import { blog } from '@/lib/data'
 import Autoplay from 'embla-carousel-autoplay'
+import { CardNovidadeBlog } from './card'
 
-export const CarroselComments = () => {
+export const CarroselNovidades = () => {
   return (
     <Carousel
       orientation="horizontal"
@@ -23,17 +23,17 @@ export const CarroselComments = () => {
       ]}
     >
       <CarouselContent>
-        {depoimentos.map((depo) => (
+        {blog.map((post) => (
           <CarouselItem
-            key={depo.empresa}
+            key={post.id}
             className="flex aspect-square items-center justify-center"
           >
-            <CommentUser data={depo} />
+            <CardNovidadeBlog key={post.id} data={post} />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden sm:flex md:hidden lg:hidden" />
-      <CarouselNext className="hidden sm:flex md:hidden lg:hidden" />
+      <CarouselPrevious className="hidden sm:flex md:hidden lg:flex" />
+      <CarouselNext className="hidden sm:flex md:hidden lg:flex" />
     </Carousel>
   )
 }
