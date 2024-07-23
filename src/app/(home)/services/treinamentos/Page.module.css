@@ -1,0 +1,212 @@
+.section {
+    background-color: #f1f1f1;
+}
+
+.title {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to right,
+        #020408,
+        #365475
+      ); /* Gradiente de laranja para amarelo */
+      -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
+      color: transparent; /* Tornar o texto transparente para mostrar o gradiente */
+      text-shadow: 4px 4px 8px rgba(77, 140, 227, 0.5); /* Adicionar sombreamento preto */
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 3px; /* Ajuste o valor conforme necessário */
+    line-height: 1.5;
+}
+
+.subtitle span {
+    color: #5981B1;
+    text-decoration: underline;
+  }
+
+  /* Efeito de hover (opcional) */
+  .card:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    cursor: pointer;
+  }
+
+/* Fundo branco para a section com título e subtítulo em desktop */
+@media (min-width: 1025px) {
+    .titleSection {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cardsSection {
+        /* background-color: #e0f7fa;  */
+        background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnRuZndyMGYwa3FoNGU0bzM3Yjg1dWszejgxMHhnN3Y5NHpzYjhlayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GuDbydhKJTrS3KSgd2/giphy.gif); 
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);        
+        width: 100%;
+        max-width: 380px; /* Ajuste conforme necessário */
+        height: 620px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 30px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;        
+    }
+
+    .card h2 {
+        background-color: #fff;
+        padding: 10px;
+        margin-top: 30px;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .card p {
+        background-color: #fff;
+        padding: 1px;
+        width: 100%;      
+    }
+
+    .cardsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Distribui os cards em 3 colunas */
+        gap: 20px;
+        justify-items: center; /* Centraliza os itens horizontalmente */
+        margin: 0 auto; /* Centraliza a grid na tela */
+        max-width: 1600px; /* Limita a largura máxima da grid conforme necessário */
+    }
+
+    /* Exibir apenas 6 cards no desktop */
+    .card:nth-child(n+7) {
+        display: none;
+    }
+}
+
+/* Fundo branco para a section com título e subtítulo em iPad e MacBook */
+@media (min-width: 820px) and (max-width: 1024px) {
+    .titleSection {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cardsSection {
+        background-color: #e0f7fa; /* Fundo azul */
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px; /* Ajuste conforme necessário */
+        height: 617px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card h2,
+    .card p {
+        background-color: #fff;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Ajusta para centralizar os cards */
+        gap: 20px;
+    }
+}
+
+/* Remove o título e subtítulo no mobile */
+@media (max-width: 768px) {
+    .titleSection {
+        display: none;
+    }
+
+    .cardsSection {
+         background-color: #d9d9d9; /* Fundo alterado para mobile */          
+        /* background-image: url(https://i.gifer.com/JDTA.gif);  */
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px; /* Ajuste conforme necessário */
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 30px auto; /* Centraliza os cards */
+    }
+
+    .card img {
+        width: 100%;
+        height: 40%;
+    }
+
+    .card h2 {
+        margin-top: 30px;
+        font-weight: bold;
+
+    }
+    .card p {
+        background-color: #fff;
+        padding: 1px;
+        width: 100%;
+    }
+
+    .cardsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+      /* Exibir apenas os cards 3, 4 e 6 no mobile */
+      .card {
+        display: none;
+    }
+
+    .card1, .card2, .card3 {
+        display: flex;
+    }
+}
