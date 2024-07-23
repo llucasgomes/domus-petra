@@ -97,7 +97,7 @@ Em nosso canal compartilharemos uma série de vídeos, apresentando em tópicos 
   },
 ]
 
-export const servicos = [
+export const palestras = [
   {
     id: '01',
     category: 'palestras',
