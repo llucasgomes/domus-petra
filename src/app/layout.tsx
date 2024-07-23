@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: 'Domus Petra',
     images: [
       {
-        url: '/logoOpenGraph.png'
+        url: '/logo/logoOpenGraph.png'
       }
     ],
     locale: 'pt-BR'
