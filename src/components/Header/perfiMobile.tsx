@@ -35,7 +35,7 @@ export const Perfil = () => {
       ) : (
         <div className="flex h-full w-full items-center justify-center">
           <Image
-            src={'/logoHorizontalWhite.png'}
+            src={'/logo/logoHorizontalWhite.png'}
             alt="Logo Domus Petra"
             width={150}
             height={95}
