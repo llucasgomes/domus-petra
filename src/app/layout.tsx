@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import AuthProvider from '@/providers/auth'
 import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
 import { montserrat } from './_ui/fonts'
@@ -66,18 +67,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-Br">
-      <body className={`${montserrat.className} bg-[-bg-primary] antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+      <AuthProvider>
+        <body
+          className={`${montserrat.className} bg-[-bg-primary] antialiased`}
         >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </AuthProvider>
     </html>
   )
 }
