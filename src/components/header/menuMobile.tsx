@@ -21,16 +21,8 @@ const routes = [
     route: '/blog',
   },
   {
-    name: 'Palestras',
-    route: '/services/palestras',
-  },
-  {
-    name: 'Consultoria',
-    route: '/services/consultoria',
-  },
-  {
-    name: 'Treinamentos',
-    route: '/services/treinamentos',
+    name: 'Serviços',
+    route: '/services',
   },
   {
     name: 'Contatos',

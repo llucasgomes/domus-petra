@@ -32,7 +32,7 @@ export default function Page() {
       </section>
       <section>
         <Tabs defaultValue="palestras">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="w-full">
             <TabsTrigger className="text-base" value="consultorias">
               Consultorias
             </TabsTrigger>
