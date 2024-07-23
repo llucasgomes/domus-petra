@@ -31,8 +31,7 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope":"off", //ja foi atualiszado ja vem como padrao
-    "react/prop-types":"off"
+    "react/react-in-jsx-scope":"off", //ja foi atualizado ja vem como padrao
+    "react/prop-types":"off"  
   }
-
 }

@@ -24,3 +24,15 @@ Instalação das dependências necessárias para suporte a ESLint, Prettier e pl
 5. **Husky + Lint-staged**
    - Utilização de githooks para execução automática de linting (ESLint) e formatação (Prettier) antes de confirmar mudanças, garantindo consistência no código fonte.
 
+6. **PrismaORM**
+   - Prisma é um ORM (Object-Relational Mapping) moderno e poderoso para Node.js e TypeScript, utilizado principalmente para trabalhar com bancos de dados relacionais. Ele oferece uma abstração de banco de dados que simplifica o acesso e a manipulação de dados, permitindo aos desenvolvedores interagir com o banco de dados através de uma interface de programação simples e intuitiva, usando tipos de dados e consultas em um estilo declarativo.
+
+7. **NextAuth.js**
+   - NextAuth.js é uma biblioteca de autenticação para Next.js, uma estrutura popular de React para desenvolvimento de aplicações web. Ele simplifica a adição de autenticação em seus aplicativos Next.js, oferecendo suporte para vários provedores de autenticação, como Google, Facebook, GitHub, entre outros, além de permitir autenticação própria (self-hosted authentication).
+
+8. **Instalando a biblioteca React-Icons**
+```
+npm install react-icons
+```
+
+

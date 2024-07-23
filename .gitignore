@@ -28,9 +28,18 @@ yarn-error.log*
 # local env files
 .env*.local
 
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+<<<<<<< HEAD
+# não ira subir
+=======
+#nao ira subir
+>>>>>>> 92dceec4994c7089a91ffd51ac9557e9fb4c7fe3
+.prettierrc.json
+.vscode

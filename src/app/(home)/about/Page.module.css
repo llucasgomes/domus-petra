@@ -1,0 +1,115 @@
+.section {
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row; /* Flex para desktop */
+    align-items: center;
+  }
+  
+  .image {
+    margin-left: 20px; /* Margem à esquerda para desktop */
+    order: 2; /* A imagem será o segundo elemento */
+    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+    transition: transform 0.2s; /* Efeito de transição */
+  }
+
+  /* Efeito de hover (opcional) */
+  .image:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  .leftImage {
+    margin-right: 20px; /* Margem à esquerda para desktop */
+    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+    transition: transform 0.2s; /* Efeito de transição */
+    order: 1; /* A imagem será o primeiro elemento */
+  }
+
+   /* Efeito de hover (opcional) */
+   .leftImage:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  .rightParagraph {
+    order: 2; /* O parágrafo será o primeiro elemento */
+  }
+  
+  .imageMobile {
+    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+    transition: transform 0.2s; /* Efeito de transição */
+    display: none; /* Esconde a imagem mobile por padrão */
+  }
+
+   /* Efeito de hover (opcional) */
+   .imageMobile:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  .paragraph {
+    flex: 1; /* Permite que o parágrafo ocupe o espaço restante */
+    order: 1; /* O parágrafo será o primeiro elemento */
+  }
+  
+  .backroundSection {
+    background-color: #d9d9d9;
+  }
+
+  /* Estilo para mobile */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column; /* Coloca a imagem acima do parágrafo no mobile */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+  
+    .image {
+      margin-left: 0; /* Remove margem no mobile */
+      margin-bottom: 10px; /* Adiciona espaço entre a imagem e o parágrafo */
+      order: 0; /* A imagem permanece acima no mobile */
+    }
+  
+    .imageMobile {
+      display: block; /* Mostra a imagem mobile no mobile */
+      margin-bottom: 10px; /* Espaço abaixo da imagem mobile */
+    }
+  
+    .paragraph {
+      margin-top: 0; /* Ajusta espaço acima do parágrafo, se necessário */
+      order: 1; /* O parágrafo permanece abaixo no mobile */
+    }    
+  }
+  
+  /* Estilo para iPad e MacBook */
+  @media (min-width: 820px) and (max-width: 1024px) {
+    .image {
+      order: 2; /* A imagem será o segundo elemento */
+    }
+
+    .leftImage {
+      order: 1; /* A imagem será o primeiro elemento */
+    }
+  
+    .paragraph {
+      order: 1; /* O parágrafo será o primeiro elemento */
+    }
+  
+    .imageMobile {
+      display: none; /* Mantém a imagem mobile escondida */
+    }
+  }
+  

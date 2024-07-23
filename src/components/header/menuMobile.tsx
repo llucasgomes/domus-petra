@@ -1,16 +1,38 @@
-'use client'
-
 import { Menu } from 'lucide-react'
+import Link from 'next/link'
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '../ui/sheet'
+import { LogIn } from './auth'
+import { Perfil } from './perfiMobile'
+
+const routes = [
+  {
+    name: 'Home',
+    route: '/',
+  },
+  {
+    name: 'Blog',
+    route: '/blog',
+  },
+  {
+    name: 'Serviços',
+    route: '/services',
+  },
+  {
+    name: 'Contatos',
+    route: '/contacts',
+  },
+  {
+    name: 'Sobre',
+    route: '/about',
+  },
+]
 
 export const MenuMobile = () => {
   return (
@@ -22,20 +44,40 @@ export const MenuMobile = () => {
           color="#ffffff"
         />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="bg-[--bg-highlight]">
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when youre done.
-          </SheetDescription>
+          <Perfil />
         </SheetHeader>
-
         <SheetFooter>
-          <SheetClose asChild>
-            <p>Footer</p>
-          </SheetClose>
+          <nav>
+            <ul className="flex w-full list-none flex-col gap-3">
+              {routes.map(({ name, route }) => {
+                return <RouteLink key={route} name={name} route={route} />
+              })}
+              <SheetClose asChild>
+                <LogIn />
+              </SheetClose>
+            </ul>
+          </nav>
         </SheetFooter>
       </SheetContent>
     </Sheet>
+  )
+}
+
+type RouteLinkProps = {
+  name: string
+  route: string
+}
+const RouteLink = ({ name, route }: RouteLinkProps) => {
+  return (
+    <SheetClose asChild>
+      <Link
+        href={route}
+        className="w-full cursor-pointer rounded-sm bg-[--bg-secundary] px-4 py-3"
+      >
+        {name}
+      </Link>
+    </SheetClose>
   )
 }
