@@ -1,4 +1,5 @@
 import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
 import { montserrat } from './_ui/fonts'
@@ -72,6 +73,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
           <Footer />
         </ThemeProvider>
