@@ -1,13 +1,13 @@
 'use client'
 
-//import { useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { SheetTitle } from '../ui/sheet'
 import { LogOut } from './auth'
 
 export const Perfil = () => {
-  //const { data } = useSession()
+  const { data } = useSession()
 
   return (
     <div
