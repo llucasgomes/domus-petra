@@ -26,7 +26,7 @@ export const Header = () => {
       className={`fixed top-0 z-10 flex h-20 w-full items-center justify-between gap-6 px-8 transition-colors duration-300 ${pathname == '/' ? (isScrolled ? 'bg-[--bg-highlight]' : 'bg-transparent') : 'bg-[--bg-highlight]'}`}
     >
       <Image
-        src={'/logoHorizontalWhite.png'}
+        src={'/logo/logoHorizontalWhite.png'}
         alt="Logo Domus Petra"
         width={170}
         height={50}

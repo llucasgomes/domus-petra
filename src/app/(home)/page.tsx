@@ -26,7 +26,7 @@ export default function Home() {
           muted={true}
           loop={true}
           className="absolute -z-10 h-screen w-full object-fill brightness-50"
-          src={'/video-banner.webm'}
+          src={'/videos/video-banner.webm'}
         ></video>
       </section>
       {/* SECTION SOBRE O FABIANO */}
@@ -38,7 +38,7 @@ export default function Home() {
             </h2>
             <Image
               alt="homem de pele clara com cabelo curto e escuro, usando um terno cinza claro sobre uma camisa social azul clara. Ele está em pé, falando com um microfone de fone de ouvido preso à orelha e um controle remoto nas mãos. A expressão dele é séria e ele parece estar apresentando ou palestrando em um evento. O fundo é escuro, destacando a figura do homem."
-              src={'/profile-fabiano.png'}
+              src={'/outros/profile-fabiano.png'}
               width={400}
               height={600}
               className="rounded-md md:h-[390px]"
@@ -118,7 +118,7 @@ export default function Home() {
               className="text-md flex flex-col items-center justify-center gap-2 py-3 lg:w-full"
             >
               <Image
-                src={'/icon-consultoria.png'}
+                src={'/icons/icon-consultoria.png'}
                 alt=""
                 width={70}
                 height={70}
@@ -134,7 +134,7 @@ export default function Home() {
               className="text-md flex flex-col items-center justify-center gap-2 py-3 lg:w-full"
             >
               <Image
-                src={'/icon-palestra.png'}
+                src={'/icons/icon-palestra.png'}
                 alt=""
                 width={70}
                 height={70}
@@ -150,7 +150,7 @@ export default function Home() {
               className="text-md flex flex-col items-center justify-center gap-2 py-3 lg:w-full"
             >
               <Image
-                src={'/icon-treinamento.png'}
+                src={'/icons/icon-treinamento.png'}
                 alt=""
                 width={70}
                 height={70}
@@ -170,7 +170,7 @@ export default function Home() {
           </h2>
           <div className="flex w-full flex-wrap items-center justify-center gap-3">
             <Image
-              src={'/client-joinvalle.png'}
+              src={'/clients/client-joinvalle.png'}
               alt=""
               width={100}
               height={100}
@@ -178,35 +178,35 @@ export default function Home() {
             />
 
             <Image
-              src={'/client-thyssenkrupp.png'}
+              src={'/clients/client-thyssenkrupp.png'}
               alt=""
               width={100}
               height={100}
               className=""
             />
             <Image
-              src={'/client-sicoob.png'}
+              src={'/clients/client-sicoob.png'}
               alt=""
               width={100}
               height={100}
               className=""
             />
             <Image
-              src={'/client-santarita.png'}
+              src={'/clients/client-santarita.png'}
               alt=""
               width={100}
               height={100}
               className=""
             />
             <Image
-              src={'/client-agoraparck.png'}
+              src={'/clients/client-agoraparck.png'}
               alt=""
               width={100}
               height={100}
               className=""
             />
             <Image
-              src={'/client-acelormittal.png'}
+              src={'/clients/client-acelormittal.png'}
               alt=""
               width={100}
               height={100}
