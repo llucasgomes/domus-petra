@@ -8,7 +8,9 @@ import {
   SheetHeader,
   SheetTrigger
 } from '../ui/sheet'
+
 import { LogIn } from './auth'
+import { Perfil } from './perfiMobile'
 
 const routes = [
   {
@@ -44,7 +46,9 @@ export const MenuMobile = () => {
         />
       </SheetTrigger>
       <SheetContent className="bg-[--bg-highlight]">
-        <SheetHeader>{/* <Perfil /> */}</SheetHeader>
+        <SheetHeader>
+          <Perfil />
+        </SheetHeader>
         <SheetFooter>
           <nav>
             <ul className="flex w-full list-none flex-col gap-3">
