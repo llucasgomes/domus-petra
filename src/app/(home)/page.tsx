@@ -102,9 +102,7 @@ export default function Home() {
 
           <p className="text-left text-lg">Explore soluções para seu setor</p>
           <Link
-            href={'#'}
-            target="_blank"
-            download
+            href={'/services'}
             className="text-md mt-6 w-36 border-[1px] border-solid border-[#F8F9FA] py-2 text-center text-[#F8FAFC] hover:bg-[--bg-primary] hover:text-[#373A3C]"
           >
             Clique aqui
@@ -118,7 +116,7 @@ export default function Home() {
               className="text-md flex flex-col items-center justify-center gap-2 py-3 lg:w-full"
             >
               <Image
-                src={'/icons/icon-consultoria.png'}
+                src={'/icons/icon-consultoria.svg'}
                 alt=""
                 width={70}
                 height={70}
@@ -134,7 +132,7 @@ export default function Home() {
               className="text-md flex flex-col items-center justify-center gap-2 py-3 lg:w-full"
             >
               <Image
-                src={'/icons/icon-palestra.png'}
+                src={'/icons/icon-palestra.svg'}
                 alt=""
                 width={70}
                 height={70}
@@ -150,7 +148,7 @@ export default function Home() {
               className="text-md flex flex-col items-center justify-center gap-2 py-3 lg:w-full"
             >
               <Image
-                src={'/icons/icon-treinamento.png'}
+                src={'/icons/icon-treinamento.svg'}
                 alt=""
                 width={70}
                 height={70}
