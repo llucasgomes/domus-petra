@@ -16,9 +16,10 @@ export async function POST(req: Request) {
       react: EmailTemplate({ name, message, email, phone }),
       text: ''
     })
-
+    console.log('Email enviado')
     return NextResponse.json('Enviado')
   } catch (error) {
+    console.log('error no route', error)
     return NextResponse.json({ Error: error, teste: name })
   }
 }

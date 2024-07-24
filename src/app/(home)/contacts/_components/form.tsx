@@ -62,17 +62,17 @@ export const FormEmail = () => {
   })
   // Defina seu Handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await fetch(`https://hydra-domus-petra.vercel.app/api/resend`, {
+    await fetch(`https://hydra-domus-petra.vercel.app/api/send`, {
       method: 'POST',
       body: JSON.stringify(values)
     })
       .then((res) => {
-        console.log(res)
+        console.log('Enviando pra api: ', res)
 
         form.reset()
       })
       .catch((err) => {
-        console.log(err)
+        console.log('Form error: ', err)
       })
   }
 
