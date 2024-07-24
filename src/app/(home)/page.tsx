@@ -26,7 +26,7 @@ export default function Home() {
           muted={true}
           loop={true}
           className="absolute -z-10 h-screen w-full object-fill brightness-50"
-          src={'/videos/video-banner.webm'}
+          src={'/videos/video-banner02.webm'}
         ></video>
       </section>
       {/* SECTION SOBRE O FABIANO */}
