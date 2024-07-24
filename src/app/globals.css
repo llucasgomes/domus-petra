@@ -8,6 +8,7 @@
     --bg-secundary: hsl(0, 0%, 100%);
     --bg-tertiary: hsl(218, 11%, 65%);
     --bg-highlight: hsl(224, 64%, 33%);
+    --bg-header: #D9D9D924;
     --text-highlight: hsl(224, 79%, 22%);
     --text-primary: hsl(0, 1%, 16%);
     --text-secundary: hsl(0, 0%, 26%);
@@ -73,4 +74,15 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.custom-glass {
+  @apply  shadow-lg ;
+  
+  
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  
 }
