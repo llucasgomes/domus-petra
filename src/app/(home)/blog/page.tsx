@@ -1,10 +1,27 @@
+import { bebasNeue } from '@/app/_ui/fonts'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import Image from 'next/image'
 
 export default function Page() {
   return (
-    <main className="">
+    <main className="flex flex-col">
+      <section className="relative flex w-full flex-col items-center justify-center py-8 md:gap-8 lg:flex-row">
+        <div className="flex h-52 flex-col items-center justify-center lg:h-60">
+          <Image
+            src={'/services/bg-services.jpeg'}
+            alt="capa de fundo da imagem"
+            width={700}
+            height={700}
+            className="absolute -z-10 h-full w-full object-cover object-center brightness-50"
+          />
+          <h1
+            className={`${bebasNeue.className} flex h-28 pt-10 text-center text-4xl text-[--bg-secundary] md:text-6xl`}
+          >
+            Blog domus petra
+          </h1>
+        </div>
+      </section>
       {/* hero */}
       <section className="flex gap-5 px-16 pb-12 pt-24">
         <div className="relative flex h-[432.26px] w-[723.75px] flex-col justify-end gap-1 rounded-xl p-7 text-white">
