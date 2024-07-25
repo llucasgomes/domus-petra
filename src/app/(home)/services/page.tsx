@@ -49,7 +49,7 @@ export default function Page() {
           </TabsList>
 
           <TabsContent
-            className="flex flex-col gap-3 p-5 data-[state=inactive]:hidden"
+            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
             value="consultorias"
           >
             {consultoria.map((item) => (
@@ -65,7 +65,7 @@ export default function Page() {
             })}
           </TabsContent>
           <TabsContent
-            className="flex flex-col gap-3 p-5 data-[state=inactive]:hidden"
+            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
             value="treinamentos"
           >
             {treinamentos.map((item) => {
