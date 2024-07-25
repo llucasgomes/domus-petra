@@ -10,8 +10,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const CardItem = ({ service }) => {
+  console.log('CATEGORIA: ', service.category)
+  console.log('CID: ', service.id)
+
   return (
-    <Link href={`/${service.category}/${service.id}`}>
+    <Link href={`/services/${service.category}/${service.id}`}>
       <Card className="flex h-32">
         <CardHeader className="h-full w-[110px] p-0">
           <Image
