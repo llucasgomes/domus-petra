@@ -76,7 +76,7 @@ Resumindo, um remédio é eficaz se traz o resultado esperado, e é eficiente se
     title: 'Entrevista sobre Eficiência',
     subtitle:
       'Eficiência é a palavra de ordem no contexto atual. Aqui você acompanha a entrevista sobre esse tema.',
-    capa_image: '/blog/blog3.png',
+    capa_image: '/blog/blog3.jpg',
     video_youtube: 'https://youtu.be/dnlM5Crn_54',
     assunto: `O setor Industrial Automotivo, historicamente, é vanguarda no desenvolvimento tecnológico e em gestão de processos. As empresas japonesas em particular, têm demonstrado o ápice em eficiência, qualidade e controle de custos nesse setor.
 
@@ -101,7 +101,7 @@ export const palestras = [
   {
     id: '01',
     category: 'palestras',
-    image: '/services/service1.png',
+    image: '/services/service01.png',
     title: 'Gestão Consciente do Tempo',
     subtitle:
       'O Tempo é um dos recursos mais preciosos e escassos. A gestão consciente do tempo possibilita enormes ganhos na qualidade de vida, na eficiência da rotina do dia-a-dia, e consequentemente na melhora dos resultados de qualquer atividade.',
@@ -130,7 +130,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '02',
     category: 'palestras',
-    image: '/services/service02.png',
+    image: '/services/service02.jpg',
     title: 'Atitude Eficiente: o verdadeiro diferencial competitivo!',
     subtitle:
       'A palestra Atitude Eficiente promove uma profunda reflexão quanto a importância do comportamento do indivíduo nos resultados.',
@@ -147,7 +147,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '03',
     category: 'palestras',
-    image: '/services/service03.png',
+    image: '/services/service03.jpg',
     title:
       'O papel da inovação e do comportamento humano frente aos desafios da sustentabilidade.',
     subtitle:
@@ -168,7 +168,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '04',
     category: 'palestras',
-    image: '/services/service04.png',
+    image: '/services/service04.jpg',
     title: 'Gestão Financeira Pessoal',
     subtitle:
       'Palestra que apresenta o impacto da saúde financeira no equilíbrio da vida e na felicidade, e os caminhos para garantir o sucesso nesse aspecto da vida.',
@@ -211,7 +211,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '06',
     category: 'palestras',
-    image: '/services/service06.png',
+    image: '/services/service06.jpg',
     title: 'Excelência no Atendimento ao Cliente',
     subtitle:
       'A palestra com Excelência no Atendimento ao Cliente visa principalmente melhorar a qualidade do atendimento e consequentemente aumentar a satisfação do cliente.',
@@ -262,7 +262,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '07',
     category: 'palestras',
-    image: '/services/service07.png',
+    image: '/services/service07.jpg',
     title: 'Comportamento Seguro',
     subtitle:
       'Palestra que aborda o tema Segurança do Trabalho com ênfase na relação do comportamento humano e a atitude das pessoas em relação aos acidentes de trabalho.',
@@ -285,7 +285,7 @@ Ou ainda, envie um e-mail para: contato@domuspetra.com.br`
   {
     id: '08',
     category: 'palestras',
-    image: '/services/service08.png',
+    image: '/services/service08.jpg',
     title: 'Cliente Interno',
     subtitle:
       'Palestra sobre o tema cliente interno. Aborda a excelência no atendimento ao cliente.',
@@ -356,7 +356,7 @@ export const treinamentos = [
   {
     id: '01',
     category: 'treinamentos',
-    image: '/services/service12.jpg',
+    image: '/services/service12.png',
     title: 'Workshop Inovação Humana',
     subtitle:
       'Uma abordagem profunda sobre a mudança de comportamento e mentalidade do profissional moderno, com foco em resultados inovadores.',
@@ -397,7 +397,7 @@ Dúvidas: contato@domuspetra.com.br`
   {
     id: '02',
     category: 'treinamentos',
-    image: '/services/service13.jpg',
+    image: '/services/service13.png',
     title: 'Ferramentas da Qualidade',
     subtitle:
       'Treinamento de Ferramentas de Gestão capacita o participante a utilizar modernas técnicas para melhorar a eficiência e gestão das atividades e processos, em todas as áreas das organizações.',
@@ -424,7 +424,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '03',
     category: 'treinamentos',
-    image: '/services/service14.jpg',
+    image: '/services/service14.png',
     title: 'Solução Eficaz de Problemas!',
     subtitle:
       'O Treinamento Solução Eficaz de Problemas trabalha as metodologias e ferramentas mais consagradas na melhoria de processos e solução de problemas.',
@@ -441,7 +441,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '04',
     category: 'treinamentos',
-    image: '/services/service15.jpg',
+    image: '/services/service15.png',
     title: 'Método 8D - Solução de problemas e gestão de RNC',
     subtitle:
       'O Método 8D é destinado à solução de problemas e resposta à não-conformidades detectadas nos processos ou em clientes. É um método estruturado em oito etapas principais e e propõem soluções eficazes e abrangentes.',
@@ -498,7 +498,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '06',
     category: 'treinamentos',
-    image: '/services/service17.jpg',
+    image: '/services/service17.png',
     title: 'QC Story / MASP - Metodologia para Solução Eficaz de Problemas',
     subtitle:
       'Metodologia de Solução de Problemas e Melhoria de Processo que apresenta um passo a passo racional e eficiente na análise de causas, planejamento e tomada de ações. Baseada no PDCA, é também um método gerencial com elevado grau de eficácia.',
@@ -535,7 +535,7 @@ Para consulta de palestra in company ou reservas para os próximos eventos, entr
   {
     id: '07',
     category: 'treinamentos',
-    image: '/services/service18.jpg',
+    image: '/services/service18.png',
     title: 'Lean Leaderships',
     subtitle:
       'Liderança é fator chave no resultado das organizações. A retenção de talentos depende prioritariamente de bons líderes.',
