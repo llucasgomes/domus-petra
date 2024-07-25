@@ -25,7 +25,7 @@ export const CarroselNovidades = () => {
   return (
     <Carousel
       orientation="horizontal"
-      className="h-auto w-full"
+      className="mt-3 h-auto w-full md:hidden"
       plugins={[
         Autoplay({
           delay: 5000

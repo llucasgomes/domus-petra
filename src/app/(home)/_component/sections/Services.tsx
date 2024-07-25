@@ -14,7 +14,7 @@ import Link from 'next/link'
 
 export const Services = () => {
   return (
-    <section className="flex w-full flex-col gap-6 p-8 pt-12 text-black md:px-16 lg:flex-row">
+    <section className="flex w-full flex-col gap-6 p-8 pt-12 text-black md:flex-row md:px-16">
       <div className="flex w-full flex-col gap-6">
         <h2 className="text-left text-[22px] font-bold text-[#0C2364] md:text-2xl lg:text-3xl">
           Fortalecendo Organizações com Excelência em Consultoria e Treinamentos
@@ -37,7 +37,7 @@ export const Services = () => {
           </Link>
         </div>
       </div>
-      <div className="flex w-full max-w-6xl items-center justify-center py-5 sm:max-h-[500px] sm:py-3 lg:max-w-[370px]">
+      <div className="hidden w-full items-center justify-center py-5 sm:py-3 md:flex md:max-h-[500px] md:max-w-[370px]">
         <Carousel
           orientation="horizontal"
           className="h-auto w-full"
