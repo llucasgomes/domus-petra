@@ -14,9 +14,9 @@ import Link from 'next/link'
 
 export const Services = () => {
   return (
-    <section className="flex w-full flex-col gap-6 bg-[--bg-highlight] p-8 text-white md:px-16 lg:flex-row">
+    <section className="flex w-full flex-col gap-6 p-8 pt-12 text-black md:px-16 lg:flex-row">
       <div className="flex w-full flex-col gap-6">
-        <h2 className="text-left text-[22px] font-bold md:text-2xl lg:text-3xl">
+        <h2 className="text-left text-[22px] font-bold text-[#0C2364] md:text-2xl lg:text-3xl">
           Fortalecendo Organizações com Excelência em Consultoria e Treinamentos
         </h2>
 
@@ -28,10 +28,10 @@ export const Services = () => {
         </p>
 
         <p className="text-left text-lg">Explore soluções para seu setor</p>
-        <div className="flex w-full justify-end pr-14">
+        <div className="flex w-full justify-start pr-14">
           <Link
             href={'/services'}
-            className="text-md mt-6 w-36 border-[1px] border-solid border-[#F8F9FA] py-2 text-center text-[#F8FAFC] hover:bg-[--bg-primary] hover:text-[#373A3C]"
+            className="text-md mt-6 w-36 border-[1px] border-solid border-black py-2 text-center text-black hover:bg-[#567CAB] hover:text-white"
           >
             Clique aqui
           </Link>

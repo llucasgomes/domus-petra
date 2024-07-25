@@ -1,5 +1,13 @@
 import Image from 'next/image'
 
+export const clientes = [
+  '/clients/client-joinvalle.png',
+  '/clients/client-thyssenkrupp.png',
+  '/clients/client-sicoob.png',
+  '/clients/client-agoraparck.png',
+  '/clients/client-acelormittal.png',
+  '/clients/client-santarita.png'
+]
 export const Clientes = () => {
   return (
     <section className="flex w-full flex-col items-center justify-center p-8 md:px-16">
@@ -8,49 +16,18 @@ export const Clientes = () => {
           Conectando o Mundo: Escolha Domus Petra para o seu Sucesso Empresarial
         </h2>
         <div className="flex w-full flex-wrap items-center justify-center gap-3">
-          <Image
-            src={'/clients/client-joinvalle.png'}
-            alt=""
-            width={100}
-            height={100}
-            className=""
-          />
-
-          <Image
-            src={'/clients/client-thyssenkrupp.png'}
-            alt=""
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={'/clients/client-sicoob.png'}
-            alt=""
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={'/clients/client-santarita.png'}
-            alt=""
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={'/clients/client-agoraparck.png'}
-            alt=""
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={'/clients/client-acelormittal.png'}
-            alt=""
-            width={100}
-            height={100}
-            className=""
-          />
+          {clientes.map((cliente) => {
+            return (
+              <Image
+                key={cliente}
+                src={cliente}
+                alt=""
+                width={100}
+                height={100}
+                className=""
+              />
+            )
+          })}
         </div>
       </div>
     </section>
