@@ -11,7 +11,7 @@ export default function Page() {
       <section className="relative flex w-full flex-col items-center justify-center py-8 md:gap-8 lg:flex-row">
         <div className="flex h-52 flex-col items-center justify-center lg:h-60">
           <Image
-            src={'/services/capa01.jpg'}
+            src={'/services/bg-services.jpeg'}
             alt="capa de fundo da imagem"
             width={700}
             height={700}
