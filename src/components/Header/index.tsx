@@ -22,7 +22,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-10 flex h-24 w-full items-center justify-center transition-colors duration-300 ${pathname == '/' || pathname == '/services' || pathname == '/services/' ? (isScrolled ? 'bg-[--bg-header]' : 'bg-transparent') : 'bg-[--bg-header]'}`}
+      className={`fixed top-0 z-10 flex h-24 w-full items-center justify-center transition-colors duration-300 ${pathname == '/' && isScrolled ? 'bg-transparent' : 'bg-transparent'}`}
     >
       <div
         className={`custom-glass flex h-20 items-center justify-center rounded-full bg-[--bg-header] px-8`}
