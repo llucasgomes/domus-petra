@@ -14,10 +14,10 @@ export default function Home() {
       <FabianoSobre />
       {/* SECTION SERVIÇOS */}
       <Services />
-      {/* SECTION CLIENTES */}
-      <Clientes />
       {/* SECTION NOVIDADES */}
       <Novidades />
+      {/* SECTION CLIENTES */}
+      <Clientes />
       {/* SECTION DEPOIMENTOS */}
       <Depoimentos />
     </main>
