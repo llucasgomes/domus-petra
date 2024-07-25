@@ -9,25 +9,25 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const CardItem = ({ item: any }) => {
+export const CardItem = ({ service }) => {
   return (
-    <Link href={`/${item.category}/${item.id}`}>
+    <Link href={`/${service.category}/${service.id}`}>
       <Card className="flex h-32">
         <CardHeader className="h-full w-[110px] p-0">
           <Image
-            src={item.image}
+            src={service.image}
             width={300}
             height={300}
-            alt={item.subtitle}
+            alt={service.subtitle}
             className="h-full w-full rounded-bl-md rounded-tl-md object-cover object-center"
           />
         </CardHeader>
         <CardContent className="flex flex-col items-center justify-start gap-2 pt-1">
           <CardTitle className="max-w-[220px] text-left text-base">
-            {item.title}
+            {service.title}
           </CardTitle>
           <CardDescription className="max-w-[220px] text-left text-sm">
-            {item.subtitle.slice(0, 70)}...
+            {service.subtitle.slice(0, 70)}...
           </CardDescription>
         </CardContent>
       </Card>
