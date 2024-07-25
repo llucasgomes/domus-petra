@@ -125,7 +125,7 @@ Alguns dos temas abordados:
 
 
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '02',
@@ -140,7 +140,7 @@ A palestra Atitude Eficiente traz à tona a relevante influência do comportamen
 
 Essa palestra é dinâmica, cativante e apresenta de forma agradável um rico conteúdo totalmente capaz de mobilizar sua equipe.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br
+.
 
 `
   },
@@ -162,7 +162,7 @@ Sustentabilidade abrange questões sociais, energéticas, econômicas, ambientai
 
 Essa palestra apresenta o tema Sustentabilidade de forma ampla, abordando os aspectos sociais, econômicos e ambientais. E promove uma reflexão apresentando novos horizontes e perspectivas.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br
+.
 `
   },
   {
@@ -186,7 +186,7 @@ Temas abordados:
 
 - Como começar: sugestões e possíveis caminhos para o estabelecimento da Saúde Financeira no curto prazo, mediante o cenário macroeconômico atual.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br
+.
 `
   },
   {
@@ -206,7 +206,7 @@ Principais temas abordados:
 - Leis, regras e procedimentos: abordagem sobre procedimentos, boas práticas e atitudes preventivas;
 - Trânsito e a bebida: choque de realidade quanto a dirigir alcoolizado.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '06',
@@ -238,7 +238,7 @@ Os principais temas abordados na palestra são:
 
 A palestra poderá ser personalizada de modo a atender exatamente a necessidade do da empresa no momento.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.brr`
+.r`
   },
   {
     id: '05',
@@ -257,7 +257,7 @@ Principais temas abordados:
 - Leis, regras e procedimentos: abordagem sobre procedimentos, boas práticas e atitudes preventivas;
 - Trânsito e a bebida: choque de realidade quanto a dirigir alcoolizado.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '07',
@@ -419,7 +419,7 @@ O treinamento aborda as seguintes ferramentas:
 - Poka-yoke
 - Brainstorming
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '03',
@@ -436,7 +436,7 @@ A eficácia do aprendizado e o retorno do investimento é garantido pela aplica�
 
 Melhore a produtividade e eficiência da sua empresa e solucione os problemas de uma única vez.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '04',
@@ -463,7 +463,7 @@ O treinamento contempla as seguintes etapas:
 
 Duração: 12 horas
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '05',
@@ -493,7 +493,7 @@ Todo o treinamento é conduzido de maneira participativa, com dinâmicas e lingu
 
 Duração: 8 horas
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br`
+.`
   },
   {
     id: '06',
@@ -528,7 +528,7 @@ Principais ganhos proporcionados pela Metodologia:
 
 - Resolução de não-conformidades e reclamações de clientes.
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br
+.
 
 `
   },
@@ -557,7 +557,7 @@ Gestão matricial e trabalho em equipe.
 Ferramentas administrativas e de gestão.
 Carga horária: 16 horas
 
-Para consulta de palestra in company ou reservas para os próximos eventos, entre em contato pelo telefone (47) 997071177 ou pelo email contato@domuspetra.com.br
+.
 
 `
   }
