@@ -17,9 +17,9 @@ export const Depoimentos = () => {
         src={'/outros/bg-depoimentos.png'}
         width={580}
         height={580}
-        className="absolute -z-10 h-full w-full"
+        className="absolute -z-10 h-full w-full object-cover object-top"
       />
-      <div className="absolute inset-0 -z-[9] bg-[#3E5A7D] bg-opacity-15 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 -z-[9] bg-[#3E5A7D] bg-opacity-80"></div>
     </section>
   )
 }
