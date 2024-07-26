@@ -3,7 +3,7 @@ import { CarouselSpacing, CarroselNovidades } from '../novidades/carrosel'
 
 export const Novidades = () => {
   return (
-    <section className="to-89% flex w-full flex-col items-start justify-start gap-3 bg-gradient-to-b from-[#3C5778] from-0% to-[#567CAB] p-8 lg:px-16">
+    <section className="to-89% flex w-full flex-col items-start justify-start gap-3 bg-gradient-to-b from-[#3C5778] from-0% to-[#567CAB] to-100% p-8 lg:px-16">
       <div className="flex h-full w-full flex-col justify-start gap-5 pt-8">
         <h2 className="text-left text-[22px] font-bold text-white lg:text-3xl">
           Novidades na Domus
