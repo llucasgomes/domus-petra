@@ -16,8 +16,8 @@ type DepoimentoProps = {
 }
 export const CommentUser = ({ data }: { data: DepoimentoProps }) => {
   return (
-    <blockquote className="max-w-[450px]">
-      <Card className="relative border-none bg-transparent">
+    <blockquote className="max-w-[450px] rounded-xl border-transparent">
+      <Card className="relative flex h-[500px] flex-col justify-between border-transparent bg-transparent">
         <CardHeader className="flex w-full flex-row items-center justify-between gap-3">
           <cite className="flex flex-1 flex-col items-end gap-1">
             <CardTitle className="text-left text-lg font-bold leading-none text-black">
@@ -40,7 +40,7 @@ export const CommentUser = ({ data }: { data: DepoimentoProps }) => {
             {data.empresa}
           </p>
         </CardFooter>
-        <div className="absolute left-0 top-0 -z-10 h-full w-full bg-[#577DAC] drop-shadow-2xl"></div>
+        <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-xl bg-[#577DAC] drop-shadow-2xl"></div>
         <Image
           alt=""
           src={'/outros/Vector.png'}
