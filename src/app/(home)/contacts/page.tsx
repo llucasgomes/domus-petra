@@ -1,5 +1,4 @@
-import { bebasNeue, lora } from '@/app/_ui/fonts'
-import { Phone } from 'lucide-react'
+import { bebasNeue } from '@/app/_ui/fonts'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FormEmail } from './_components/form'
@@ -24,28 +23,27 @@ export default function Page() {
         </div>
       </section>
       <section className="mt-20 flex w-full flex-col items-center justify-center px-8 py-8 md:gap-8 lg:flex-row lg:px-32">
-        <div className="flex flex-col gap-4 pb-4 text-[--text-primary] lg:w-2/4 lg:gap-4">
+        <div className="flex flex-col gap-4 pb-4 text-[--text-highlight] lg:w-2/4 lg:gap-4">
           <h2 className="text-3xl font-bold text-[--text-highlight]">
             Fale conosco
           </h2>
-          <p className="w-full max-w-[700px] text-left text-xl font-medium">
+          <p className="w-full max-w-[700px] text-left text-xl font-normal">
             Se você tem alguma dúvida, sugestão ou quer saber mais sobre nós,
             entre em contato
           </p>
           <div>
             <Link
               href="tel:+55 (47) 997071177"
-              className={`flex gap-5 text-lg font-bold${lora.className}`}
+              className={`flex gap-5 text-lg font-normal`}
             >
-              <Phone />
               +55 (47) 997071177
             </Link>
           </div>
-          <address className={`text-left text-lg font-bold ${lora.className}`}>
+          <address className={`text-left text-lg font-normal not-italic`}>
             Rua Tangará, 470 Bairro Iririú Joinville - SC
           </address>
           <Link
-            className={`w-[287px] text-left text-lg font-bold ${lora.className}`}
+            className={`w-[287px] text-left text-lg font-normal`}
             href={'mailto:contato@domuspetra.com.br'}
           >
             contato@domuspetra.com.br

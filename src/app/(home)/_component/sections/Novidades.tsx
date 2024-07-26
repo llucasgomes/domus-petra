@@ -3,7 +3,7 @@ import { CarouselSpacing, CarroselNovidades } from '../novidades/carrosel'
 
 export const Novidades = () => {
   return (
-    <section className="relative flex w-full flex-col items-start justify-start gap-3 p-8 pt-16 md:h-[700px] lg:h-[700px] lg:px-16 xl:h-[700px]">
+    <section className="relative flex w-full flex-col items-start justify-start gap-3 p-8 pt-16 md:h-[700px] lg:h-[700px] lg:px-16 xl:h-screen">
       <div className="hidden h-full w-full flex-col justify-start gap-5 md:hidden">
         <h2
           className={`${poppis.className} text-left text-[22px] font-black uppercase text-[#567CAB] lg:text-3xl`}
