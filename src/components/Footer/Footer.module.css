@@ -1,66 +1,127 @@
-/* Estilos para o rodapé */
 .footer {
-    background-color: #d9d9d9;
-    padding: 20px;
-    text-align: center;
-  }
-  
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.footerText {
+  margin-bottom: 200px;  /* Espaçamento entre endereço e email */
+}
+
+.footerSocials {
+  display: flex;
+  gap: 15px;
+}
+
+
+/* Responsividade para Desktop e MacBook */
+@media (min-width: 1025px) {
   .footerContainer {
-    display: flex;
-    justify-content: space-between; /* Imagem à esquerda e redes sociais à direita */
-    align-items: center;
-    margin-bottom: 10px;  
-  }
-  
-  .logo {
-    max-width: 100px; /* Ajuste conforme necessário */
-  }
-  
-  .socialMedia {
-    display: flex;
-    gap: 15px; /* Espaço entre os links */
-  }
-  
-  .socialLink {
-    text-decoration: none;
-    color: var(--bg-primary);
-    font-size: 32px; /* Tamanho dos ícones */
-  }
-  
-  .socialLink:hover {
-    color: var(--bg-secundary); 
-  }
-    
-  .copyright {
-    margin-top: 10px; /* Espaço acima do copyright */
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
   }
 
-  .copyright span {
-    color: var(--bg-secundary); 
+  .footerLeft {
+      flex-direction: column;
+      align-items: flex-start;
   }
 
-    /* Estilo para mobile */
-    @media (max-width: 768px) {
-        .footerContainer {
-            flex-direction: column; /* Coloca a imagem acima das redes sociais */
-            align-items: center; /* Centraliza os itens */
-          }
-        
-          .logo {
-            margin-bottom: 10px; /* Espaço abaixo da imagem */
-          }
-        
-          .socialMedia {
-            margin-bottom: 10px; /* Espaço abaixo das redes sociais */
-            margin-top: 20px; /* Espaço acima do copyright no mobile */
-          }
-        
-          .socialLink {
-            margin-bottom: 5px; /* Espaço abaixo de cada link social no mobile */
-          }
-          
-          .copyright {
-            margin-top: 10px; /* Espaço acima do copyright no mobile */
-          }   
-      }
-      
+  .footerRight {
+      align-items: flex-end;
+  }
+
+  .footerText {
+      margin-bottom: 20px;  /* Aumenta o espaçamento no desktop */
+  }
+}
+
+/* Responsividade para Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footerContainer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .footerLeft {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .footerRight {
+      align-items: flex-end;
+  }
+
+  .footerText {
+      margin-bottom: 15px;  /* Ajuste de espaçamento para tablets */
+  }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 767px) {
+  .footerContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footerLeft,
+  .footerRight {
+      align-items: center;
+  }
+
+  .footerSocials {
+      justify-content: center;
+  }
+
+  .footerText {
+      margin-bottom: 20px;  /* Aumenta o espaçamento entre endereço e email no mobile */
+  }
+
+  .footerSocials {
+      margin-top: 20px;  /* Aumenta o espaçamento acima das redes sociais no mobile */
+  }
+
+  .footerLeft,
+  .footerRight {
+      align-items: center;
+      margin-top: 30px;
+  }
+
+  .footerSocials {
+      justify-content: center;
+  }
+
+  .footerText {
+      margin-bottom: 10px;  /* Ajuste de espaçamento para mobile */
+  }
+
+  .text-sm {
+    margin-top: 30px;
+  }
+
+  .footerCopyright {
+    margin-top: 30px;
+  }
+}
+

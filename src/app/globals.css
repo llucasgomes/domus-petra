@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --bg-footer: #2b355a
     --bg-primary: hsl(0, 0%, 90%);
     --bg-secundary: hsl(0, 0%, 100%);
     --bg-tertiary: hsl(218, 11%, 65%);
