@@ -1,10 +1,27 @@
 /* eslint-disable prettier/prettier */
+import { bebasNeue } from '@/app/_ui/fonts'
 import Image from 'next/image'
 import styles from './Page.module.css'
 
 export default function Page() {
   return (
-    <>
+    <main>
+      <section className="relative flex w-full flex-col items-center justify-center py-8 md:gap-8 lg:flex-row">
+        <div className="flex h-52 flex-col items-center justify-center lg:h-60">
+          <Image
+            src={'/services/bg-services.jpeg'}
+            alt="capa de fundo da imagem"
+            width={700}
+            height={700}
+            className="absolute -z-10 h-full w-full object-cover object-center brightness-50"
+          />
+          <h1
+            className={`${bebasNeue.className} flex h-28 pt-10 text-center text-4xl text-[--bg-secundary] md:text-6xl`}
+          >
+            Sobre
+          </h1>
+        </div>
+      </section>
       <section className={`${styles.section} mt-20`}>
         <div className={styles.container}>
           <h2 className={styles.title}>DOMUS PETRA</h2>
@@ -106,6 +123,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   )
 }

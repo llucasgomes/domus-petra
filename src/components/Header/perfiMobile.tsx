@@ -4,7 +4,6 @@ import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { SheetTitle } from '../ui/sheet'
-import { LogOut } from './auth'
 
 export const Perfil = () => {
   const { data } = useSession()
@@ -21,16 +20,15 @@ export const Perfil = () => {
           </Avatar>
           <div className="flex-1 space-y-1">
             <SheetTitle>
-              <p className="text-left text-sm font-medium leading-none">
+              <p className="font-font-semibold text-left text-sm leading-none text-white">
                 {data.user.name!}
               </p>
             </SheetTitle>
 
-            <p className="text-left text-sm text-muted-foreground">
+            <p className="text-left text-sm font-semibold text-muted-foreground">
               {data.user.email!.split('@')[0]}
             </p>
           </div>
-          <LogOut />
         </>
       ) : (
         <div className="flex h-full w-full items-center justify-center">
