@@ -6,9 +6,9 @@ export const Hero = () => {
       <div className="flex flex-col items-center justify-center px-8 pt-10 md:items-end">
         <Image
           alt="Logo Domus Petra"
-          src={'/logo/logoHorizontalWhite.png'}
-          width={800}
-          height={800}
+          src={'/logo/logoWhite.png'}
+          width={500}
+          height={500}
           className="w-full md:h-auto"
         />
 
