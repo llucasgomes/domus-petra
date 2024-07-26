@@ -29,7 +29,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className="flex w-full flex-col p-8 pt-12 text-black md:flex-row md:px-16">
+    <section className="flex w-full flex-col items-center justify-center p-8 px-10 pt-12 text-black md:h-[700px] md:flex-row md:px-16">
       {/* <div className="flex w-full flex-col gap-6 md:hidden">
         <h2 className="text-left text-[22px] font-bold text-[#0C2364] md:text-2xl lg:text-3xl">
           Fortalecendo Organizações com Excelência em Consultoria e Treinamentos
@@ -129,7 +129,7 @@ export const Services = () => {
           return (
             <Card
               key={item.id}
-              className="flex w-full flex-col items-center gap-4 p-7 md:w-80 lg:h-[400px] lg:w-[320px] xl:w-[300px]"
+              className="flex w-full flex-col items-center gap-4 border-transparent p-7 shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:w-80 lg:h-[400px] lg:w-[320px] xl:w-[300px]"
             >
               <Image
                 src={item.image}
