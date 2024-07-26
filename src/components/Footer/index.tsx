@@ -1,8 +1,10 @@
-/* eslint-disable prettier/prettier */
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
-import styles from './Footer.module.css' // Importando o CSS
+// Importando o CSS
+import { usePathname } from 'next/navigation'
+import styles from './Footer.module.css'
 
 export const redes_sociais = [
   {
@@ -28,18 +30,25 @@ export const redes_sociais = [
 ]
 
 export const Footer = () => {
+  const pathname = usePathname()
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${pathname != '/' && 'bg-[#577DAC]'}`}>
       <div className={styles.footerContainer}>
         <div className={styles.footerLeft}>
           <Image
-            src={'/logo/logoDomus-Footer.png'}
+            src={
+              pathname != '/'
+                ? '/logo/logoWhite.png'
+                : '/logo/logoDomus-Footer.png'
+            }
             alt="Logo Domus Petra"
             width={450}
             height={95}
           />
         </div>
-        <div className={styles.footerRight}>
+        <div
+          className={`${styles.footerRight} ${pathname != '/' && 'text-white'}`}
+        >
           <p className={styles.footerText}>contato@domuspetra.com.br</p>
           <p className={styles.footerText}>47 9 9707 1177</p>
           <p className={styles.footerText}>Rua Tangará, 470 | Joinville</p>
@@ -49,7 +58,7 @@ export const Footer = () => {
                 key={item.link}
                 href={item.link}
                 target="_blank"
-                className="text-4xl text-primary hover:text-secondary"
+                className={`text-4xl text-primary ${pathname == '/' ? 'hover:text-[#567CAB]' : 'hover:text-secondary'} `}
               >
                 {item.icon}
               </Link>

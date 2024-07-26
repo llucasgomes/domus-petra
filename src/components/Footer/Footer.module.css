@@ -1,6 +1,6 @@
 .footer {
-  background-color: #fff;
-  padding: 20px;
+  padding:20px;
+  
   text-align: center;
 }
 
@@ -37,6 +37,7 @@
 /* Responsividade para Desktop e MacBook */
 @media (min-width: 1025px) {
   .footerContainer {
+    padding: 20 50px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -59,6 +60,7 @@
 /* Responsividade para Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
   .footerContainer {
+    padding: 20px 25px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
