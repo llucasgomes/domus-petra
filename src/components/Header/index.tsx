@@ -23,18 +23,28 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-10 flex h-20 w-full items-center justify-between gap-6 px-8 transition-colors duration-300 ${pathname == '/' ? (isScrolled ? 'bg-[--bg-highlight]' : 'bg-transparent') : 'bg-[--bg-highlight]'}`}
+      className={`fixed top-0 z-10 flex w-full items-center justify-center transition-colors duration-300 md:h-24 ${pathname == '/' && isScrolled ? 'bg-transparent' : 'bg-transparent'}`}
     >
-      <Image
-        src={'/logo/logoHorizontalWhite.png'}
-        alt="Logo Domus Petra"
-        width={170}
-        height={50}
-        className="h-[50px] w-[175px]"
-      />
-      <NavHeader />
-      <div className="md:hidden">
-        <MenuMobile />
+      <div
+        className={`custom-glass flex h-20 w-full items-center justify-between bg-[--bg-header] px-8 md:w-auto md:justify-center md:rounded-full`}
+      >
+        <Image
+          src={
+            pathname == '/'
+              ? isScrolled
+                ? '/logo/logoDomus-Footer.png'
+                : '/logo/logoWhite.png'
+              : '/logo/logoDomus-Footer.png'
+          }
+          alt="Logo Domus Petra"
+          width={150}
+          height={150}
+          className="md:hidden"
+        />
+        <NavHeader />
+        <div className="md:hidden">
+          <MenuMobile />
+        </div>
       </div>
     </header>
   )

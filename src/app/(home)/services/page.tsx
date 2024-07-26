@@ -1,121 +1,75 @@
 import { bebasNeue } from '@/app/_ui/fonts'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { consultoria, palestras } from '@/lib/data'
+import { consultoria, palestras, treinamentos } from '@/lib/data'
 
 import Image from 'next/image'
+import { CardItem } from './_components/carditemService'
 
 export default function Page() {
   return (
-    <main className="mt-20 flex w-full flex-col items-center justify-center">
-      <section className="relative h-36 w-screen">
-        <div className="flex h-full w-full items-center justify-center text-white">
+    <main className="flex w-full flex-col items-center justify-center">
+      <section className="relative flex w-full flex-col items-center justify-center py-8 md:gap-8 lg:flex-row">
+        <div className="flex h-52 flex-col items-center justify-center lg:h-60">
+          <Image
+            src={'/services/bg-services.jpeg'}
+            alt="capa de fundo da imagem"
+            width={700}
+            height={700}
+            className="absolute -z-10 h-full w-full object-cover object-center brightness-50"
+          />
           <h1
-            className={`${bebasNeue.className} flex h-28 text-center text-4xl text-[--bg-secundary] md:text-6xl md:leading-[70px] lg:w-1/2 lg:text-left lg:leading-[55px]`}
+            className={`${bebasNeue.className} flex h-28 pt-10 text-center text-4xl text-[--bg-secundary] md:text-6xl`}
           >
             serviços
           </h1>
         </div>
-        <Image
-          src={'/services/capa01.jpg'}
-          width={500}
-          height={500}
-          alt="teste"
-          className="absolute top-0 -z-10 h-full w-full object-cover brightness-50"
-        />
       </section>
-      <section>
+
+      <section className="w-screen">
         <Tabs defaultValue="palestras">
-          <TabsList className="w-full">
-            <TabsTrigger className="text-base" value="consultorias">
+          <TabsList className="h-24 w-full gap-3">
+            <TabsTrigger
+              className="text-lg hover:bg-[--bg-highlight] hover:text-[--bg-secundary] data-[state=active]:bg-[--bg-highlight] data-[state=active]:text-[--bg-secundary]"
+              value="consultorias"
+            >
               Consultorias
             </TabsTrigger>
-            <TabsTrigger className="text-base" value="palestras">
+            <TabsTrigger
+              className="text-lg hover:bg-[--bg-highlight] hover:text-[--bg-secundary] data-[state=active]:bg-[--bg-highlight] data-[state=active]:text-[--bg-secundary]"
+              value="palestras"
+            >
               Palestras
             </TabsTrigger>
-            <TabsTrigger className="text-base" value="treinamentos">
+            <TabsTrigger
+              className="text-lg hover:bg-[--bg-highlight] hover:text-[--bg-secundary] data-[state=active]:bg-[--bg-highlight] data-[state=active]:text-[--bg-secundary]"
+              value="treinamentos"
+            >
               Treinamentos
             </TabsTrigger>
           </TabsList>
 
           <TabsContent
-            className="flex flex-col gap-3 p-5 data-[state=inactive]:hidden"
+            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
             value="consultorias"
           >
             {consultoria.map((item) => (
-              <Card key={item.id} className="flex h-32">
-                <CardHeader className="h-full w-[110px] p-0">
-                  <Image
-                    src={item.image}
-                    width={300}
-                    height={300}
-                    alt={item.subtitle}
-                    className="h-full w-full rounded-bl-md rounded-tl-md object-cover object-center"
-                  />
-                </CardHeader>
-                <CardContent className="flex flex-col items-center justify-start gap-2 pt-1">
-                  <CardTitle className="max-w-[220px] text-left text-base">
-                    {item.title}
-                  </CardTitle>
-                  <CardDescription className="max-w-[220px] text-left text-sm">
-                    {item.subtitle.slice(0, 70)}...
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <CardItem key={item.title} service={item} />
             ))}
           </TabsContent>
           <TabsContent
-            className="flex flex-col gap-3 p-5 data-[state=inactive]:hidden"
+            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
             value="palestras"
           >
             {palestras.map((item) => {
-              return (
-                <Card key={item.id} className="mt-0 flex h-32">
-                  <CardHeader className="h-full w-[110px] p-0">
-                    <Image
-                      src={'/services/capa01.jpg'}
-                      width={300}
-                      height={300}
-                      alt="asda"
-                      className="h-full w-full rounded-bl-md rounded-tl-md object-cover object-center"
-                    />
-                  </CardHeader>
-                  <CardContent className="flex flex-col items-center justify-start gap-5 pt-1">
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                  </CardContent>
-                </Card>
-              )
+              return <CardItem key={item.title} service={item} />
             })}
           </TabsContent>
           <TabsContent
-            className="flex flex-col gap-3 p-5 data-[state=inactive]:hidden"
+            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
             value="treinamentos"
           >
-            {palestras.map((item) => {
-              return (
-                <Card key={item.id} className="flex h-32">
-                  <CardHeader className="h-full w-[110px] p-0">
-                    <Image
-                      src={'/services/capa01.jpg'}
-                      width={300}
-                      height={300}
-                      alt="asda"
-                      className="h-full w-full rounded-bl-md rounded-tl-md object-cover object-center"
-                    />
-                  </CardHeader>
-                  <CardContent className="flex flex-col items-center justify-start gap-5 pt-1">
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
-                  </CardContent>
-                </Card>
-              )
+            {treinamentos.map((item) => {
+              return <CardItem key={item.title} service={item} />
             })}
           </TabsContent>
         </Tabs>
