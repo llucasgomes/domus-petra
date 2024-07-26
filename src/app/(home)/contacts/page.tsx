@@ -59,7 +59,7 @@ export default function Page() {
           className="w-full max-w-[700px] lg:max-w-[500px]"
         />
       </section>
-      <section className="flex w-full flex-col items-center justify-center gap-8 bg-[--bg-highlight] px-8 py-8">
+      <section className="flex w-full flex-col items-center justify-center gap-8 bg-gradient-to-b from-[#3C5778] from-0% to-[#567CAB] to-100% px-8 py-8">
         <h2 className="min-w-[385px] text-center text-[28px] font-bold text-white">
           PRONTO PARA COMEÇAR?
         </h2>
