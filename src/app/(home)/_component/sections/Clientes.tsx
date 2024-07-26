@@ -18,7 +18,7 @@ export const Clientes = () => {
               <Image
                 key={cliente}
                 src={cliente}
-                alt=""
+                alt="Um dos varios clientes"
                 width={150}
                 height={150}
                 className=""
