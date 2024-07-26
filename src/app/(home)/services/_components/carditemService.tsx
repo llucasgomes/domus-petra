@@ -9,7 +9,16 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const CardItem = ({ service }) => {
+type serviceProps = {
+  id: string
+  category: string
+  image: string
+  title: string
+  subtitle: string
+  content: string
+}
+
+export const CardItem = ({ service }: { service: serviceProps }) => {
   return (
     <Link href={`/services/${service.category}/${service.id}`}>
       <Card className="flex md:max-w-[350px] md:flex-col lg:max-w-[390px]">
