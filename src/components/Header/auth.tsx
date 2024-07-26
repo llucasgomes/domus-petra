@@ -13,18 +13,18 @@ export const LogOut = () => {
 export const LogInMenuDesktop = () => {
   return (
     <Button
-      className="h-9 bg-transparent"
+      className="h-9 border-transparent bg-transparent"
       variant={'outline'}
       onClick={async () => await signIn()}
     >
-      Logar
+      Log in
     </Button>
   )
 }
 export const LogOutMenuDesktop = () => {
   return (
     <Button
-      className="h-9 bg-transparent"
+      className="h-9 border-transparent bg-transparent"
       variant={'outline'}
       onClick={async () => await signOut()}
     >
