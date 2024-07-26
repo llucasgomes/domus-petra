@@ -12,6 +12,8 @@ import {
 } from '../ui/sheet'
 
 import { useSession } from 'next-auth/react'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { LogIn, LogOut } from './auth'
 import { Perfil } from './perfiMobile'
 
@@ -40,16 +42,31 @@ const routes = [
 
 export const MenuMobile = () => {
   const { data } = useSession()
+  const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Menu
           className="border-none focus:outline-none data-[state=open]:bg-transparent"
           size={36}
-          color="#ffffff"
+          color={
+            pathname == '/' ? (isScrolled ? '#1D1F31' : '#ffffff') : '#1D1F31'
+          }
         />
       </SheetTrigger>
-      <SheetContent className="flex flex-col justify-center bg-gradient-to-b from-[#131727] from-0% via-[#2B355A] via-50% to-[#131727] to-100%">
+      <SheetContent className="flex flex-col justify-center border-[#1D1F31] bg-gradient-to-b from-[#131727] from-0% via-[#2B355A] via-50% to-[#131727] to-100%">
         <SheetHeader>
           <Perfil />
         </SheetHeader>
