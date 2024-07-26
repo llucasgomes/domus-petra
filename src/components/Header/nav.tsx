@@ -22,7 +22,10 @@ export const NavHeader = () => {
     }
   }, [])
 
-  //
+  const rafael = 'rafarz76dev@gmail.com'
+  const lucas = 'lucas.gomes.manaus@gmail.com'
+  const amanda = 'amanda.spitzner@gmail.com'
+
   return (
     <nav className="text hidden md:block">
       <ul
@@ -58,14 +61,16 @@ export const NavHeader = () => {
         >
           Sobre
         </Link>
-        {data?.user?.email === 'lucas.gomes.manaus@gmail.com' && (
-          <Link
-            href={'/dashboard'}
-            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
-          >
-            Dasboard
-          </Link>
-        )}
+        {data?.user?.email != rafael &&
+          data?.user?.email != lucas &&
+          data?.user?.email != amanda && (
+            <Link
+              href={'/dashboard'}
+              className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
+            >
+              Dasboard
+            </Link>
+          )}
         {data?.user ? <LogOutMenuDesktop /> : <LogInMenuDesktop />}
       </ul>
     </nav>

@@ -6,8 +6,15 @@ export default function Page() {
   const { status, data } = useSession()
 
   !data && redirect('/')
+  const rafael = 'rafarz76dev@gmail.com'
+  const lucas = 'lucas.gomes.manaus@gmail.com'
+  const amanda = 'amanda.spitzner@gmail.com'
 
-  if (data?.user?.email != 'lucas.gomes.manaus@gmail.com') {
+  if (
+    data?.user?.email != rafael &&
+    data?.user?.email != lucas &&
+    data?.user?.email != amanda
+  ) {
     redirect('/')
   }
 
