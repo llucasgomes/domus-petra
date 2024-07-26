@@ -51,16 +51,19 @@ export const CarroselNovidades = () => {
 export function CarouselSpacing() {
   return (
     <Carousel
-      className="w-[700px] cursor-grab"
+      className="cursor-grab md:w-[770px] lg:w-[900px]"
       plugins={[
         Autoplay({
           delay: 3000
         })
       ]}
     >
-      <CarouselContent className="-ml-1 max-w-lg">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-2/3">
+      <CarouselContent className="max-w-lg lg:-ml-1">
+        {Array.from({ length: 8 }).map((_, index) => (
+          <CarouselItem
+            key={index}
+            className="md:basis-2/3 lg:basis-2/3 lg:pl-1"
+          >
             <div className="p-1">
               <Card className="h-[400px] max-w-lg">
                 <CardHeader className="h-40 p-0">
@@ -90,8 +93,8 @@ export function CarouselSpacing() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="lg:hidden" />
-      <CarouselNext className="lg:hidden" />
+      <CarouselPrevious className="md:hidden" />
+      <CarouselNext className="md:hidden" />
     </Carousel>
   )
 }
