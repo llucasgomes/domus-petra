@@ -1,12 +1,15 @@
 'use client'
 
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { LogInMenuDesktop, LogOutMenuDesktop } from './auth'
 
 export const NavHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
+  const { data } = useSession()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +58,15 @@ export const NavHeader = () => {
         >
           Sobre
         </Link>
+        {data?.user?.email === 'lucas.gomes.manaus@gmail.com' && (
+          <Link
+            href={'/dashboard'}
+            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
+          >
+            Dasboard
+          </Link>
+        )}
+        {data?.user ? <LogOutMenuDesktop /> : <LogInMenuDesktop />}
       </ul>
     </nav>
   )

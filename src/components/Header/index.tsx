@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { MenuMobile } from './menuMobile'
@@ -22,11 +23,18 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-10 flex h-24 w-full items-center justify-center transition-colors duration-300 ${pathname == '/' && isScrolled ? 'bg-transparent' : 'bg-transparent'}`}
+      className={`fixed top-0 z-10 flex w-full items-center justify-center transition-colors duration-300 md:h-24 ${pathname == '/' && isScrolled ? 'bg-transparent' : 'bg-transparent'}`}
     >
       <div
-        className={`custom-glass flex h-20 items-center justify-center rounded-full bg-[--bg-header] px-8`}
+        className={`custom-glass flex h-20 w-full items-center justify-between bg-[--bg-header] px-8 md:w-auto md:justify-center md:rounded-full`}
       >
+        <Image
+          src={pathname == '/' ? '/logo/logoWhite.png' : '/logo/logoWhite.png'}
+          alt="Logo Domus Petra"
+          width={150}
+          height={150}
+          className="md:hidden"
+        />
         <NavHeader />
         <div className="md:hidden">
           <MenuMobile />
