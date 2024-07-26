@@ -58,7 +58,7 @@ export const Footer = () => {
                 key={item.link}
                 href={item.link}
                 target="_blank"
-                className={`text-4xl text-primary ${pathname == '/' ? 'hover:text-[#567CAB]' : 'hover:text-secondary'} `}
+                className={`text-4xl text-primary ${pathname == '/' ? 'hover:text-[#567CAB]' : 'text-white'} `}
               >
                 {item.icon}
               </Link>
