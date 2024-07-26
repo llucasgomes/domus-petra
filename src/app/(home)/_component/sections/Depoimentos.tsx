@@ -4,7 +4,7 @@ import { CarroselComments } from '../carrosel'
 export const Depoimentos = () => {
   return (
     <section className="relative flex w-full flex-col items-center justify-center p-8 lg:px-16">
-      <div className="flex w-full flex-col gap-5">
+      <div className="flex hidden w-full flex-col gap-5">
         <h2 className="text-left text-[22px] font-bold text-white lg:text-3xl">
           Depoimentos Reais de Sucesso Empresarial
         </h2>
