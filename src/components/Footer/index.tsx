@@ -34,7 +34,7 @@ export const Footer = () => {
   return (
     <footer className={`${styles.footer} ${pathname != '/' && 'bg-[#577DAC]'}`}>
       <div className={styles.footerContainer}>
-        <div className={styles.footerLeft}>
+        <div className={`${styles.footerLeft}`}>
           <Image
             src={
               pathname != '/'

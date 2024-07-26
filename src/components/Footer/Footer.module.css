@@ -67,6 +67,7 @@
   }
 
   .footerLeft {
+    display: flex;
       flex-direction: column;
       align-items: flex-start;
   }
@@ -86,6 +87,10 @@
       flex-direction: column;
       align-items: center;
   }
+
+.footerLeft{
+  display: none;
+}
 
   .footerLeft,
   .footerRight {
