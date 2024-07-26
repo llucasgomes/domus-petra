@@ -29,7 +29,13 @@ export const Header = () => {
         className={`custom-glass flex h-20 w-full items-center justify-between bg-[--bg-header] px-8 md:w-auto md:justify-center md:rounded-full`}
       >
         <Image
-          src={pathname == '/' ? '/logo/logoWhite.png' : '/logo/logoWhite.png'}
+          src={
+            pathname == '/'
+              ? isScrolled
+                ? '/logo/logoDomus-Footer.png'
+                : '/logo/logoWhite.png'
+              : '/logo/logoDomus-Footer.png'
+          }
           alt="Logo Domus Petra"
           width={150}
           height={150}
