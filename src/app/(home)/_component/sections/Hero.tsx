@@ -3,24 +3,29 @@ import Image from 'next/image'
 export const Hero = () => {
   return (
     <section className="relative flex h-screen w-full items-center justify-center">
-      <div className="flex flex-col items-end justify-center pt-10">
+      <div className="flex flex-col items-center justify-center px-8 pt-10 md:items-end">
         <Image
-          alt="homem de pele clara com cabelo curto e escuro, usando um terno cinza claro sobre uma camisa social azul clara. Ele está em pé, falando com um microfone de fone de ouvido preso à orelha e um controle remoto nas mãos. A expressão dele é séria e ele parece estar apresentando ou palestrando em um evento. O fundo é escuro, destacando a figura do homem."
+          alt="Logo Domus Petra"
           src={'/logo/logoHorizontalWhite.png'}
           width={800}
           height={800}
+          className="w-full md:h-auto"
         />
 
-        <h1 className={`h-28 text-center text-4xl text-white`}>
-          <span className="font-black text-[#93B3DA]">Aprimore</span> seu
-          negócio
-        </h1>
+        <div className="w-full">
+          <h1
+            className={`text-right text-xl text-white md:h-28 md:text-center md:text-4xl`}
+          >
+            <span className="font-black text-[#93B3DA]">Aprimore</span> seu
+            negócio
+          </h1>
+        </div>
       </div>
       <video
         autoPlay={true}
         muted={true}
         loop={true}
-        className="absolute -z-10 h-screen w-full object-fill brightness-50"
+        className="absolute -z-10 h-screen w-full object-cover object-left brightness-50"
         src={'/videos/video-banner02.webm'}
       ></video>
     </section>
