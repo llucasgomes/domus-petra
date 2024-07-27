@@ -14,6 +14,7 @@ import {
 import { useSession } from 'next-auth/react'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { Separator } from '../ui/separator'
 import { LogIn, LogOut } from './auth'
 import { Perfil } from './perfiMobile'
 
@@ -66,25 +67,31 @@ export const MenuMobile = () => {
           }
         />
       </SheetTrigger>
-      <SheetContent className="flex flex-col justify-center border-[#1D1F31] bg-gradient-to-b from-[#131727] from-0% via-[#2B355A] via-50% to-[#131727] to-100%">
+      <SheetContent className="flex flex-col justify-center border-[#1D1F31] bg-gradient-to-b from-[#567CAB] from-0% to-[#2A4C75] to-100%">
         <SheetHeader>
           <Perfil />
         </SheetHeader>
         <SheetFooter>
           <nav>
-            <ul className="flex w-full list-none flex-col gap-3">
+            <ul className="flex w-full list-none flex-col items-center gap-3">
               {routes.map(({ name, route }) => {
                 return <RouteLink key={route} name={name} route={route} />
               })}
               {data?.user?.email === 'lucas.gomes.manaus@gmail.com' && (
-                <SheetClose asChild>
-                  <Link
-                    href={'/dashboard'}
-                    className="w-full cursor-pointer rounded-sm bg-[--bg-secundary] px-4 py-3"
-                  >
-                    Dasboard
-                  </Link>
-                </SheetClose>
+                <>
+                  <SheetClose asChild>
+                    <Link
+                      href={'/dashboard'}
+                      className="w-full cursor-pointer rounded-sm bg-transparent px-4 py-3 text-center text-white"
+                    >
+                      Dasboard
+                    </Link>
+                  </SheetClose>
+                  <Separator
+                    orientation="vertical"
+                    className="h-[1px] w-[200px]"
+                  />
+                </>
               )}
               <SheetClose asChild>
                 {data?.user ? <LogOut /> : <LogIn />}
@@ -103,13 +110,16 @@ type RouteLinkProps = {
 }
 const RouteLink = ({ name, route }: RouteLinkProps) => {
   return (
-    <SheetClose asChild>
-      <Link
-        href={route}
-        className="w-full cursor-pointer rounded-sm bg-[--bg-secundary] px-4 py-3"
-      >
-        {name}
-      </Link>
-    </SheetClose>
+    <>
+      <SheetClose asChild>
+        <Link
+          href={route}
+          className="w-full cursor-pointer rounded-sm bg-transparent px-2 py-2 text-center text-white"
+        >
+          {name}
+        </Link>
+      </SheetClose>
+      <Separator orientation="vertical" className="h-[1px] w-[200px]" />
+    </>
   )
 }
