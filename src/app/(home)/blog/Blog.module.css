@@ -1,0 +1,134 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.newSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+    position: relative;   
+}
+
+.leftSection,
+.rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 5rem; /* Adiciona uma margem superior no desktop */
+}
+
+.leftImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+.blogText {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 84px;
+    color: #ffffff;
+    margin-left: -330px;
+    font-weight: bold; 
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #345171;
+    font-weight: bold;
+    margin-top: -80px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: #D89150; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.textImageSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContent {
+    flex: 1;
+}
+
+.textHeading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #345171;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.textParagraph {
+    font-size: 1rem;
+    color: #030408;
+}
+
+.rightImage {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .newSection {
+        flex-direction: column;
+    }
+
+    .subtitle{
+        color: #345171;
+        font-weight: bold;
+    }
+
+    .blogText {
+        top: 80%; /* Ajusta a posição do texto no mobile */
+        margin-left: -80px;
+        font-weight: bold;
+        font-size: 45px;        
+    }
+    
+    .textImageSection {
+        flex-direction: column;
+    }
+
+    .textImageSection.mobile-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .rightImage {
+        margin-top: 1rem; /* Adiciona margem no mobile */
+    }
+}
