@@ -8,6 +8,7 @@ import { NavHeader } from './nav'
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+
   const pathname = usePathname()
 
   useEffect(() => {
@@ -23,7 +24,15 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-10 flex w-full items-center justify-center transition-colors duration-300 md:top-4 md:h-24 ${pathname == '/' && isScrolled ? 'bg-transparent' : 'bg-transparent'}`}
+      className={`${
+        pathname == '/dashboard' ||
+        pathname == '/dashboard/new-post' ||
+        pathname == '/dashboard/users' ||
+        pathname == '/dashboard/posts' ||
+        pathname == '/dashboard/services'
+          ? 'hidden'
+          : null
+      } fixed top-0 z-10 flex w-full items-center justify-center transition-colors duration-300 md:top-4 md:h-24 ${pathname == '/' && isScrolled ? 'bg-transparent' : 'bg-transparent'}`}
     >
       <div
         className={`custom-glass flex h-20 w-full items-center justify-between bg-[--bg-header] px-8 md:w-auto md:justify-center md:rounded-full`}
