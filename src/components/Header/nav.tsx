@@ -61,16 +61,31 @@ export const NavHeader = () => {
         >
           Sobre
         </Link>
-        {data?.user?.email != rafael &&
-          data?.user?.email != lucas &&
-          data?.user?.email != amanda && (
-            <Link
-              href={'/dashboard'}
-              className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
-            >
-              Dasboard
-            </Link>
-          )}
+        {data?.user?.email == lucas && (
+          <Link
+            href={'/dashboard'}
+            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
+          >
+            Dasboard
+          </Link>
+        )}
+        {data?.user?.email == amanda && (
+          <Link
+            href={'/dashboard'}
+            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
+          >
+            Dasboard
+          </Link>
+        )}
+        {data?.user?.email == rafael && (
+          <Link
+            href={'/dashboard'}
+            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
+          >
+            Dasboard
+          </Link>
+        )}
+
         {data?.user ? <LogOutMenuDesktop /> : <LogInMenuDesktop />}
       </ul>
     </nav>
