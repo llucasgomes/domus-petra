@@ -76,7 +76,7 @@ Resumindo, um remédio é eficaz se traz o resultado esperado, e é eficiente se
     title: 'Entrevista sobre Eficiência',
     subtitle:
       'Eficiência é a palavra de ordem no contexto atual. Aqui você acompanha a entrevista sobre esse tema.',
-    capa_image: '/blog/blog3.jpg',
+    capa_image: '/blog/blog3.png',
     video_youtube: 'https://youtu.be/dnlM5Crn_54',
     assunto: `O setor Industrial Automotivo, historicamente, é vanguarda no desenvolvimento tecnológico e em gestão de processos. As empresas japonesas em particular, têm demonstrado o ápice em eficiência, qualidade e controle de custos nesse setor.
 
