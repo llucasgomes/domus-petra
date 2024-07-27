@@ -1,91 +1,77 @@
+/* eslint-disable prettier/prettier */
 import { bebasNeue } from '@/app/_ui/fonts'
-import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import Image from 'next/image'
+import styles from './Blog.module.css'
 
 export default function Page() {
   return (
-    <main className="flex flex-col">
-      <section className="relative flex w-full flex-col items-center justify-center py-8 md:gap-8 lg:flex-row">
-        <div className="flex h-52 flex-col items-center justify-center lg:h-60">
+    <main className={styles.main}>
+      {/* Nova seção */}
+      <section className={styles.newSection}>
+        <div className={styles.leftSection}>
           <Image
-            src={'/services/bg-services.jpeg'}
-            alt="capa de fundo da imagem"
-            width={700}
-            height={700}
-            className="absolute -z-10 h-full w-full object-cover object-center brightness-50"
+            src={'/blog/blog4.png'}
+            alt="Imagem para seção"
+            width={955}
+            height={706}
+            className={styles.leftImage}
           />
-          <h1
-            className={`${bebasNeue.className} flex h-28 pt-10 text-center text-4xl text-[--bg-secundary] md:text-6xl`}
-          >
-            Blog domus petra
-          </h1>
+          <h1 className={`${bebasNeue.className} ${styles.blogText}`}>BLOG</h1>
+        </div>
+        <div className={styles.rightSection}>
+          <h2 className={styles.subtitle}>Últimas Postagens</h2>
+          <div className={styles.cards}>
+            <Card className={styles.card}>
+              Fortalecendo a Indústria Brasileira com experiência do Japão. ➜
+            </Card>
+            <Card className={styles.card}>Eficiência ou Eficácia?. ➜</Card>
+            <Card className={styles.card}>Entrevista sobre Eficiência. ➜</Card>
+          </div>
         </div>
       </section>
-      {/* hero */}
-      <section className="flex gap-5 px-16 pb-12 pt-24">
-        <div className="relative flex h-[432.26px] w-[723.75px] flex-col justify-end gap-1 rounded-xl p-7 text-white">
-          <h1 className="text-4xl">Ini Adalah Judul Artikel</h1>
-          <p className="text-base">
-            <span className="font-semibold">By</span> Ridho Satriawan
+      <section className={styles.textImageSection}>
+        <div className={styles.textContent}>
+          <h2 className={styles.textHeading}>
+            Fortalecendo a Indústria Brasileira <br />
+            com experiência do Japão.
+          </h2>
+          <p className={styles.textParagraph}>
+            O setor Industrial Automotivo, historicamente, é vanguarda no
+            desenvolvimento tecnológico e em gestão de processos. As empresas
+            japonesas em particular, têm demonstrado o ápice em eficiência,
+            qualidade e controle de custos nesse setor. O governo Japonês, por
+            meio da Agência Internacional de Cooperação (JICA), realiza vários
+            programas para auxiliar os países em desenvolvimento a evoluir em
+            tecnologia, cultura e métodos. Nesse ano tive a oportunidade de
+            participar do programa de fortalecimento do setor de auto peças no
+            Brasil, o qual foi formatado em parceria entre a JICA e o governo
+            Brasileiro, e capitaneado pelo Sindipeças. Com um mês de imersão,
+            experimentamos a cultura e modelo de vida Japonês, em todas as suas
+            nuances. E a capacitação consistiu de treinamentos, palestras,
+            debates, exercícios práticos e visitas em empresas do setor. Os
+            temas de maior relevância foram: Kaizen, 5S, Monozukuri, Total
+            Productive Maintenance, Total Quality Managment, Toyota Productive
+            System, Técnicas de Consultoria, Desenvolvimento de Capital Humano,
+            entre outros. Aparentemente nada de muito novo, pois essas
+            metodologias e programas já são de nosso conhecimento. Mas há razões
+            para funcionarem tão bem no Japão, e nem tanto no Brasil. E esse,
+            certamente, foi um dos grandes aprendizados. Agora, o desafio é
+            compartilhar o aprendizado nas empresas brasileiras, proporcionando
+            a evolução em qualidade, entrega, eficiência e gestão de custos. E
+            com isso atender o mercado global com mais competitividade. Em nosso
+            canal compartilharemos uma série de vídeos, apresentando em tópicos
+            os aprendizados e percepções dessa jornada. Inscreva-se aqui:
+            https://youtu.be/Ae00HvsP73s Aprendizados & Percepções do Japão
           </p>
-          <Image
-            src={'/outros/image-contact.webp'}
-            alt="Imagem ilustrativa, de uma mão segurando um celular, se referindo ao contexto da pagina, como informações de contato"
-            width={500}
-            height={500}
-            className="absolute left-0 top-0 -z-10 h-full w-full rounded-xl object-cover brightness-50"
-          />
         </div>
-        <div className="flex h-[432.26px] w-[461px] flex-col items-center justify-start gap-3 rounded-xl px-5">
-          <div className="flex h-16 w-full items-center justify-center rounded-lg bg-red-400">
-            <h1 className="text-4xl capitalize">ultimas postagens</h1>
-          </div>
-          <div className="flex w-full flex-col gap-3">
-            <Card className="full h-28">daklsdnlasdaksdnaskdjk</Card>
-            <Card className="full h-28">daklsdnlasdaksdnaskdjk</Card>
-            <Card className="full h-28">daklsdnlasdaksdnaskdjk</Card>
-          </div>
-        </div>
-      </section>
-      <section className="flex h-full gap-5 px-16 py-12">
-        <div className="flex w-full flex-col justify-start gap-1 rounded-xl">
-          <div className="flex h-full w-full flex-col gap-3">
-            <div className="flex h-16 w-full items-center justify-center rounded-lg bg-red-400">
-              <h1 className="text-4xl capitalize">postagens domus petra</h1>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-4 bg-green-400 p-4">
-              {/* <Card className="m-0 h-[296px] w-[260px] bg-red-500"></Card> */}
-              <Card className="h-[296px] w-[260px] bg-red-500"></Card>
-              <Card className="h-[296px] w-[260px] bg-red-500"></Card>
-              <Card className="h-[296px] w-[260px] bg-red-500"></Card>
-              <Card className="h-[296px] w-[260px] bg-red-500"></Card>
-            </div>
-          </div>
-        </div>
-        {/* vategorias */}
-        <div className="flex h-[432.26px] w-[461px] flex-col items-center justify-start gap-3 rounded-xl px-5">
-          <div className="flex h-16 w-full items-center justify-center rounded-lg bg-red-400">
-            <h1 className="text-4xl capitalize">categorias</h1>
-          </div>
-          <div className="flex w-full flex-col items-center justify-center gap-3">
-            <Badge className="flex h-10 w-40 items-center justify-center rounded-2xl text-center">
-              IA
-            </Badge>
-            <Badge className="flex h-10 w-40 items-center justify-center rounded-2xl text-center">
-              IA
-            </Badge>
-            <Badge className="flex h-10 w-40 items-center justify-center rounded-2xl text-center">
-              IA
-            </Badge>
-            <Badge className="flex h-10 w-40 items-center justify-center rounded-2xl text-center">
-              IA
-            </Badge>
-            <Badge className="flex h-10 w-40 items-center justify-center rounded-2xl text-center">
-              IA
-            </Badge>
-          </div>
-        </div>
+        <Image
+          src={'/blog/blog1.jpg'}
+          alt="Imagem ilustrativa"
+          width={804}
+          height={500}
+          className={styles.rightImage}
+        />
       </section>
     </main>
   )
