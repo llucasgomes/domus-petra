@@ -10,7 +10,7 @@ export const Perfil = () => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-4 rounded-none border border-transparent ${!data?.user && 'border-none bg-[--bg-highlight]'}`}
+      className={`flex flex-col items-center justify-center gap-4 rounded-none border border-transparent`}
     >
       {data?.user ? (
         <>
@@ -36,7 +36,7 @@ export const Perfil = () => {
             src={'/logo/logoWhite.png'}
             alt="Logo Domus Petra"
             width={150}
-            height={95}
+            height={150}
           />
         </div>
       )}

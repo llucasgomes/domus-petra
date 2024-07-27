@@ -59,7 +59,7 @@ export function CarouselSpacing() {
       ]}
     >
       <CarouselContent className="max-w-lg lg:-ml-1">
-        {Array.from({ length: 8 }).map((_, index) => (
+        {blog.map((item, index) => (
           <CarouselItem
             key={index}
             className="md:basis-2/3 lg:basis-2/3 lg:pl-1"
@@ -68,16 +68,16 @@ export function CarouselSpacing() {
               <Card className="h-[400px] max-w-lg">
                 <CardHeader className="h-40 p-0">
                   <Image
-                    src={'/services/service01.png'}
+                    src={item.capa_image}
                     width={150}
                     height={130}
                     alt="adsad"
                     className="h-full w-full rounded-md object-cover"
                   />
                 </CardHeader>
-                <CardContent className="flex flex-col place-items-end justify-center gap-2 pt-3">
-                  <CardTitle className="text-lg">
-                    Fortalecendo a Indústria Brasileira com experiência do Japão
+                <CardContent className="place-items-left flex flex-col justify-center gap-2 pt-3">
+                  <CardTitle className="text-left text-lg">
+                    {item.title}
                   </CardTitle>
                   <CardDescription>
                     Treinamento no Japão, coordenado pela JICA (Japanese
