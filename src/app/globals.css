@@ -87,3 +87,12 @@
   -webkit-backdrop-filter: blur(7.6px);
   
 }
+
+
+.ql-container{
+  font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  color: #b3b3b1;
+}
