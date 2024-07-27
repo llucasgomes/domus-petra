@@ -5,7 +5,11 @@ import { Button } from '../ui/button'
 
 export const LogOut = () => {
   return (
-    <Button variant={'outline'} onClick={async () => await signOut()}>
+    <Button
+      variant={'outline'}
+      className="border-none bg-transparent text-slate-50 hover:bg-transparent"
+      onClick={async () => await signOut()}
+    >
       Sair
     </Button>
   )
@@ -36,6 +40,15 @@ export const LogOutMenuDesktop = () => {
 export const LogIn = () => {
   const { data } = useSession()
   return (
-    <>{!data && <Button onClick={async () => await signIn()}>Logar</Button>}</>
+    <>
+      {!data && (
+        <Button
+          className="border-none bg-transparent text-slate-50 hover:bg-transparent"
+          onClick={async () => await signIn()}
+        >
+          Log in
+        </Button>
+      )}
+    </>
   )
 }
