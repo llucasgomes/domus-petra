@@ -32,7 +32,17 @@ export const redes_sociais = [
 export const Footer = () => {
   const pathname = usePathname()
   return (
-    <footer className={`${styles.footer} ${pathname != '/' && 'bg-[#577DAC]'}`}>
+    <footer
+      className={` ${styles.footer} ${pathname != '/' && 'bg-[#577DAC]'} ${
+        pathname == '/dashboard' ||
+        pathname == '/dashboard/new-post' ||
+        pathname == '/dashboard/users' ||
+        pathname == '/dashboard/posts' ||
+        pathname == '/dashboard/services'
+          ? 'hidden'
+          : null
+      }`}
+    >
       <div className={styles.footerContainer}>
         <div className={`${styles.footerLeft}`}>
           <Image
