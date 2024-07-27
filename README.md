@@ -8,7 +8,9 @@
 
 Este repositório contém um modelo de aplicativo configurado com as **melhores práticas** para desenvolvimento utilizando Next.js, Tailwind CSS e TypeScript.
 
+## 🧑‍💻 Time Hydra Developer:
 
+[<img src='https://avatars.githubusercontent.com/u/96358624?v=4' alt='Foto Lucas' height='150' >](https://github.com/llucasgomes)   [<img src='https://avatars.githubusercontent.com/u/95360085?v=4' alt='Foto Amanda Spitzner' height='150'>](https://github.com/amandaspitz)[<img src='https://avatars.githubusercontent.com/u/87991807?v=4' alt='Foto Amanda Spitzner' height='150'>](https://github.com/RafaRz76Dev)
 ## 🦄 Figma
 Figma é uma ferramenta de design colaborativo baseada na web, amplamente utilizada por designers para criar interfaces de usuário, protótipos e gráficos vetoriais. 
 
