@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Layout padrão em coluna para mobile */
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #131727, #2B355A, #131727);
+  padding: 2rem;
+  height: 100vh;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 2.5rem; /* Ajustado para ser responsivo */
+  font-weight: bold;
+  color: white;
+  line-height: 1.2; /* Ajustado para melhorar a leitura em telas menores */
+}
+
+.subHeading {
+  font-size: 2rem; /* Ajustado para ser responsivo */
+  font-weight: bold;
+  color: #567CAB;
+}
+
+/* Paragraph Styles */
+.paragraph {
+  font-size: 0.875rem; /* Ajustado para ser responsivo */
+  color: white;
+  margin-top: 1.5rem;
+  max-width: 90%; /* Ajusta a largura do parágrafo para telas menores */
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Layout em coluna no mobile */
+    padding: 2rem;
+    height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+  }
+
+  .headingWrapper {
+    order: 1; /* Título acima no mobile */
+    text-align: center; /* Centraliza o texto no mobile */
+  }
+
+  .imageWrapper {
+    order: 3; /* Imagem abaixo do título no mobile */
+    margin-top: 1rem; /* Espaçamento entre o título e a imagem */   
+  }
+
+  .textWrapper {
+    order: 2; /* Texto abaixo da imagem no mobile */
+    text-align: center; /* Centraliza o texto no mobile */
+    margin-top: 1rem; /* Espaçamento opcional entre a imagem e o texto */
+  }
+
+  .heading {
+    font-size: 2.5rem; /* Ajusta o tamanho da fonte para telas menores */  
+  }
+
+  .subHeading {
+    font-size: 2rem; /* Ajusta o tamanho da fonte para telas menores */
+  }
+
+  .paragraph {
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte para telas menores */
+  }
+
+  .image {
+    width: 100%; /* Ajusta a largura da imagem para se adaptar à tela */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+}
+
+/* Tablet Styles (iPad) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Layout em linha no tablet e desktop */
+    padding: 2.5rem;
+    margin-top: 50px;
+  }
+
+  .textWrapper {
+    margin-right: 4rem;
+    width: 50%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-align: left;
+    order: 1; /* Texto à esquerda no tablet */
+  }
+
+  .imageWrapper {
+    width: 50%;
+    order: 2; /* Imagem à direita no tablet */
+    margin-top: 0; /* Remove o espaçamento opcional */
+  }
+
+  .heading {
+    font-size: 5rem;
+    margin-top: -50px;
+  }
+
+  .subHeading {
+    font-size: 4.5rem;
+  }
+
+  .paragraph {
+    font-size: 1.125rem;
+  }
+
+  .image {
+    width: 100%; /* Aumenta a imagem para tablets */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+}
+
+/* Desktop Styles (MacBook) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 3rem;
+  }
+
+  .textWrapper {
+    margin-right: 6.25rem;
+    width: 50%;
+    order: 1; /* Texto à esquerda no desktop */
+  }
+
+  .imageWrapper {
+    width: 50%;
+    order: 2; /* Imagem à direita no desktop */
+    margin-top: 0; /* Remove o espaçamento opcional */
+  }
+
+  .heading {
+    font-size: 9.375rem;
+    margin-left: 250px;
+    margin-top: 250px;
+    text-align: center;
+  }
+
+  .subHeading {
+    font-size: 9.375rem;
+    margin-left: 250px;
+    margin-top: -30px;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 250px;
+  }
+}
