@@ -11,20 +11,21 @@ Este repositório contém um modelo de aplicativo configurado com as **melhores 
 ## 🧑‍💻 Time Hydra Developer:
 
 [<img src='https://avatars.githubusercontent.com/u/96358624?v=4' alt='Foto Lucas' height='150' >](https://github.com/llucasgomes)   [<img src='https://avatars.githubusercontent.com/u/95360085?v=4' alt='Foto Amanda Spitzner' height='150'>](https://github.com/amandaspitz)[<img src='https://avatars.githubusercontent.com/u/87991807?v=4' alt='Foto Amanda Spitzner' height='150'>](https://github.com/RafaRz76Dev)
+
 ## 🦄 Figma
 Figma é uma ferramenta de design colaborativo baseada na web, amplamente utilizada por designers para criar interfaces de usuário, protótipos e gráficos vetoriais. 
 
 https://www.figma.com/design/mRfA5Mam9wglPqMXp1v1og/Domus-new-(Copy)?node-id=187-2&t=xqJ9KDJqyUpz0c2P-0
 
 
-### 📓 Trelo
+## 📓 Trelo
 
 Trello é uma ferramenta de gerenciamento de projetos visual baseada na web que utiliza o método Kanban para organizar tarefas e projetos. 
 
 https://trello.com/invite/b/6691c78dc97bf7a6dea697bc/ATTI045e6bd616c37cb573815408468a901e113A4C7C/domus-petra
 
 
-###  ⚙ Dependências Ultilizadas
+##  ⚙ Dependências Ultilizadas
 
 
 
