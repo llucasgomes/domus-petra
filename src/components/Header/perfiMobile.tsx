@@ -10,22 +10,22 @@ export const Perfil = () => {
 
   return (
     <div
-      className={`mb-3 flex items-center space-x-4 rounded-md border p-4 ${!data?.user && 'border-none bg-[--bg-highlight]'}`}
+      className={`flex flex-col items-center justify-center gap-4 rounded-none border border-transparent ${!data?.user && 'border-none bg-[--bg-highlight]'}`}
     >
       {data?.user ? (
         <>
-          <Avatar>
+          <Avatar className="h-30 w-30">
             <AvatarImage src={data.user.image!} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <div className="flex-1 space-y-1">
+          <div className="flex flex-col items-center justify-center space-y-1">
             <SheetTitle>
-              <p className="font-font-semibold text-left text-sm leading-none text-white">
+              <p className="text-left text-sm font-semibold uppercase leading-none text-white">
                 {data.user.name!}
               </p>
             </SheetTitle>
 
-            <p className="text-left text-sm font-semibold text-muted-foreground">
+            <p className="text-left text-sm text-muted-foreground text-white">
               {data.user.email!.split('@')[0]}
             </p>
           </div>
