@@ -12,7 +12,6 @@ import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import ReactQuill from 'react-quill'
-import styles from './new-post.module.css'
 
 export default function Page() {
   const { status } = useSession()
@@ -62,7 +61,7 @@ export default function Page() {
   }, [file])
 
   if (status === 'loading') {
-    return <div className={styles.loading}>Loading...</div>
+    return <div>Loading...</div>
   }
 
   const handleSubmit = async () => {
@@ -121,7 +120,7 @@ export default function Page() {
           />
         </div>
       </div>
-      <button className={styles.publish} onClick={handleSubmit}>
+      <button className={``} onClick={handleSubmit}>
         Publicar
       </button>
     </div>
