@@ -1,115 +1,114 @@
-.section {
-    padding: 20px;
-  }
-  
+/* Mobile Styles (default) */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #131727, #2B355A, #131727);
+  padding: 2rem;
+  height: 100vh;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.headingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3rem; /* Ajustado para ser responsivo */
+  font-weight: bold;
+  color: white;
+  line-height: 1.2; /* Ajustado para melhorar a leitura em telas menores */
+}
+
+.subHeading {
+  font-size: 2.5rem; /* Ajustado para ser responsivo */
+  font-weight: bold;
+  color: #567CAB;
+}
+
+.paragraph {
+  font-size: 1rem; /* Ajustado para ser responsivo */
+  color: white;
+  margin-top: 1.5rem;
+  max-width: 90%; /* Ajusta a largura do parágrafo para telas menores */
+  text-align: center;
+}
+
+.imageWrapper {
+  margin: 2rem 0; /* Espaçamento vertical em torno da imagem */
+}
+
+/* Tablet Styles (iPad) */
+@media (min-width: 768px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: row;
+    padding: 2.5rem;
   }
-  
-  .title {
+
+  .textWrapper {
+    margin-right: 4rem;
+    width: 50%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
     text-align: left;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-style: italic;
-    font-weight: bold;
   }
-  
-  .content {
-    display: flex;
-    flex-direction: row; /* Flex para desktop */
+
+  .headingWrapper {
+    flex-direction: row;
     align-items: center;
   }
-  
-  .image {
-    margin-left: 20px; /* Margem à esquerda para desktop */
-    order: 2; /* A imagem será o segundo elemento */
-    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
-    transition: transform 0.2s; /* Efeito de transição */
+
+  .heading {
+    font-size: 5rem;
   }
 
-  /* Efeito de hover (opcional) */
-  .image:hover {
-    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
-  }
-  
-  .leftImage {
-    margin-right: 20px; /* Margem à esquerda para desktop */
-    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
-    transition: transform 0.2s; /* Efeito de transição */
-    order: 1; /* A imagem será o primeiro elemento */
+  .subHeading {
+    font-size: 4.5rem;
   }
 
-   /* Efeito de hover (opcional) */
-   .leftImage:hover {
-    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
-  }
-  
-  .rightParagraph {
-    order: 2; /* O parágrafo será o primeiro elemento */
-  }
-  
-  .imageMobile {
-    box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
-    transition: transform 0.2s; /* Efeito de transição */
-    display: none; /* Esconde a imagem mobile por padrão */
-  }
-
-   /* Efeito de hover (opcional) */
-   .imageMobile:hover {
-    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
-  }
-  
   .paragraph {
-    flex: 1; /* Permite que o parágrafo ocupe o espaço restante */
-    order: 1; /* O parágrafo será o primeiro elemento */
+    font-size: 1.125rem;
   }
-  
-  .backroundSection {
-    background-color: #d9d9d9;
+}
+
+/* Desktop Styles (MacBook) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 3rem;
   }
 
-  /* Estilo para mobile */
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column; /* Coloca a imagem acima do parágrafo no mobile */
-      align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-  
-    .image {
-      margin-left: 0; /* Remove margem no mobile */
-      margin-bottom: 10px; /* Adiciona espaço entre a imagem e o parágrafo */
-      order: 0; /* A imagem permanece acima no mobile */
-    }
-  
-    .imageMobile {
-      display: block; /* Mostra a imagem mobile no mobile */
-      margin-bottom: 10px; /* Espaço abaixo da imagem mobile */
-    }
-  
-    .paragraph {
-      margin-top: 0; /* Ajusta espaço acima do parágrafo, se necessário */
-      order: 1; /* O parágrafo permanece abaixo no mobile */
-    }    
+  .textWrapper {
+    margin-right: 6.25rem;
+    width: 50%;
   }
-  
-  /* Estilo para iPad e MacBook */
-  @media (min-width: 820px) and (max-width: 1024px) {
-    .image {
-      order: 2; /* A imagem será o segundo elemento */
-    }
 
-    .leftImage {
-      order: 1; /* A imagem será o primeiro elemento */
-    }
-  
-    .paragraph {
-      order: 1; /* O parágrafo será o primeiro elemento */
-    }
-  
-    .imageMobile {
-      display: none; /* Mantém a imagem mobile escondida */
-    }
+  .heading {
+    font-size: 7.5rem;
+    margin-left: 250px;
+    margin-top: 150px; /* Ajustado para uma posição mais adequada */
+    text-align: left; /* Alinhado à esquerda para maior clareza em telas grandes */
   }
-  
+
+  .subHeading {
+    font-size: 6rem;
+    margin-left: 250px; /* Ajustado para alinhar com o título principal */
+    margin-top: -10px;
+  }
+
+  .paragraph {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    max-width: 75%; /* Ajustado para largura adequada em desktops */
+  }
+}
