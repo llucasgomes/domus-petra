@@ -6,7 +6,7 @@ const Navbar = () => {
   const pathname = usePathname()
   return (
     <div className="flex w-full items-center justify-between rounded-xl bg-[#577DAC] p-5">
-      <div className="font-bold capitalize text-[--text-secundary]">
+      <div className="font-bold capitalize text-white">
         {pathname.split('/').pop()?.replace('-', ' ')}
       </div>
     </div>
