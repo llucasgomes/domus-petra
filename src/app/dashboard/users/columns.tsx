@@ -3,10 +3,21 @@
 import { ColumnDef } from '@tanstack/react-table'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { User } from '@prisma/client'
+
 import { Editar } from './_components/editar'
 
-export const columns: ColumnDef<User>[] = [
+interface User {
+  id: string
+  name: string | null
+  email: string | null
+  emailVerified: Date | null
+  role: string
+  image: string | null
+  createdAt: Date
+  updatedAt: Date
+}
+
+export const columns: ColumnDef<User, unknown>[] = [
   {
     accessorKey: 'image',
     header: 'Foto',
