@@ -1,0 +1,485 @@
+[33mcommit 8033645fb0f9b1adb9f05fcdac6591adc171e56f[m[33m ([m[1;36mHEAD -> [m[1;32mdeveloper[m[33m, [m[1;31morigin/developer[m[33m)[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Sat Jul 27 17:29:47 2024 -0300
+
+    :lipstick: chore (_component/novidades): reestruturando carrossel and (Header): reestruturando perfilMobile
+
+[33mcommit 0885077e4c2c4f0497877ab3619b73064f34b3fc[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Sat Jul 27 16:16:47 2024 -0300
+
+    :lipstick:  chore(home/about): reestruturando Sobre
+
+[33mcommit 432efb0bbeedf57ceb521b7e2c04b68fef9e6ad3[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 12:09:44 2024 -0400
+
+    :books: docs: Atualizaçao do README
+
+[33mcommit fb0a1b78e6b617e5241f1f393327a60c7649947d[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 12:08:35 2024 -0400
+
+    :books: docs: Atualizaçao do README
+
+[33mcommit ce3bf39d51ce65924804aa708ddacfa2d93fe497[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 12:00:57 2024 -0400
+
+    :books: docs: Atualizaçao do README
+
+[33mcommit 42403eebd1fb5254fa37d886ecc799d23a144343[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 11:20:45 2024 -0400
+
+    :lipstick: chore(component): reestruturando menu Mobile
+
+[33mcommit f986e33f18f7d249de58ce642b0333b4954f2209[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 10:39:29 2024 -0400
+
+    :bug: fix: Problema deploy 03
+
+[33mcommit 9dac51021f7b5f34580d3fed22bbd0aedd183161[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 10:30:52 2024 -0400
+
+    :bug: fix: Problema deploy 02
+
+[33mcommit 0a0c9de38f80bf1242c5992038a252c6b15ddee6[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 10:27:43 2024 -0400
+
+    :bug: fix: Problema deploy 01
+
+[33mcommit e62f1695d5dcdd0976559b29efeaa7ea25d1c4e7[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 10:18:43 2024 -0400
+
+    :bug: fix: Problema de Merge
+
+[33mcommit 6c67ae0789eaf56f77e70407b0859771966d4904[m
+Merge: e867cf5 6800840
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 09:47:48 2024 -0400
+
+    Merge branch 'main' into developer
+
+[33mcommit e867cf58dfc8aa2a313dca0f315354e1c7054edc[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 09:41:05 2024 -0400
+
+    :lipstick: feat(page/dashboard): creating pahe Dashboard
+
+[33mcommit 3b376396b8497d42e7f637eb40a67d3fd9de4ee7[m
+Merge: 2ee1cb6 0c5267f
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 09:27:05 2024 -0400
+
+    Merge branch 'developer' of https://github.com/llucasgomes/domus-petra into developer
+
+[33mcommit 0c5267f30d52a931c22365953a6a15f1faa663f4[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Sat Jul 27 10:14:56 2024 -0300
+
+    :lipstick: chore(page/home): restruturando section Fabiano
+
+[33mcommit 2ee1cb6a6ef8987be857b2c9a4601d86995291a8[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Sat Jul 27 06:46:41 2024 -0400
+
+    :lipstick: chore(component): reestruturando header desktop
+
+[33mcommit c060632f3cb9943192599f6f876581e9cb211be1[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Fri Jul 26 23:58:21 2024 -0300
+
+    :lipstick: chore(page/home): restruturando section Fabiano and  :sparkles: feat: (page/home): adicionando Section.module.css
+
+[33mcommit 0d0177d252d560f56e45c4f203cec945f0bee738[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 13:08:15 2024 -0400
+
+    :lock: feat: adicionado rota privada no dasboard, apenas para adm
+
+[33mcommit 85bf91759f3832153c31f0443ae8aad4151fc259[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 12:58:28 2024 -0400
+
+    :lock: feat: adicionado rota privada no dasboard, apenas para adm
+
+[33mcommit d62766c916727fdbba067cd77a784d6eb56eedce[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Fri Jul 26 13:19:20 2024 -0300
+
+    :lipstick: chore(page/home): restruturando o sect
+    ion Fabiano
+
+[33mcommit 6800840ba03d7e11b0e723d7c617c7985ee4a257[m
+Merge: 988d6b8 376f46f
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 12:08:01 2024 -0400
+
+    Merge pull request #11 from llucasgomes/developer
+    
+    Developer
+
+[33mcommit 376f46f41eb16b45a3baf5db79fdee301bc643c9[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 11:59:15 2024 -0400
+
+    :lipstick: chore(component): reestruturando componemt header
+
+[33mcommit 988d6b8953946f278c365545043e5b2a6f4db05c[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Fri Jul 26 12:46:14 2024 -0300
+
+    :lipstick: chore(page/home): restruturando o section Fabiano
+
+[33mcommit f46ccb6e65625c6503e2c5bdcab61f97425d871c[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 11:40:32 2024 -0400
+
+    :lipstick: chore(page/service): reestruturando page principal
+
+[33mcommit 6632663e47cb096a1c9274c0e4a47a992dfea3a4[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 11:03:55 2024 -0400
+
+    :lipstick: chore(page/contact): cor dos icons , o component footer
+
+[33mcommit 8c6626e26496f2febdccd905e015cfa9203d5877[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 10:56:48 2024 -0400
+
+    :lipstick: chore(page/contact): restruturando o section contato
+
+[33mcommit 628369fecf08b44e6db4df88c50dca14ac723edf[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 10:51:04 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section depoimentos
+
+[33mcommit a8940b9f7c518ece967ca21d5c591a156ca22229[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 10:39:16 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section novidades
+
+[33mcommit f222648b67e2b5b1e1572dfc82d105745109f321[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 10:30:57 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section services
+
+[33mcommit cbf70aed613c1704e1a2ad2a0f6cee457df903a5[m
+Merge: 458aae0 ff7808f
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 09:52:31 2024 -0400
+
+    Merge pull request #10 from llucasgomes/developer
+    
+    Developer
+
+[33mcommit ff7808f17987a976e76a0e40146ae56a556c6508[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 09:50:56 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section novidades
+
+[33mcommit 6eaad809d4764c84acf885089eb660deabf8fff4[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 09:03:02 2024 -0400
+
+    :lipstick: chore(page/contact):alterado o background  da section formulario
+
+[33mcommit b9b5c145bbb19caf3fdbd0ce21eefcd4af2fc678[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:57:59 2024 -0400
+
+    :lipstick: chore(page/contact):alterado o background  da section formulario
+
+[33mcommit 458aae0dab9d0ce82fee50c700bcc38cb146f9ff[m
+Merge: 0a389ca 896315e
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:44:01 2024 -0400
+
+    Merge pull request #9 from llucasgomes/developer
+    
+    :lipstick: chore(page/home): rename path image logo branco
+
+[33mcommit 896315e346da3c4e65721b08feab22a0445e5acb[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:42:07 2024 -0400
+
+    :lipstick: chore(page/home): rename path image logo branco
+
+[33mcommit 0a389caefb829efb9839b87dd16367af7847662d[m
+Merge: e58551b 1c95251
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:19:27 2024 -0400
+
+    Merge pull request #8 from llucasgomes/developer
+    
+    Developer
+
+[33mcommit 1c95251376b7fb81625d34a9b825101e02d1fc23[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:14:24 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section banner
+
+[33mcommit 80904bd7185178c56267b0e5d7cff7538718dd4e[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:04:58 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o component Footer
+
+[33mcommit 040f3b3441c8289c1584065e98b38dc34d974a15[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 08:00:04 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o component Header
+
+[33mcommit 713207ed61fe87eb7767abe2ceb0069c9b23920a[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 07:46:50 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o component Header
+
+[33mcommit ded125d4362480b037bf09a409f52419e293dcce[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 07:44:28 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o component Header
+
+[33mcommit 9649aeaad74115f220a17ab28fd9ea65f9aeb9a7[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 02:24:01 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section comentarios
+
+[33mcommit 8cfd9a2d32af318e20277444517d524fe4087d43[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 02:22:42 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section comentarios
+
+[33mcommit cfb11956159b5d568d1a976fb14cce63e735e4c1[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 01:49:41 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o component footer
+
+[33mcommit 3437e58d3a09d30b7a2bd45b25ebe8dfbd4292b4[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 01:14:24 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section fabiano
+
+[33mcommit 74dd10f848e50d5eac50f2a3c673d19fe220e077[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Fri Jul 26 00:28:46 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section services
+
+[33mcommit 6131c9123b6208b82692a0d42012422c8fad62e0[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 23:38:35 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section clientes
+
+[33mcommit 1c6ebbd6f245c66d696a3378d168a8f918523b6b[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 23:37:36 2024 -0400
+
+    :lipstick: chore(page/home): restruturando o section clientes
+
+[33mcommit c5a256cb6e9522a0950c310ca19940b5293b9dec[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 23:13:32 2024 -0400
+
+    :bug: fix: corrigido erro de tipagens
+
+[33mcommit b3163c69d2d8eb94be61539cba4243e80889eeaf[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 23:08:24 2024 -0400
+
+    :bug: fix: corrigido erro de tipagens
+
+[33mcommit 9f6964c763bfeb898374df60253ad06c31eda8a3[m
+Author: RafaRz76Dev <rafarz76dev@gmail.com>
+Date:   Thu Jul 25 23:19:32 2024 -0300
+
+    :wrench: chore: :sparkles: feat(components/Footer) and (public/logo) adicionado uma nova imagem logo
+
+[33mcommit 01772602d01ff55908b97628b5d5a1787a73e80b[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 12:43:22 2024 -0400
+
+    :lipstick: chore(page): restruturando o stilo
+
+[33mcommit 4a923875f8382f8d6e8838f505671339b1357dfb[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 12:32:30 2024 -0400
+
+    :lipstick: chore(page): restruturando o stilo
+
+[33mcommit 76967ca5228fcd1687f138c303fb1509da6a151a[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 11:37:03 2024 -0400
+
+    :sparkles: feat(page/service): responsivo
+
+[33mcommit c73551bf84bf6c2b29ce6ea6f4877935d9c89191[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 10:32:56 2024 -0400
+
+    :sparkles: feat(page/service): finalizacao da pagina service junto com sua pagina de produto
+
+[33mcommit 8120f49770f20a73ac2357aa13d1c73a6523ee50[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 09:25:21 2024 -0400
+
+    :sparkles: feat(page/service): add routa dinamica
+
+[33mcommit 13166262681e37f9a86e0729d467f68b4c1c7bbc[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Thu Jul 25 09:01:54 2024 -0400
+
+    :bug: fix: correcao das caminhos de url, e card item
+
+[33mcommit 94c15ba05fba1cec58402b74b1b5c27d56f57be4[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 21:26:38 2024 -0400
+
+    :sparkles: chore(page/home): reestruturando a section depoimentos
+
+[33mcommit a5b3679c943fc7f940c34ff5eb17a3d5885fcc8d[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 20:40:44 2024 -0400
+
+    :sparkles: chore(page/home): reestruturando a section Novidades
+
+[33mcommit ba79af23303f82c0322765d0c51b9d92b1203a44[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 19:09:48 2024 -0400
+
+    :sparkles: chore(page/home): restruturando a section services
+
+[33mcommit 6d63ed3980d82b9d71bb891d2be371ff37f80e88[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 17:49:26 2024 -0400
+
+    :construction: Blog page
+
+[33mcommit 47ee315fbc132b692f13735e3ac8d5d441b61d35[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 16:02:19 2024 -0400
+
+    :recycle: :lipstick:  refactor: alteraado o layout, e componetizacao as sections de paginas
+
+[33mcommit e59e0dc5072e48a4e8cceab652dc25f195fd042d[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 13:31:19 2024 -0400
+
+    :sparkles: chore(page/home): add trocando as .png por svg
+
+[33mcommit 7ce68a5510dd92e0d5b618c5e80a1710e5499dab[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 13:28:27 2024 -0400
+
+    :fire:
+
+[33mcommit e58551b6dc5f8e9eda4d2aa2b2a5f27abcd9ba86[m
+Merge: 4bd2f6a 1be0089
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 11:16:28 2024 -0400
+
+    Merge pull request #7 from llucasgomes/developer
+    
+    Developer
+
+[33mcommit 1be0089ea2c31406b1dba6a37ba064dbcee883ce[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 11:14:33 2024 -0400
+
+    :sparkles: chore(page/home): alterado o video bg section hero
+
+[33mcommit d21898fa4ee2e7d246673b7e95a5e983153a5173[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 11:13:34 2024 -0400
+
+    :sparkles: feat(page/home): adicionado um novo video de bg section hero
+
+[33mcommit 61de1eaacfd347c3318eae6739cb8d31456b1fab[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 08:44:53 2024 -0400
+
+    chore:(comp) Removido o botoao de X
+
+[33mcommit 4bd2f6a961ffcb9a2d3897255bac572a8ad188d0[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 08:39:27 2024 -0400
+
+    :chore: rename variavel de ambiente
+
+[33mcommit 9380f947bfee9647c3dabbcd26de880494f88b4f[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 07:56:35 2024 -0400
+
+    :bug: prisma generate
+
+[33mcommit 5c65850ed87ad31e33f1c7996e37682793176967[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 07:50:05 2024 -0400
+
+    :bug: prisma
+
+[33mcommit 1eaef16b9459218a234281a0915a5d9ef1f1a99f[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 07:29:31 2024 -0400
+
+    :bug: fix:NextAuth
+
+[33mcommit 3aaaf8e6da3ffb3e7a38eb9b6e281cdf0369a2ab[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Wed Jul 24 07:17:36 2024 -0400
+
+    :bug: fix:erro resend
+
+[33mcommit d9a48f4a643d708731b92012de58eb000bcd7b0a[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Tue Jul 23 14:02:06 2024 -0400
+
+    :construction: feat(page/services): building page
+
+[33mcommit ca68819962e422771071f8e8b49c4bf1d785da5b[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Tue Jul 23 13:56:47 2024 -0400
+
+    :sparkles: feat(page/contact): created Contact page
+
+[33mcommit c28500d9fa764f7ec0df6248c5bc8bd0426958be[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Tue Jul 23 13:50:35 2024 -0400
+
+    :sparkles: feat(page/about): created About page
+
+[33mcommit b361843937d377212e36809b9bd01a1e6db41680[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Tue Jul 23 13:47:46 2024 -0400
+
+    :sparkles: chore(page/home): rename path logo
+
+[33mcommit 610cd8fc58f601c736bae78ee3e143fc4f380156[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Tue Jul 23 13:42:04 2024 -0400
+
+    :sparkles: chore(page/home): rename path logo
+
+[33mcommit db5b823b9886355c071c24f25aa47a36a652bdce[m
+Author: Lucas Gomes <lucas.gomes.manaus@gmail.com>
+Date:   Tue Jul 23 13:33:51 2024 -0400
+
+    :sparkles: feat(page/home): created Home page
