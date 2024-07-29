@@ -1,4 +1,4 @@
-import { consultoria, palestras, treinamentos } from '@/lib/data'
+import { GETServiceSingle } from '@/actions/service'
 import Image from 'next/image'
 
 type paramsProps = {
@@ -7,27 +7,11 @@ type paramsProps = {
     id: string
   }
 }
-type ServiceType = {
-  id: string
-  category: string
-  image: string
-  title: string
-  subtitle: string
-  content: string
-}
 
-export default function Page({ params }: paramsProps) {
-  const { category, id } = params
+export default async function Page({ params }: paramsProps) {
+  const { id } = params
 
-  let service: ServiceType | undefined
-
-  if (category === 'palestras') {
-    service = palestras.find((item) => item.id === id)
-  } else if (category === 'consultoria') {
-    service = consultoria.find((item) => item.id === id)
-  } else if (category === 'treinamentos') {
-    service = treinamentos.find((item) => item.id === id)
-  }
+  const service = await GETServiceSingle(id)
 
   if (!service) {
     return <div>Service not found</div>
@@ -38,7 +22,7 @@ export default function Page({ params }: paramsProps) {
       <section className="relative flex w-screen flex-col items-center justify-center py-8 md:gap-8 lg:flex-row lg:px-32">
         <div className="flex h-56 flex-col items-center justify-center">
           <Image
-            src={service.image}
+            src={service.image!}
             alt="capa de fundo da imagem"
             width={700}
             height={700}
@@ -50,7 +34,7 @@ export default function Page({ params }: paramsProps) {
         </div>
       </section>
       <section className="p-8 text-base lg:p-16">
-        <p className="text-lg">{service.content}</p>
+        <p className="text-lg">{service.text}</p>
         <p className="mt-6 text-lg">
           Entre em contato pelo telefone (47) 997071177 ou pelo email
           contato@domuspetra.com.br
