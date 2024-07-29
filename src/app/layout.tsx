@@ -1,6 +1,7 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Toaster } from '@/components/ui/toaster'
+import { GlobalProvider } from '@/contexts/GlobalContext'
 import AuthProvider from '@/providers/auth'
 import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
@@ -69,21 +70,23 @@ export default function RootLayout({
   return (
     <html lang="pt-Br">
       <AuthProvider>
-        <body
-          className={`${montserrat.className} bg-[-bg-primary] antialiased`}
-        >
-          <Toaster />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+        <GlobalProvider>
+          <body
+            className={`${montserrat.className} bg-[-bg-primary] antialiased`}
           >
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </body>
+            <Toaster />
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Header />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </body>
+        </GlobalProvider>
       </AuthProvider>
     </html>
   )

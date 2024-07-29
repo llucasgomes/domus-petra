@@ -22,6 +22,8 @@ import {
   SelectValue
 } from '@/components/ui/select'
 import { toast } from '@/components/ui/use-toast'
+import { GlobalContext } from '@/contexts/GlobalContext'
+import { useContext } from 'react'
 
 const FormSchema = z.object({
   cargo: z.string({
@@ -30,6 +32,8 @@ const FormSchema = z.object({
 })
 
 export function SelectForm({ userId }: { userId: string }) {
+  const { setUpdateUserList } = useContext(GlobalContext)
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema)
   })
@@ -43,6 +47,9 @@ export function SelectForm({ userId }: { userId: string }) {
       toast({
         title: 'Sucess!!',
         description: 'Usuario alterado com sucesso'
+      })
+      setUpdateUserList((prev) => {
+        return !prev
       })
     } catch (error) {
       toast({
@@ -68,7 +75,7 @@ export function SelectForm({ userId }: { userId: string }) {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="admin">Admin</SelectItem>
+                  <SelectItem value="admin">admin</SelectItem>
                   <SelectItem value="user">user</SelectItem>
                 </SelectContent>
               </Select>
