@@ -4,7 +4,6 @@ import { db } from '@/lib/prisma'
 
 export async function GETServices() {
   const services = await db.service.findMany()
-  console.log(services)
   return services
 }
 export async function GETPalestras() {
