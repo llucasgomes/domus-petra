@@ -29,7 +29,6 @@ export async function GETConsultorias() {
   })
   return consultoria
 }
-
 export async function GETTreinamentos() {
   const treinamentos = await db.service.findMany({
     where: {
@@ -40,4 +39,15 @@ export async function GETTreinamentos() {
     }
   })
   return treinamentos
+}
+export async function GETServiceSingle(serviceId: string) {
+  const service = await db.service.findUnique({
+    where: {
+      id: serviceId
+    },
+    include: {
+      user: true
+    }
+  })
+  return service
 }

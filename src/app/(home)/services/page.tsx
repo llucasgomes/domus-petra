@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   GETConsultorias,
   GETPalestras,
+  GETServiceSingle,
   GETTreinamentos
 } from '@/actions/service'
 import Image from 'next/image'
@@ -13,6 +14,8 @@ export default async function Page() {
   const consultoria = await GETConsultorias()
   const treinamentos = await GETTreinamentos()
   const palestras = await GETPalestras()
+  await GETServiceSingle('66a6d750030f6716e139c3cb')
+
   return (
     <main className="flex w-full flex-col items-center justify-center">
       <section className="relative flex w-full flex-col items-center justify-center py-8 md:h-96 md:gap-8 lg:flex-row">
