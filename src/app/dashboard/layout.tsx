@@ -7,14 +7,23 @@ import { routesLink } from './_components/Sidebar/routesLink'
 import { DashLogOut } from './_components/auth'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const session = useSession()
+  const { data } = useSession()
 
-  if (!session.data) {
+  !data && redirect('/')
+  const rafael = 'rafarz76dev@gmail.com'
+  const lucas = 'lucas.gomes.manaus@gmail.com'
+  const amanda = 'amanda.spitzner@gmail.com'
+  const mauricio = 'canto.mauricio@gmail.com'
+
+  if (
+    data?.user?.email != rafael &&
+    data?.user?.email != lucas &&
+    data?.user?.email != mauricio &&
+    data?.user?.email != amanda
+  ) {
     redirect('/')
   }
   const navLinks = routesLink.filter((route) => route.hole.includes('admin'))
-
-  console.log(session.status)
 
   return (
     <main>
@@ -23,8 +32,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <C_SideBar.container>
           <C_SideBar.user
             userHole={'admin'}
-            userName={session.data?.user?.name}
-            userImage={session.data?.user?.image}
+            userName={data?.user?.name}
+            userImage={data?.user?.image}
           />
           <C_SideBar.nav>
             {navLinks.map((item) => (
