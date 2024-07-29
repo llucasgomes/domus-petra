@@ -142,24 +142,23 @@
     }
 
     .blogDiv2 .blogImage {
-        width: 230%;
-        height: 230%;     
+        width: 100%;
+        height: auto;     
         margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
         margin-top: 20px;
-        margin-left: -10px;
+        margin-left: 0px;
     }
     .blogDiv3 .blogImage {
-      width: 230%;
-      height: 230%;      
+      width: 100%;
+      height: auto;      
       margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */      
-      margin-left: 50px;
+      margin-left: 40px;
     }
   
     .blogDiv2 .blogText,
     .blogDiv3 .blogText {
       width: 100%;
-      padding: 0;
-      text-align: center; 
+      padding: 0;     
     }
 
     .blogHeading {       
