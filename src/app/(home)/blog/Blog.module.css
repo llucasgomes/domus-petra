@@ -1,134 +1,208 @@
-.main {
-    display: flex;
-    flex-direction: column;
-}
-
-.newSection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    align-items: center;
-    position: relative;   
-}
-
-.leftSection,
-.rightSection {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 5rem; /* Adiciona uma margem superior no desktop */
-}
-
-.leftImage {
+/* Estilo geral para o blog */
+.blogDiv1, .blogDiv2, .blogDiv3, .blogDiv4 {
+    margin-bottom: 40px;
+  }
+  
+  .blogImage {
     width: 100%;
+    max-width: 600px;
     height: auto;
+    margin-top: 50px;
     object-fit: cover;
+    transition: transform 0.3s ease; 
+  }
+  
+  .blogImage:hover {
+    transform: scale(1.02);
+  }
+  
+  .blogText {
+    max-width: 600px;
+  }
+  
+  /* Estilo para a primeira seção */
+  .blogHeader {
     position: relative;
-}
-
-.blogText {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .blogHeaderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .blogTitle {
     position: absolute;
-    top: 90%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 84px;
-    color: #ffffff;
-    margin-left: -330px;
-    font-weight: bold; 
-}
+    color: var(--text-highlight);
+    font-size: 4rem;
+    font-weight: bold;  
+  }
+  
+  /* Estilo para a seção do blog */
+  .blogContent {
+    margin-bottom: 40px;
+  }
 
-.subtitle {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #345171;
+  .blogText {
+    max-width: 600px;
+  }
+  
+  .blogHeading {
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-top: -80px;
-}
-
-.cards {
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-weight: bold;  
+  }
+  
+  .blogSubtitle {
+    font-size: 1.2rem;
+    color: gray;
+  }
+  
+  /* Div 1: Imagem centralizada acima do texto */
+  .blogDiv1 {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    font-weight: bold;
-}
-
-.card {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-    color: #D89150; 
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.textImageSection {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .blogDiv1 .blogImage {
+    width: 980px; /* Define a largura da imagem */
+    height: 562px; /* Define a altura da imagem */
+    margin-bottom: 20px;
+  }
+  
+  /* Div 2: Imagem à direita e texto à esquerda */
+  .blogDiv2 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-}
+  }
+  
+  .blogDiv2 .blogImage {
+    width: 478px;
+    height: 430px;
+    margin-left: 40px;
+  }
+  
+  .blogDiv2 .blogText {
+    width: 50%;
+    text-align: left;  
+  }
+  
+  /* Div 3: Imagem à esquerda e texto à direita */
+  .blogDiv3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blogDiv3 .blogImage {
+    width: 478px;
+    height: 430px;
+    margin-right: 40px;
+  }
+  
+  .blogDiv3 .blogText {
+    width: 50%;
+    text-align: left;    
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 767px) {
+    .blogDiv1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .blogDiv1 .blogImage{
+      width: 230%;
+      height: 230%;      
+    } 
 
-.textContent {
-    flex: 1;
-}
-
-.textHeading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #345171;
-    font-style: italic;
-    font-weight: bold;
-}
-
-.textParagraph {
-    font-size: 1rem;
-    color: #030408;
-}
-
-.rightImage {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .newSection {
-        flex-direction: column;
+    .blogDiv2, 
+    .blogDiv3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%; 
     }
 
-    .subtitle{
-        color: #345171;
-        font-weight: bold;
+    .blogDiv2 .blogImage {
+        width: 230%;
+        height: 230%;     
+        margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */
+        margin-top: 20px;
+        margin-left: -10px;
+    }
+    .blogDiv3 .blogImage {
+      width: 230%;
+      height: 230%;      
+      margin-bottom: 20px; /* Espaçamento entre a imagem e o texto */      
+      margin-left: 50px;
+    }
+  
+    .blogDiv2 .blogText,
+    .blogDiv3 .blogText {
+      width: 100%;
+      padding: 0;
+      text-align: center; 
     }
 
-    .blogText {
-        top: 80%; /* Ajusta a posição do texto no mobile */
-        margin-left: -80px;
-        font-weight: bold;
-        font-size: 45px;        
+    .blogHeading {       
+       text-align: center;    
+      }
+      
+      .blogSubtitle {
+        text-align: center;  
+      }
+  }
+  
+  /* Tablet Styles (iPad) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .blogDiv1 .blogImage {
+      width: 100%;
+      height: auto;
+      max-width: 800px; /* Ajuste o máximo largura da imagem */
+    }
+  
+    .blogDiv2 .blogImage, 
+    .blogDiv3 .blogImage {
+      width: 100%;
+      height: auto;
+      max-width: 478px; /* Ajuste o máximo largura da imagem */
     }
     
-    .textImageSection {
-        flex-direction: column;
+    .blogDiv2, 
+    .blogDiv3 {
+      justify-content: center; /* Centraliza o conteúdo no tablet */
     }
-
-    .textImageSection.mobile-reverse {
-        flex-direction: column-reverse;
+  
+    .blogDiv2 .blogText, 
+    .blogDiv3 .blogText {
+      padding: 0 20px; /* Ajuste o padding para tablets */
     }
-
-    .rightImage {
-        margin-top: 1rem; /* Adiciona margem no mobile */
-    }
-}
+  }
+  
+  /* Desktop Styles (MacBook) */
+  @media (min-width: 1024px) and (max-width: 1284px) {
+    /* Não altere nada aqui */
+  }
+  
+  /* Large Desktop Styles */
+  @media (min-width: 1285px) {
+    /* Não altere nada aqui */
+  }
