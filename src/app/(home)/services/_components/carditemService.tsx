@@ -6,19 +6,11 @@ import {
   CardHeader,
   CardTitle
 } from '@/components/ui/card'
+import { Service } from '@prisma/client'
 import Image from 'next/image'
 import Link from 'next/link'
 
-type serviceProps = {
-  id: string
-  category: string
-  image: string
-  title: string
-  subtitle: string
-  content: string
-}
-
-export const CardItem = ({ service }: { service: serviceProps }) => {
+export const CardItem = ({ service }: { service: Service }) => {
   return (
     <Link href={`/services/${service.category}/${service.id}`}>
       <Card className="flex border-transparent shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:h-96 md:max-w-[350px] md:flex-col lg:max-w-[390px]">

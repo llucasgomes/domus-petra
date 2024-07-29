@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { Toaster } from '@/components/ui/toaster'
 import AuthProvider from '@/providers/auth'
 import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
@@ -71,6 +72,7 @@ export default function RootLayout({
         <body
           className={`${montserrat.className} bg-[-bg-primary] antialiased`}
         >
+          <Toaster />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

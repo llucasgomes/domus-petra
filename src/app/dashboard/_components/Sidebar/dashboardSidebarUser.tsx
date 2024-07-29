@@ -1,4 +1,3 @@
-import { LogOut } from 'lucide-react'
 import Image from 'next/image'
 
 type DashboardSidebarUserProps = {
@@ -30,18 +29,11 @@ export const DashboardSidebarUser = ({
         height="50"
       />
       <div className="flex flex-col">
-        <span className="font-medium">
-          {userName && userName.split(' ')[0]}
-        </span>
+        <span className="font-medium">{userName && userName}</span>
 
         {userRoleText && (
-          <span className="text-xs text-[--text-secundary]">
-            {userRoleText}
-          </span>
+          <span className="text-xs text-white">{userRoleText}</span>
         )}
-      </div>
-      <div className="ml-4 cursor-pointer text-[--text-primary]">
-        <LogOut size={25} />
       </div>
     </header>
   )

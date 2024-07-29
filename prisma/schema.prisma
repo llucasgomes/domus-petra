@@ -14,18 +14,20 @@ datasource db {
 }
 
 model User {
-  id            String          @id @default(auto()) @map("_id") @db.ObjectId
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
-  email         String?         @unique
+  email         String?   @unique
   emailVerified DateTime?
+  role          String    @default("user")
   image         String?
   accounts      Account[]
   sessions      Session[]
-  // Optional for WebAuthn support
+
   Authenticator Authenticator[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Services  Service[]
 }
 
 model Account {
@@ -82,4 +84,24 @@ model Authenticator {
   transports           String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Service {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  image    String
+  title    String
+  subtitle String
+  text     String
+  category Category
+  userId   String   @db.ObjectId
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Category {
+  PALESTRAS
+  CONSULTORIAS
+  TREINAMENTOS
 }
