@@ -4,7 +4,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   GETConsultorias,
   GETPalestras,
-  GETServiceSingle,
   GETTreinamentos
 } from '@/actions/service'
 import Image from 'next/image'
@@ -14,7 +13,6 @@ export default async function Page() {
   const consultoria = await GETConsultorias()
   const treinamentos = await GETTreinamentos()
   const palestras = await GETPalestras()
-  await GETServiceSingle('66a6d750030f6716e139c3cb')
 
   return (
     <main className="flex w-full flex-col items-center justify-center">
@@ -79,7 +77,7 @@ export default async function Page() {
             value="palestras"
           >
             {palestras.map((item) => {
-              return <CardItem key={item.title} service={item} />
+              return <CardItem key={item.id} service={item} />
             })}
           </TabsContent>
           <TabsContent
@@ -87,7 +85,7 @@ export default async function Page() {
             value="treinamentos"
           >
             {treinamentos.map((item) => {
-              return <CardItem key={item.title} service={item} />
+              return <CardItem key={item.id} service={item} />
             })}
           </TabsContent>
         </Tabs>
