@@ -1,28 +1,34 @@
-'use client'
-import { useSession } from 'next-auth/react'
-import { redirect } from 'next/navigation'
+import { GETServices } from '@/actions/service'
+import { GETUsers } from '@/actions/user'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-export default function Page() {
-  const { status, data } = useSession()
-
-  !data && redirect('/')
-  const rafael = 'rafarz76dev@gmail.com'
-  const lucas = 'lucas.gomes.manaus@gmail.com'
-  const amanda = 'amanda.spitzner@gmail.com'
-
-  if (
-    data?.user?.email != rafael &&
-    data?.user?.email != lucas &&
-    data?.user?.email != amanda
-  ) {
-    redirect('/')
-  }
-
+export default async function Page() {
+  const users = await await GETUsers()
+  const services = await await GETServices()
   return (
-    <div>
-      {' '}
-      <h1>pagina de dashboard</h1>
-      <h1>{status}</h1>
+    <div className="mt-12 flex w-full items-center justify-center gap-6">
+      <Card className="flex w-[300px] flex-col bg-[#577DAC]">
+        <CardHeader className="flex w-full flex-col items-center justify-start">
+          <CardTitle className="text-5xl text-white">{users.length}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-center font-semibold text-white">
+            Usuarios Cadastrados
+          </p>
+        </CardContent>
+      </Card>
+      <Card className="flex w-[300px] flex-col bg-[#577DAC]">
+        <CardHeader className="flex w-full flex-col items-center justify-start">
+          <CardTitle className="text-5xl text-white">
+            {services.length}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-center font-semibold text-white">
+            Total de Serviços
+          </p>
+        </CardContent>
+      </Card>
     </div>
   )
 }

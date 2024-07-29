@@ -16,3 +16,12 @@ export async function UPDATEUser(userId: string, newRole: string) {
     console.log(error)
   }
 }
+
+export async function GETUserSingle(userEmail: string) {
+  const user = await db.user.findUnique({
+    where: {
+      email: userEmail
+    }
+  })
+  return user
+}
