@@ -1,11 +1,19 @@
 import { poppis } from '@/app/_ui/fonts'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { consultoria, palestras, treinamentos } from '@/lib/data'
 
+import {
+  GETConsultorias,
+  GETPalestras,
+  GETTreinamentos
+} from '@/actions/service'
 import Image from 'next/image'
 import { CardItem } from './_components/carditemService'
 
-export default function Page() {
+export default async function Page() {
+  const consultoria = await GETConsultorias()
+  const treinamentos = await GETTreinamentos()
+  const palestras = await GETPalestras()
+
   return (
     <main className="flex w-full flex-col items-center justify-center">
       <section className="relative flex w-full flex-col items-center justify-center py-8 md:h-96 md:gap-8 lg:flex-row">
@@ -61,7 +69,7 @@ export default function Page() {
             value="consultorias"
           >
             {consultoria.map((item) => (
-              <CardItem key={item.title} service={item} />
+              <CardItem key={item.id} service={item} />
             ))}
           </TabsContent>
           <TabsContent
@@ -69,7 +77,7 @@ export default function Page() {
             value="palestras"
           >
             {palestras.map((item) => {
-              return <CardItem key={item.title} service={item} />
+              return <CardItem key={item.id} service={item} />
             })}
           </TabsContent>
           <TabsContent
@@ -77,7 +85,7 @@ export default function Page() {
             value="treinamentos"
           >
             {treinamentos.map((item) => {
-              return <CardItem key={item.title} service={item} />
+              return <CardItem key={item.id} service={item} />
             })}
           </TabsContent>
         </Tabs>
