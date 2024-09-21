@@ -1,135 +1,61 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
-  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": [".next", ".husky"] },
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "files": {
+    "ignore": [".next", ".husky"]
+  },
   "formatter": {
-    "enabled": true,
-    "useEditorconfig": true,
-    "formatWithErrors": false,
-    "indentStyle": "space",
-    "indentWidth": 2,
+    "formatWithErrors": true,
     "lineEnding": "lf",
     "lineWidth": 80,
-    "attributePosition": "auto",
-    "bracketSpacing": true
+    "attributePosition": "auto"
   },
-  "organizeImports": { "enabled": true },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": false,
+      "recommended": true,
       "a11y": { "noBlankTarget": "error" },
       "complexity": {
-        "noBannedTypes": "error",
         "noUselessThisAlias": "error",
         "noUselessTypeConstraint": "error",
         "useArrowFunction": "off"
       },
       "correctness": {
         "noChildrenProp": "error",
-        "noPrecisionLoss": "error",
         "noUnusedVariables": "error",
         "useArrayLiterals": "off",
         "useExhaustiveDependencies": "warn",
         "useHookAtTopLevel": "error",
-        "useJsxKeyInIterable": "error"
-      },
-      "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
-      "style": {
-        "noNamespace": "error",
-        "useAsConstAssertion": "error",
-        "useBlockStatements": "off"
-      },
-      "suspicious": {
-        "noCommentText": "error",
-        "noDuplicateJsxProps": "error",
-        "noExplicitAny": "error",
-        "noExtraNonNullAssertion": "error",
-        "noMisleadingInstantiator": "error",
-        "noUnsafeDeclarationMerging": "error"
+        "useJsxKeyInIterable": "error",
+        "noUnusedImports": "warn"
       }
     }
   },
   "javascript": {
     "formatter": {
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "lineWidth": 120,
       "trailingCommas": "none",
       "semicolons": "asNeeded",
-      "arrowParentheses": "always",
-      "bracketSameLine": false,
-      "quoteStyle": "single",
-      "attributePosition": "auto",
-      "bracketSpacing": true
+      "arrowParentheses": "asNeeded"
+    },
+    "jsxRuntime": "transparent"
+  },
+  "json": {
+    "parser": {
+      "allowComments": true
     }
   },
   "overrides": [
     {
-      "include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
-      "linter": {
-        "rules": {
-          "correctness": {
-            "noConstAssign": "off",
-            "noGlobalObjectCalls": "off",
-            "noInvalidBuiltinInstantiation": "off",
-            "noInvalidConstructorSuper": "off",
-            "noNewSymbol": "off",
-            "noSetterReturn": "off",
-            "noUndeclaredVariables": "off",
-            "noUnreachable": "off",
-            "noUnreachableSuper": "off"
-          },
-          "style": {
-            "noArguments": "error",
-            "noVar": "error",
-            "useConst": "error"
-          },
-          "suspicious": {
-            "noDuplicateClassMembers": "off",
-            "noDuplicateObjectKeys": "off",
-            "noDuplicateParameters": "off",
-            "noFunctionAssign": "off",
-            "noImportAssign": "off",
-            "noRedeclare": "off",
-            "noUnsafeNegation": "off",
-            "useGetterReturn": "off"
-          }
-        }
-      }
-    },
-    {
-      "include": ["*.ts", "*.tsx", "*.mts", "*.cts"],
-      "linter": {
-        "rules": {
-          "correctness": {
-            "noConstAssign": "off",
-            "noGlobalObjectCalls": "off",
-            "noInvalidBuiltinInstantiation": "off",
-            "noInvalidConstructorSuper": "off",
-            "noNewSymbol": "off",
-            "noSetterReturn": "off",
-            "noUndeclaredVariables": "off",
-            "noUnreachable": "off",
-            "noUnreachableSuper": "off"
-          },
-          "style": {
-            "noArguments": "error",
-            "noVar": "error",
-            "useConst": "error"
-          },
-          "suspicious": {
-            "noDuplicateClassMembers": "off",
-            "noDuplicateObjectKeys": "off",
-            "noDuplicateParameters": "off",
-            "noFunctionAssign": "off",
-            "noImportAssign": "off",
-            "noRedeclare": "off",
-            "noUnsafeNegation": "off",
-            "useGetterReturn": "off"
-          }
-        }
-      }
-    },
-    { "include": ["*.json"], "formatter": { "lineWidth": 80 } }
+      "include": ["*.ts", "*.tsx", "*.mts", "*.cts"]
+    }
   ]
 }
