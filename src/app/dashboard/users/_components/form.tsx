@@ -51,7 +51,7 @@ export function SelectForm({ userId }: { userId: string }) {
       setUpdateUserList((prev) => {
         return !prev
       })
-    } catch (error) {
+    } catch (_error) {
       toast({
         title: 'Failed!!',
         description: 'Falha ao alterar  cargo de usuário'

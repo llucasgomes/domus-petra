@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 // Importando o CSS
 import { usePathname } from 'next/navigation'
+import { FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 import styles from './Footer.module.css'
 
 export const redes_sociais = [
@@ -77,9 +77,8 @@ export const Footer = () => {
         </div>
       </div>
       <p className={`${styles.footerCopyright} text-sm`}>
-        © 2024{' '}
-        <span className="text-[--bg-tertiary]">Fabiano Dell Agnelo</span>. Todos
-        os direitos reservados.
+        © 2024 <span className="text-[--bg-tertiary]">Fabiano Dell Agnelo</span>
+        . Todos os direitos reservados.
       </p>
     </footer>
   )

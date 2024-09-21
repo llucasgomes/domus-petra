@@ -7,11 +7,11 @@ import { columns } from './columns'
 import { DataTable } from './data-table'
 
 export default function Page() {
-  const { setUserList, updateUserList, userList } = useContext(GlobalContext)
+  const { setUserList, userList } = useContext(GlobalContext)
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await await await GETUsers()
+        const result = await await GETUsers()
         setUserList(result)
       } catch (error) {
         console.error('Erro ao buscar alunos:', error)
@@ -19,7 +19,7 @@ export default function Page() {
     }
 
     fetchData()
-  }, [updateUserList])
+  }, [setUserList])
 
   return (
     <div>

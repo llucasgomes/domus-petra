@@ -12,12 +12,12 @@ import {
 
 import {
   ColumnDef,
+  SortingState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
-  SortingState,
   useReactTable
 } from '@tanstack/react-table'
 import { ChevronLeft, ChevronRight } from 'lucide-react'

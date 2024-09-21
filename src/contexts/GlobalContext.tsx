@@ -2,11 +2,11 @@
 
 import { User } from '@prisma/client'
 import {
-  createContext,
   Dispatch,
   FC,
   ReactNode,
   SetStateAction,
+  createContext,
   useState
 } from 'react'
 
