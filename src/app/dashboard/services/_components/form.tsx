@@ -45,6 +45,7 @@ export function SelectForm({ userId }: { userId: string }) {
         description: 'Usuario alterado com sucesso'
       })
     } catch (error) {
+      console.log(error)
       toast({
         title: 'Failed!!',
         description: 'Falha ao alterar  cargo de usuário'

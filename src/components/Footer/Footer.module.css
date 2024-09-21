@@ -1,6 +1,6 @@
 .footer {
-  padding:20px;
-  
+  padding: 20px;
+
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .footerText {
-  margin-bottom: 200px;  /* Espaçamento entre endereço e email */
+  margin-bottom: 200px; /* Espaçamento entre endereço e email */
 }
 
 .footerSocials {
@@ -33,27 +33,26 @@
   gap: 15px;
 }
 
-
 /* Responsividade para Desktop e MacBook */
 @media (min-width: 1025px) {
   .footerContainer {
     padding: 20 50px;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footerLeft {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .footerRight {
-      align-items: flex-end;
+    align-items: flex-end;
   }
 
   .footerText {
-      margin-bottom: 20px;  /* Aumenta o espaçamento no desktop */
+    margin-bottom: 20px; /* Aumenta o espaçamento no desktop */
   }
 }
 
@@ -61,66 +60,66 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .footerContainer {
     padding: 20px 25px;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footerLeft {
     display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .footerRight {
-      align-items: flex-end;
+    align-items: flex-end;
   }
 
   .footerText {
-      margin-bottom: 15px;  /* Ajuste de espaçamento para tablets */
+    margin-bottom: 15px; /* Ajuste de espaçamento para tablets */
   }
 }
 
 /* Responsividade para Mobile */
 @media (max-width: 767px) {
   .footerContainer {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-.footerLeft{
-  display: none;
-}
-
-  .footerLeft,
-  .footerRight {
-      align-items: center;
-  }
-
-  .footerSocials {
-      justify-content: center;
-  }
-
-  .footerText {
-      margin-bottom: 20px;  /* Aumenta o espaçamento entre endereço e email no mobile */
-  }
-
-  .footerSocials {
-      margin-top: 20px;  /* Aumenta o espaçamento acima das redes sociais no mobile */
+  .footerLeft {
+    display: none;
   }
 
   .footerLeft,
   .footerRight {
-      align-items: center;
-      margin-top: 30px;
+    align-items: center;
   }
 
   .footerSocials {
-      justify-content: center;
+    justify-content: center;
   }
 
   .footerText {
-      margin-bottom: 10px;  /* Ajuste de espaçamento para mobile */
+    margin-bottom: 20px; /* Aumenta o espaçamento entre endereço e email no mobile */
+  }
+
+  .footerSocials {
+    margin-top: 20px; /* Aumenta o espaçamento acima das redes sociais no mobile */
+  }
+
+  .footerLeft,
+  .footerRight {
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .footerSocials {
+    justify-content: center;
+  }
+
+  .footerText {
+    margin-bottom: 10px; /* Ajuste de espaçamento para mobile */
   }
 
   .text-sm {
@@ -131,4 +130,3 @@
     margin-top: 30px;
   }
 }
-

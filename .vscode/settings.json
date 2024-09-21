@@ -1,6 +1,14 @@
 {
-  "editor.formatOnSave": false,
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "biomejs.biome"
+  },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint":"always" 
-    }
+    "source.organizeImports.biome": "explicit",
+    "quickfix.biome": "explicit"
+  }
 }

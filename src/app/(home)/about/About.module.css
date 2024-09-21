@@ -25,7 +25,7 @@
 .image {
   margin-left: 20px; /* Margem à esquerda para desktop */
   order: 2; /* A imagem será o segundo elemento */
-  box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+  box-shadow: 0 4px 8px #343434; /* Sombreamento */
   transition: transform 0.2s; /* Efeito de transição */
 }
 
@@ -36,13 +36,13 @@
 
 .leftImage {
   margin-right: 20px; /* Margem à esquerda para desktop */
-  box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+  box-shadow: 0 4px 8px #343434; /* Sombreamento */
   transition: transform 0.2s; /* Efeito de transição */
   order: 1; /* A imagem será o primeiro elemento */
 }
 
- /* Efeito de hover (opcional) */
- .leftImage:hover {
+/* Efeito de hover (opcional) */
+.leftImage:hover {
   transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
 }
 
@@ -51,13 +51,13 @@
 }
 
 .imageMobile {
-  box-shadow: 0 4px 8px #343434(0, 0, 0, 1.2); /* Sombreamento */
+  box-shadow: 0 4px 8px #343434; /* Sombreamento */
   transition: transform 0.2s; /* Efeito de transição */
   display: none; /* Esconde a imagem mobile por padrão */
 }
 
- /* Efeito de hover (opcional) */
- .imageMobile:hover {
+/* Efeito de hover (opcional) */
+.imageMobile:hover {
   transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
 }
 
@@ -67,7 +67,7 @@
 }
 
 .backroundSection {
-  background-color: #567CAB;
+  background-color: #567cab;
 }
 
 /* Estilo para mobile */
@@ -95,7 +95,7 @@
   .paragraph {
     margin-top: 0; /* Ajusta espaço acima do parágrafo, se necessário */
     order: 1; /* O parágrafo permanece abaixo no mobile */
-  }    
+  }
 }
 
 /* Estilo para iPad e MacBook */
@@ -116,4 +116,3 @@
     display: none; /* Mantém a imagem mobile escondida */
   }
 }
-
