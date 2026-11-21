@@ -14,7 +14,8 @@ const routes = [
 	{ name: 'Sobre', route: '/about', icon: HelpCircle },
 	{ name: 'Serviços', route: '/services', icon: Briefcase },
 	{ name: 'Blog', route: '/blog', icon: BookOpen },
-	{ name: 'Contatos', route: '/contacts', icon: Mail }
+	{ name: 'Contatos', route: '/contacts', icon: Mail },
+	{ name: 'Painel Admin', route: '/dashboard', icon: LayoutDashboard }
 ]
 
 const adminEmails = ['lucas.gomes.manaus@gmail.com', 'amanda.spitzner@gmail.com', 'rafarz76dev@gmail.com']

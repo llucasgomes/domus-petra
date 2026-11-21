@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 type DashboardSidebarUserProps = {
 	userImage?: string | null | undefined
@@ -11,27 +11,35 @@ type UserRole = 'guest' | 'admin'
 export const DashboardSidebarUser = ({
 	userImage = '/noperson.png',
 	userHole,
-	userName
+	userName = 'Administrador'
 }: DashboardSidebarUserProps) => {
 	const userRoles: { [key in UserRole]: string } = {
 		guest: 'Convidado',
-		admin: 'Admin'
+		admin: 'Administrador'
 	}
 	const userRoleText = userRoles[userHole]
 
-	return (
-		<header className="mt-5 flex items-center gap-5 text-white">
-			<Image
-				src={userImage ? userImage : '/noperson.png'}
-				className="rounded-full object-cover"
-				alt={`Foto de perfil do(a) ${userHole}, que se chama ${userName},que se encontra logado(a)`}
-				width="50"
-				height="50"
-			/>
-			<div className="flex flex-col">
-				<span className="font-medium">{userName && userName}</span>
+	const initials = userName
+		? userName
+				.split(' ')
+				.map(n => n[0])
+				.slice(0, 2)
+				.join('')
+				.toUpperCase()
+		: 'DP'
 
-				{userRoleText && <span className="text-xs text-white">{userRoleText}</span>}
+	return (
+		<header className="mb-4 flex items-center gap-3.5 p-3 rounded-2xl bg-white/5 border border-white/10 text-white">
+			<Avatar className="h-10 w-10 ring-2 ring-[#567CAB]/50">
+				<AvatarImage src={userImage || '/noperson.png'} alt={userName || 'Admin'} />
+				<AvatarFallback className="bg-[#2B355A] text-white font-bold text-xs">{initials}</AvatarFallback>
+			</Avatar>
+			<div className="flex flex-col min-w-0 flex-1">
+				<span className="font-semibold text-sm truncate text-white">{userName || 'Administrador'}</span>
+				<div className="flex items-center gap-1.5 mt-0.5">
+					<span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+					<span className="text-xs text-slate-300 font-medium">{userRoleText}</span>
+				</div>
 			</div>
 		</header>
 	)

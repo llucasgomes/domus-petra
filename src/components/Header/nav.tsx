@@ -12,13 +12,9 @@ const navLinks = [
 	{ name: 'Contato', href: '/contacts' }
 ]
 
-const adminEmails = ['lucas.gomes.manaus@gmail.com', 'amanda.spitzner@gmail.com', 'rafarz76dev@gmail.com']
-
 export const NavHeader = () => {
 	const pathname = usePathname()
-	const { data } = useSession()
-
-	const isAdmin = data?.user?.email && adminEmails.includes(data.user.email)
+	useSession()
 
 	return (
 		<nav aria-label="Navegação Principal">
@@ -43,20 +39,18 @@ export const NavHeader = () => {
 					)
 				})}
 
-				{isAdmin && (
-					<li>
-						<Link
-							href="/dashboard"
-							className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 tracking-wide ${
-								pathname?.startsWith('/dashboard')
-									? 'text-white bg-[#567CAB] font-semibold'
-									: 'text-amber-300 hover:text-amber-200 hover:bg-white/10'
-							}`}
-						>
-							Dashboard
-						</Link>
-					</li>
-				)}
+				<li>
+					<Link
+						href="/dashboard"
+						className={`flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-lg transition-all tracking-wide border ${
+							pathname?.startsWith('/dashboard')
+								? 'text-white bg-[#567CAB] border-[#567CAB]'
+								: 'text-[#93B3DA] border-[#567CAB]/40 bg-[#567CAB]/10 hover:bg-[#567CAB]/25 hover:text-white'
+						}`}
+					>
+						<span>Painel</span>
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	)
