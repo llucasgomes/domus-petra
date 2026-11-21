@@ -1,35 +1,47 @@
 import { poppis } from '@/app/_ui/fonts'
-import { CarouselSpacing, CarroselNovidades } from '../novidades/carrosel'
+import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+import { CarroselNovidades } from '../novidades/carrosel'
 
 export const Novidades = () => {
-  return (
-    <section className="relative flex w-full flex-col items-start justify-start gap-3 p-8 pt-16 md:h-[700px] lg:h-[700px] lg:px-16 xl:h-screen">
-      <div className="hidden h-full w-full flex-col justify-start gap-5 md:hidden">
-        <h2
-          className={`${poppis.className} text-left text-[22px] font-black uppercase text-[#567CAB] lg:text-3xl`}
-        >
-          Novidades na Domus
-        </h2>
+	return (
+		<section className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-[#2B355A] via-[#3C5778] to-[#2B355A]">
+			<div className="max-w-7xl mx-auto flex flex-col gap-8 relative z-10">
+				{/* Section Header */}
+				<div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+					<div className="flex flex-col gap-2">
+						<span className="text-xs font-bold uppercase tracking-wider text-[#93B3DA]">Artigos & Insights</span>
+						<h2 className={`${poppis.className} text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase text-white`}>
+							Novidades da Domus Petra
+						</h2>
+						<p className="text-sm sm:text-base text-slate-200 max-w-xl">
+							Fique por dentro das melhores práticas em gestão, liderança, eficiência operacional e metodologia
+							japonesa.
+						</p>
+					</div>
 
-        <p className="hidden text-left text-lg text-white md:flex">
-          Receba novidades, conheça as melhores práticas e muito mais.
-        </p>
-        <div className="flex w-full justify-start pr-14"></div>
-      </div>
-      <div className="flex w-full items-center justify-end sm:py-3">
-        <CarroselNovidades />
+					<Link
+						href="/blog"
+						className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2.5 rounded-lg transition-all w-fit"
+					>
+						Ver todos os artigos
+						<ArrowRight size={16} />
+					</Link>
+				</div>
 
-        <div className="hidden md:flex">
-          <CarouselSpacing />
-        </div>
-      </div>
-      <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-b from-[#3C5778] from-0% to-[#567CAB] to-100%"></div>
-      <p
-        className={`${poppis.className} absolute bottom-0 right-0 -z-[9] text-[200px] font-black uppercase text-[#3B5E89] md:bottom-5 md:right-6 md:text-9xl xl:bottom-5 xl:right-10 xl:text-[210px]`}
-      >
-        {' '}
-        novidades
-      </p>
-    </section>
-  )
+				{/* Carousel */}
+				<div className="w-full mt-4">
+					<CarroselNovidades />
+				</div>
+			</div>
+
+			{/* Decorative Background Text */}
+			<p
+				aria-hidden="true"
+				className={`${poppis.className} pointer-events-none select-none absolute -bottom-10 right-4 -z-0 text-7xl sm:text-9xl md:text-[180px] lg:text-[220px] font-black uppercase text-white/[0.04] leading-none`}
+			>
+				Novidades
+			</p>
+		</section>
+	)
 }

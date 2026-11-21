@@ -4,8 +4,8 @@ import { DashboardSidebarNavItem } from './dashboardSidebarNavItem'
 import { DashboardSidebarUser } from './dashboardSidebarUser'
 
 export const C_SideBar = {
-  container: DashboardSidebar,
-  user: DashboardSidebarUser,
-  navItem: DashboardSidebarNavItem,
-  nav: DashboardSidebarNav
+	container: DashboardSidebar,
+	user: DashboardSidebarUser,
+	navItem: DashboardSidebarNavItem,
+	nav: DashboardSidebarNav
 }

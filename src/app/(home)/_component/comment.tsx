@@ -1,61 +1,41 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card'
-import Image from 'next/image'
+'use client'
+
+import { Card } from '@/components/ui/card'
+import { Quote, Star } from 'lucide-react'
 
 type DepoimentoProps = {
-  name: string
-  empresa: string
-  image: string
-  comentario: string
+	name: string
+	empresa: string
+	image: string
+	comentario: string
 }
+
+const ratingStars = ['star-1', 'star-2', 'star-3', 'star-4', 'star-5']
+
 export const CommentUser = ({ data }: { data: DepoimentoProps }) => {
-  return (
-    <blockquote className="max-w-[450px] rounded-xl border-transparent">
-      <Card className="relative flex h-[500px] flex-col justify-between border-transparent bg-transparent">
-        <CardHeader className="flex w-full flex-row items-center justify-between gap-3">
-          <cite className="flex flex-1 flex-col items-end gap-1">
-            <CardTitle className="text-left text-lg font-bold leading-none text-black">
-              {data.name}
-            </CardTitle>
-            <CardDescription className="font-medium text-black">
-              {'Gerente de compras'}
-            </CardDescription>
-          </cite>
-        </CardHeader>
-        <CardContent className="mt-3">
-          <p className="text-lg text-[#131727] md:text-base lg:text-xl">
-            <cite>
-              <q>{data.comentario}</q>
-            </cite>
-          </p>
-        </CardContent>
-        <CardFooter className="justify-start">
-          <p className="text-right text-lg font-semibold uppercase">
-            {data.empresa}
-          </p>
-        </CardFooter>
-        <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-xl bg-[#577DAC] drop-shadow-2xl"></div>
-        <Image
-          alt=""
-          src={'/outros/Vector.png'}
-          width={70}
-          height={70}
-          className="absolute left-5 top-5 -z-[5]"
-        />
-        <Image
-          alt=""
-          src={'/outros/vector-right.png'}
-          width={100}
-          height={100}
-          className="absolute bottom-5 right-5 -z-[5] opacity-85"
-        />
-      </Card>
-    </blockquote>
-  )
+	return (
+		<Card className="relative flex flex-col justify-between w-full max-w-md h-[340px] sm:h-[320px] p-6 sm:p-8 rounded-2xl bg-white/95 backdrop-blur-md border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300">
+			<div>
+				<div className="flex items-center justify-between mb-4">
+					<div className="flex gap-1 text-amber-400">
+						{ratingStars.map(starId => (
+							<Star key={starId} size={18} fill="currentColor" strokeWidth={0} />
+						))}
+					</div>
+					<Quote className="text-[#567CAB]/30 h-8 w-8" />
+				</div>
+
+				<p className="text-slate-700 text-sm sm:text-base leading-relaxed italic line-clamp-5">
+					&ldquo;{data.comentario}&rdquo;
+				</p>
+			</div>
+
+			<div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+				<div className="flex flex-col">
+					<span className="font-bold text-[#131727] text-sm sm:text-base">{data.name}</span>
+					<span className="text-xs font-semibold text-[#567CAB] uppercase tracking-wider">{data.empresa}</span>
+				</div>
+			</div>
+		</Card>
+	)
 }

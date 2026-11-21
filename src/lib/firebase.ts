@@ -5,12 +5,12 @@ import { initializeApp } from 'firebase/app'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: 'domus-f7f49.firebaseapp.com',
-  projectId: 'domus-f7f49',
-  storageBucket: 'domus-f7f49.appspot.com',
-  messagingSenderId: '402350293667',
-  appId: '1:402350293667:web:be956d0a73f45903bcb516'
+	apiKey: process.env.FIREBASE_API_KEY,
+	authDomain: 'domus-f7f49.firebaseapp.com',
+	projectId: 'domus-f7f49',
+	storageBucket: 'domus-f7f49.appspot.com',
+	messagingSenderId: '402350293667',
+	appId: '1:402350293667:web:be956d0a73f45903bcb516'
 }
 
 // Initialize Firebase

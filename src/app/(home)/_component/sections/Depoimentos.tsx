@@ -2,24 +2,30 @@ import Image from 'next/image'
 import { CarroselComments } from '../carrosel'
 
 export const Depoimentos = () => {
-  return (
-    <section className="relative flex w-full flex-col items-center justify-center p-8 lg:h-[700px] lg:px-16">
-      <div className="hidden w-full flex-col gap-5">
-        <h2 className="text-left text-[22px] font-bold text-white lg:text-3xl">
-          Depoimentos Reais de Sucesso Empresarial
-        </h2>
-      </div>
-      <div className="flex w-full max-w-6xl items-center justify-center py-5 sm:max-h-[500px] sm:py-3 lg:max-w-[600px]">
-        <CarroselComments />
-      </div>
-      <Image
-        alt="homem de pele clara com cabelo curto e escuro, usando um terno cinza claro sobre uma camisa social azul clara. Ele está em pé, falando com um microfone de fone de ouvido preso à orelha e um controle remoto nas mãos. A expressão dele é séria e ele parece estar apresentando ou palestrando em um evento. O fundo é escuro, destacando a figura do homem."
-        src={'/outros/bg-depoimentos.png'}
-        width={580}
-        height={580}
-        className="absolute -z-10 h-full w-full object-cover object-top"
-      />
-      <div className="absolute inset-0 -z-[9] bg-[#3E5A7D] bg-opacity-80"></div>
-    </section>
-  )
+	return (
+		<section className="relative w-full py-16 sm:py-20 lg:py-28 px-6 sm:px-8 lg:px-16 overflow-hidden flex flex-col items-center justify-center">
+			{/* Background Image & Gradient */}
+			<Image
+				alt="Fabiano Dell'Agnolo palestrando"
+				src="/outros/bg-depoimentos.png"
+				fill
+				sizes="100vw"
+				className="object-cover object-center brightness-40 -z-20"
+			/>
+			<div className="absolute inset-0 bg-gradient-to-b from-[#131727]/90 via-[#2B355A]/85 to-[#131727]/95 -z-10" />
+
+			<div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-4 relative z-10 mb-8 sm:mb-12">
+				<span className="text-xs font-bold uppercase tracking-wider text-[#93B3DA]">Resultados Comprovados</span>
+				<h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase text-white">Depoimentos de Sucesso</h2>
+				<p className="text-sm sm:text-base text-slate-200 max-w-xl">
+					Descubra como nossa metodologia prática em consultoria e capacitação gera impacto duradouro em organizações de
+					diversos segmentos.
+				</p>
+			</div>
+
+			<div className="w-full max-w-3xl relative z-10">
+				<CarroselComments />
+			</div>
+		</section>
+	)
 }

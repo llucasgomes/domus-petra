@@ -1,9 +1,9 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 export type RoutesLink = {
-  title: string
-  path: string
-  hole: ('guest' | 'admin')[]
+	title: string
+	path: string
+	hole: ('guest' | 'admin')[]
 
-  icon: ReactNode
+	icon: ReactNode
 }

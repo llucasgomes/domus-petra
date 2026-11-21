@@ -3,91 +3,61 @@
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import { LogInMenuDesktop, LogOutMenuDesktop } from './auth'
+
+const navLinks = [
+	{ name: 'Início', href: '/' },
+	{ name: 'Sobre', href: '/about' },
+	{ name: 'Serviços', href: '/services' },
+	{ name: 'Blog', href: '/blog' },
+	{ name: 'Contato', href: '/contacts' }
+]
+
+const adminEmails = ['lucas.gomes.manaus@gmail.com', 'amanda.spitzner@gmail.com', 'rafarz76dev@gmail.com']
 
 export const NavHeader = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
-  const { data } = useSession()
+	const pathname = usePathname()
+	const { data } = useSession()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
+	const isAdmin = data?.user?.email && adminEmails.includes(data.user.email)
 
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+	return (
+		<nav aria-label="Navegação Principal">
+			<ul className="flex items-center gap-1 xl:gap-2">
+				{navLinks.map(link => {
+					const isActive = link.href === '/' ? pathname === '/' : pathname?.startsWith(link.href)
 
-  const rafael = 'rafarz76dev@gmail.com'
-  const lucas = 'lucas.gomes.manaus@gmail.com'
-  const amanda = 'amanda.spitzner@gmail.com'
+					return (
+						<li key={link.href}>
+							<Link
+								href={link.href}
+								className={`relative px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 tracking-wide ${
+									isActive
+										? 'text-white bg-white/15 shadow-sm font-semibold'
+										: 'text-slate-200 hover:text-white hover:bg-white/10'
+								}`}
+							>
+								{link.name}
+								{isActive && <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#93B3DA] rounded-full" />}
+							</Link>
+						</li>
+					)
+				})}
 
-  return (
-    <nav className="text hidden md:block">
-      <ul
-        className={`flex w-full list-none gap-5 ${pathname == '/' ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'}`}
-      >
-        <Link
-          href={'/'}
-          className={`cursor-pointer px-4 py-2 ${pathname == '/' && 'font-bold'}`}
-        >
-          Home
-        </Link>
-        <Link
-          href={'/contacts'}
-          className={`cursor-pointer px-4 py-2 ${pathname == '/contacts' && 'font-bold'}`}
-        >
-          Contato
-        </Link>
-        <Link
-          href={'/services'}
-          className={`cursor-pointer px-4 py-2 ${pathname == '/services' && 'font-bold'}`}
-        >
-          Serviços
-        </Link>
-        <Link
-          href={'/blog'}
-          className={`cursor-pointer px-4 py-2 ${pathname == '/blog' && 'font-bold'}`}
-        >
-          Blog
-        </Link>
-        <Link
-          href={'/about'}
-          className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
-        >
-          Sobre
-        </Link>
-        {data?.user?.email == lucas && (
-          <Link
-            href={'/dashboard'}
-            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
-          >
-            Dasboard
-          </Link>
-        )}
-        {data?.user?.email == amanda && (
-          <Link
-            href={'/dashboard'}
-            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
-          >
-            Dasboard
-          </Link>
-        )}
-        {data?.user?.email == rafael && (
-          <Link
-            href={'/dashboard'}
-            className={`cursor-pointer px-4 py-2 ${pathname == '/about' && 'font-bold'}`}
-          >
-            Dasboard
-          </Link>
-        )}
-
-        {data?.user ? <LogOutMenuDesktop /> : <LogInMenuDesktop />}
-      </ul>
-    </nav>
-  )
+				{isAdmin && (
+					<li>
+						<Link
+							href="/dashboard"
+							className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 tracking-wide ${
+								pathname?.startsWith('/dashboard')
+									? 'text-white bg-[#567CAB] font-semibold'
+									: 'text-amber-300 hover:text-amber-200 hover:bg-white/10'
+							}`}
+						>
+							Dashboard
+						</Link>
+					</li>
+				)}
+			</ul>
+		</nav>
+	)
 }

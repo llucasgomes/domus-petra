@@ -1,95 +1,94 @@
-import { poppis } from '@/app/_ui/fonts'
+import { GETConsultorias, GETPalestras, GETTreinamentos } from '@/actions/service'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-
-import {
-  GETConsultorias,
-  GETPalestras,
-  GETTreinamentos
-} from '@/actions/service'
-import Image from 'next/image'
+import { Briefcase, GraduationCap, Mic, Sparkles } from 'lucide-react'
 import { CardItem } from './_components/carditemService'
 
-export default async function Page() {
-  const consultoria = await GETConsultorias()
-  const treinamentos = await GETTreinamentos()
-  const palestras = await GETPalestras()
+export const dynamic = 'force-dynamic'
 
-  return (
-    <main className="flex w-full flex-col items-center justify-center">
-      <section className="relative flex w-full flex-col items-center justify-center py-8 md:h-96 md:gap-8 lg:flex-row">
-        <div className="flex h-52 flex-col items-center justify-center lg:h-60">
-          <Image
-            src={'/services/bg-services.jpeg'}
-            alt="capa de fundo da imagem"
-            width={700}
-            height={700}
-            className="absolute -z-10 h-full w-full object-cover object-center brightness-75"
-          />
-          <div className="flex h-full w-full flex-col items-center justify-start gap-6 pl-11 md:items-start">
-            <h1
-              className={`${poppis.className} flex w-full pt-20 text-center text-4xl font-black uppercase text-black md:pt-10 md:text-6xl`}
-            >
-              serviços
-            </h1>
-            <h2 className="hidden w-1/2 md:flex md:w-4/5 lg:w-3/5">
-              A Domus Petra é especialista em consultoria empresarial e
-              treinamentos de alta performance. Nossa missão é ajudar empresas a
-              alcançarem seus objetivos através de serviços personalizados e de
-              qualidade. Explore soluções para seu setor
-            </h2>
-          </div>
-        </div>
-      </section>
+export default async function ServicesPage() {
+	const consultoria = await GETConsultorias()
+	const treinamentos = await GETTreinamentos()
+	const palestras = await GETPalestras()
 
-      <section className="">
-        <Tabs defaultValue="palestras">
-          <TabsList className="h-24 w-full gap-2 rounded-none bg-[#577DAC] md:h-28 md:gap-3">
-            <TabsTrigger
-              className="text-white hover:bg-[--bg-highlight] hover:text-[--bg-secundary] data-[state=active]:bg-[--bg-highlight] data-[state=active]:text-[--bg-secundary] md:text-lg"
-              value="consultorias"
-            >
-              Consultorias
-            </TabsTrigger>
-            <TabsTrigger
-              className="text-white hover:bg-[--bg-highlight] hover:text-[--bg-secundary] data-[state=active]:bg-[--bg-highlight] data-[state=active]:text-[--bg-secundary] md:text-base"
-              value="palestras"
-            >
-              Palestras
-            </TabsTrigger>
-            <TabsTrigger
-              className="text-white hover:bg-[--bg-highlight] hover:text-[--bg-secundary] data-[state=active]:bg-[--bg-highlight] data-[state=active]:text-[--bg-secundary] md:text-lg"
-              value="treinamentos"
-            >
-              Treinamentos
-            </TabsTrigger>
-          </TabsList>
+	return (
+		<main className="w-full min-h-screen bg-slate-50 overflow-hidden">
+			{/* 1. HERO HEADER */}
+			<section className="relative w-full pt-32 pb-20 sm:pt-40 sm:pb-24 px-6 sm:px-8 lg:px-12 bg-gradient-to-b from-[#131727] via-[#1B233D] to-[#2B355A] text-white">
+				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#567CAB]/20 rounded-full blur-3xl pointer-events-none" />
 
-          <TabsContent
-            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
-            value="consultorias"
-          >
-            {consultoria.map((item) => (
-              <CardItem key={item.id} service={item} />
-            ))}
-          </TabsContent>
-          <TabsContent
-            className="flex flex-col flex-wrap justify-center gap-6 p-5 data-[state=inactive]:hidden md:flex-row"
-            value="palestras"
-          >
-            {palestras.map((item) => {
-              return <CardItem key={item.id} service={item} />
-            })}
-          </TabsContent>
-          <TabsContent
-            className="flex flex-col flex-wrap justify-center gap-3 p-5 data-[state=inactive]:hidden md:flex-row"
-            value="treinamentos"
-          >
-            {treinamentos.map((item) => {
-              return <CardItem key={item.id} service={item} />
-            })}
-          </TabsContent>
-        </Tabs>
-      </section>
-    </main>
-  )
+				<div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6 relative z-10">
+					<span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#93B3DA] bg-white/10 px-4 py-1.5 rounded-full border border-white/15 backdrop-blur-sm">
+						<Sparkles size={14} />
+						Soluções Corporativas & Industriais
+					</span>
+
+					<h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+						Nossos <span className="text-[#93B3DA]">Serviços</span>
+					</h1>
+
+					<p className="text-base sm:text-xl text-slate-200 max-w-2xl leading-relaxed font-light">
+						Especialistas em consultoria empresarial, treinamentos de alta performance e palestras transformadoras.
+						Conheça as soluções personalizadas para o seu segmento.
+					</p>
+				</div>
+			</section>
+
+			{/* 2. TABS & SERVICES GRID */}
+			<section className="max-w-7xl mx-auto py-16 sm:py-24 px-6 sm:px-8 lg:px-12">
+				<Tabs defaultValue="consultorias" className="w-full flex flex-col items-center">
+					{/* Tabs Navigation */}
+					<TabsList className="h-auto p-1.5 rounded-xl bg-slate-200/80 border border-slate-300/60 flex flex-wrap justify-center gap-1.5 mb-12 shadow-sm">
+						<TabsTrigger
+							value="consultorias"
+							className="flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-bold text-slate-700 data-[state=active]:bg-[#2B355A] data-[state=active]:text-white transition-all shadow-none data-[state=active]:shadow-md"
+						>
+							<Briefcase size={18} />
+							Consultorias
+						</TabsTrigger>
+						<TabsTrigger
+							value="treinamentos"
+							className="flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-bold text-slate-700 data-[state=active]:bg-[#2B355A] data-[state=active]:text-white transition-all shadow-none data-[state=active]:shadow-md"
+						>
+							<GraduationCap size={18} />
+							Treinamentos
+						</TabsTrigger>
+						<TabsTrigger
+							value="palestras"
+							className="flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-bold text-slate-700 data-[state=active]:bg-[#2B355A] data-[state=active]:text-white transition-all shadow-none data-[state=active]:shadow-md"
+						>
+							<Mic size={18} />
+							Palestras
+						</TabsTrigger>
+					</TabsList>
+
+					{/* Tab 1: Consultorias */}
+					<TabsContent value="consultorias" className="w-full">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full justify-items-center">
+							{consultoria.map(item => (
+								<CardItem key={item.id} service={item} />
+							))}
+						</div>
+					</TabsContent>
+
+					{/* Tab 2: Treinamentos */}
+					<TabsContent value="treinamentos" className="w-full">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full justify-items-center">
+							{treinamentos.map(item => (
+								<CardItem key={item.id} service={item} />
+							))}
+						</div>
+					</TabsContent>
+
+					{/* Tab 3: Palestras */}
+					<TabsContent value="palestras" className="w-full">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full justify-items-center">
+							{palestras.map(item => (
+								<CardItem key={item.id} service={item} />
+							))}
+						</div>
+					</TabsContent>
+				</Tabs>
+			</section>
+		</main>
+	)
 }

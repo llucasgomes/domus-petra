@@ -1,150 +1,125 @@
 'use client'
 
 import { Card } from '@/components/ui/card'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const services = [
-  {
-    id: '01',
-    name: 'consultoria',
-    description:
-      'Nossas consultorias são personalizadas para atender às necessidades específicas do seu negócio. Ajudamos a identificar oportunidades, resolver problemas e impulsionar o crescimento da sua empresa. ',
-    image: '/icons/icon-consultoria.svg'
-  },
-  {
-    id: '02',
-    name: 'treinamentos',
-    description:
-      'Oferecemos treinamentos práticos e para desenvolver habilidades e competências no ambiente de trabalho. Nossos programas de treinamento visam aprimorar a performance individual e coletiva, promovendo um ambiente de aprendizado contínuo e crescimento profissional.',
-    image: '/icons/icon-treinamento.svg'
-  },
-  {
-    id: '03',
-    name: 'palestra',
-    description:
-      'Nossas palestras são projetadas para motivar e engajar seu público. Nossos palestrantes compartilham conhecimento, experiências e insights que provocam reflexões e estimulam mudanças positivas. Ideal para eventos corporativos, conferências e seminários.',
-    image: '/icons/icon-palestra.svg'
-  }
+	{
+		id: '01',
+		name: 'Consultorias',
+		subtitle: 'Diagnóstico & Otimização',
+		description:
+			'Consultorias personalizadas para atender às necessidades específicas da sua organização. Identificamos gargalos, eliminamos desperdícios e estruturamos processos para maximizar resultados.',
+		image: '/icons/icon-consultoria.svg',
+		tags: ['Lean Manufacturing', 'Diagnóstico Operacional', 'Mapeamento de Fluxo', 'Gestão Estratégica'],
+		link: '/services'
+	},
+	{
+		id: '02',
+		name: 'Treinamentos',
+		subtitle: 'Capacitação Prática',
+		description:
+			'Programas práticos voltados para Solução Eficaz de Problemas, Lean Manufacturing, 5S e liderança. Focados em desenvolver competências operacionais e elevar a produtividade do time.',
+		image: '/icons/icon-treinamento.svg',
+		tags: ['5S & Kaizen', 'Solução Eficaz de Problemas', 'Liderança Industrial', 'Desenvolvimento de Equipes'],
+		link: '/services'
+	},
+	{
+		id: '03',
+		name: 'Palestras',
+		subtitle: 'Impacto & Motivação',
+		description:
+			'Apresentações inspiradoras e dinâmicas que provocam reflexão e estimulam mudanças culturais positivas. Ideais para convenções, encontros corporativos e eventos empresariais.',
+		image: '/icons/icon-palestra.svg',
+		tags: ['Cultura de Eficiência', 'Metodologia Japonesa', 'Gestão de Mudanças', 'Inovação e Pessoas'],
+		link: '/services'
+	}
 ]
 
 export const Services = () => {
-  return (
-    <section className="flex w-full flex-col items-center justify-center p-8 px-10 pt-12 text-black md:h-[700px] md:flex-row md:px-16">
-      {/* <div className="flex w-full flex-col gap-6 md:hidden">
-        <h2 className="text-left text-[22px] font-bold text-[#0C2364] md:text-2xl lg:text-3xl">
-          Fortalecendo Organizações com Excelência em Consultoria e Treinamentos
-        </h2>
+	return (
+		<section id="servicos" className="w-full py-16 sm:py-20 lg:py-28 px-6 sm:px-8 lg:px-16 bg-[#F8FAFC]">
+			<div className="max-w-7xl mx-auto flex flex-col items-center gap-12 sm:gap-16">
+				{/* Section Header */}
+				<div className="flex flex-col items-center text-center gap-3 max-w-2xl mx-auto">
+					<span className="text-xs font-bold uppercase tracking-widest text-[#567CAB] bg-[#567CAB]/10 px-3.5 py-1.5 rounded-full">
+						Nossas Soluções
+					</span>
+					<h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#131727] uppercase tracking-tight">
+						Excelência para o seu Negócio
+					</h2>
+					<p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+						Metodologias robustas para potencializar a eficiência e a sustentabilidade da sua empresa através de pessoas
+						e processos integrados.
+					</p>
+				</div>
 
-        <p className="text-left text-lg lg:w-10/12">
-          A <strong>Domus Petra</strong> é especialista em consultoria
-          empresarial e treinamentos de alta performance. Nossa missão é ajudar
-          empresas a alcançarem seus objetivos através de serviços
-          personalizados e de qualidade.
-        </p>
+				{/* Services Cards Grid */}
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+					{services.map(item => (
+						<Card
+							key={item.id}
+							className="group flex flex-col justify-between p-8 rounded-2xl bg-white border border-slate-200/80 hover:border-[#567CAB]/60 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+						>
+							<div className="flex flex-col items-start gap-5">
+								<div className="w-16 h-16 rounded-xl bg-[#567CAB]/10 group-hover:bg-[#567CAB] transition-colors flex items-center justify-center p-3.5">
+									<Image
+										src={item.image}
+										alt={item.name}
+										width={48}
+										height={48}
+										className="w-full h-full object-contain transition-all group-hover:brightness-0 group-hover:invert"
+									/>
+								</div>
 
-        <p className="text-left text-lg">Explore soluções para seu setor</p>
-        <div className="flex w-full justify-start pr-14">
-          <Link
-            href={'/services'}
-            className="text-md mt-6 w-36 border-[1px] border-solid border-black py-2 text-center text-black hover:bg-[#567CAB] hover:text-white"
-          >
-            Clique aqui
-          </Link>
-        </div>
-      </div>
-      <div className="w-full items-center justify-center py-5 sm:py-3 md:flex md:max-h-[500px] md:max-w-[370px]">
-        <Carousel
-          orientation="horizontal"
-          className="h-auto w-full"
-          plugins={[
-            Autoplay({
-              delay: 5000
-            })
-          ]}
-        >
-          <CarouselContent>
-            <CarouselItem>
-              <Card className="flex w-[500px] flex-col gap-4 p-7 lg:h-[400px] lg:w-[350px]">
-                <Image
-                  src={'/icons/icon-consultoria.svg'}
-                  alt=""
-                  width={100}
-                  height={100}
-                  className=""
-                />
-                <p className="text-xl font-bold uppercase">consultorias</p>
-                <p>
-                  Nossas consultorias são personalizadas para atender às
-                  necessidades específicas do seu negócio. Ajudamos a
-                  identificar oportunidades, resolver problemas e impulsionar o
-                  crescimento da sua empresa.{' '}
-                </p>
-              </Card>
-            </CarouselItem>
-            <CarouselItem>
-              <Card className="flex w-[500px] flex-col gap-4 p-7 lg:h-[400px] lg:w-[350px]">
-                <Image
-                  src={'/icons/icon-treinamento.svg'}
-                  alt=""
-                  width={100}
-                  height={100}
-                  className=""
-                />
-                <p className="text-xl font-bold uppercase">treinamento</p>
-                <p>
-                  Oferecemos treinamentos práticos e para desenvolver
-                  habilidades e competências no ambiente de trabalho. Nossos
-                  programas de treinamento visam aprimorar a performance
-                  individual e coletiva, promovendo um ambiente de aprendizado
-                  contínuo e crescimento profissional.
-                </p>
-              </Card>
-            </CarouselItem>
-            <CarouselItem>
-              <Card className="flex w-[500px] flex-col gap-4 p-7 lg:h-[400px] lg:w-[350px]">
-                <Image
-                  src={'/icons/icon-palestra.svg'}
-                  alt=""
-                  width={100}
-                  height={100}
-                  className=""
-                />
-                <p className="text-xl font-bold uppercase">palestra</p>
-                <p>
-                  Nossas palestras são projetadas para motivar e engajar seu
-                  público. Nossos palestrantes compartilham conhecimento,
-                  experiências e insights que provocam reflexões e estimulam
-                  mudanças positivas. Ideal para eventos corporativos,
-                  conferências e seminários.
-                </p>
-              </Card>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious className="hidden border-none bg-transparent sm:flex md:hidden lg:flex" />
-          <CarouselNext className="hidden border-none bg-transparent sm:flex md:hidden lg:flex" />
-        </Carousel>
-      </div> */}
-      <div className="flex w-full flex-col items-center justify-evenly gap-3 px-2 md:h-60 md:flex-row lg:h-96">
-        {services.map((item) => {
-          return (
-            <Card
-              key={item.id}
-              className="flex w-full flex-col items-center gap-4 border-transparent p-7 shadow-[0_3px_10px_rgb(0,0,0,0.2)] md:w-80 lg:h-[400px] lg:w-[320px] xl:w-[300px]"
-            >
-              <Image
-                src={item.image}
-                alt={`Imagem simples do tipo ${item.name}`}
-                width={100}
-                height={100}
-              />
-              <p className="text-xl font-bold uppercase xl:text-lg">
-                {item.name}
-              </p>
-              <p className="hidden lg:flex xl:text-sm">{item.description}</p>
-            </Card>
-          )
-        })}
-      </div>
-    </section>
-  )
+								<div className="flex flex-col gap-1">
+									<span className="text-xs font-semibold uppercase tracking-wider text-[#567CAB]">{item.subtitle}</span>
+									<h3 className="text-xl sm:text-2xl font-bold text-[#131727] group-hover:text-[#567CAB] transition-colors">
+										{item.name}
+									</h3>
+								</div>
+
+								<p className="text-sm sm:text-base text-slate-600 leading-relaxed">{item.description}</p>
+
+								{/* Skill / Specialty Pills */}
+								<div className="flex flex-wrap gap-1.5 pt-2">
+									{item.tags.map(tag => (
+										<span
+											key={tag}
+											className="text-[11px] font-medium px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 group-hover:bg-[#567CAB]/10 group-hover:text-[#2B355A] transition-colors"
+										>
+											{tag}
+										</span>
+									))}
+								</div>
+							</div>
+
+							<div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+								<Link
+									href={item.link}
+									className="inline-flex items-center gap-2 text-sm font-semibold text-[#567CAB] group-hover:text-[#131727] group-hover:gap-3 transition-all"
+								>
+									Saiba mais
+									<ArrowRight size={16} />
+								</Link>
+							</div>
+						</Card>
+					))}
+				</div>
+
+				{/* Action Link */}
+				<div className="pt-2">
+					<Link
+						href="/services"
+						className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white bg-[#2B355A] hover:bg-[#131727] transition-all shadow-md hover:shadow-lg"
+					>
+						Explorar Todos os Serviços
+						<ArrowRight size={16} />
+					</Link>
+				</div>
+			</div>
+		</section>
+	)
 }
